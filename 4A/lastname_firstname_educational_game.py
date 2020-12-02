@@ -1,4 +1,4 @@
-# <Darwin's Journey to the Galapgos Islands>, <Ryan Kelley>, <2:00PM> <11/30/20>, <Version 0.1>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:38PM> <12/02/20>, <Version 0.45>
 
 # Global Variables
 
@@ -15,7 +15,7 @@ party_member3 = ""
 # Supply Variables
 amount_food = 0
 amount_water = 0
-num_ships = 0
+num_boats = 0
 num_guns = 0
 num_bullets = 0
 num_swords = 0
@@ -26,3 +26,56 @@ num_clothing = 0
 num_cows = 0
 num_chickens = 0
 num_pigs = 0 
+
+
+# Disaster Variables
+chnc_sick = 0.0
+chnc_die = 0.0
+chnc_injury = 0.0
+chnc_hostile_natives = 0.0
+chnc_wagon_accident = 0.0
+chnc_bear_attack = 0.0 
+
+# main menu function
+def main_menu():
+    print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print("*                            Lewis and Clark                        *")
+    print("*                                  in                               *")
+    print("*                   The Western Exploration Extravaganza            *")
+    print("*                                  by                               *")
+    print("*                             Ryan Kelley                           *")
+    print("*                                                                   *")
+    print("*                                                                   *")
+    print("*    1. Start the Game                                              *")
+    print("*    2. Learn more about the Lewis and Clark Expedition             *")
+    print("*    3. Enable / Disable Sound                                      *")
+    print("*    4. See High Scores                                             *")
+    print("*    5. Exit Game                                                   *")
+    print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    global player_choice
+    player_choice = int(input("Please type a number and press enter.\n"))
+    if player_choice == 1:
+        print("Ok, let the journey begin.\n")
+    elif player_choice == 2:
+        print("Ok, let me tell you a story about Lewis and Clark.\n")
+    elif player_choice == 3:
+        print("Is it too loud for you?\n")
+    elif player_choice == 4:
+        print("Let's find out who the best explorers have been.\n")
+    else:
+        print("Sorry to see you go.")
+        exit() 
+    return player_choice
+
+# Display info about the expedition.  
+def disp_info():
+    print("""
+        Write at least ONE PARAGRAPH of FACTUAL INFORMATION ABOUT YOUR EXPEDITION.\n
+        """) 
+
+
+
+
+
+
+
