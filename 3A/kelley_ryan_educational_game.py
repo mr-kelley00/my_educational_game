@@ -36,6 +36,7 @@ chnc_die = 0.0
 chnc_wheel_break = 0.0
 chnc_axle_break = 0.0
 chnc_bad_weather = 0.0
+player_choice = 0
 
 # Main Menu
 def main_menu():
@@ -53,4 +54,6 @@ def main_menu():
     print("++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++")
 
 main_menu()
+
+
 
