@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <1:05PM> <12/01/20>, <Version 0.2>
+# <Educational Game>, <Ryan Kelley>, <12:21PM> <12/03/20>, <Version 0.3>
 
 # Player Variables
 player_role = ""
@@ -27,4 +27,13 @@ num_boat_oar = 0
 num_pelts = 0
 
 
-
+# Disaster Variables, as a percentage chance of happening. 
+chnc_sick = 0.0
+chnc_death = 0.0
+chnc_bad_weather = 0.0
+chnc_transport_accident = 0.0
+chnc_native_attack = 0.0
+chnc_bear_attack = 0.0
+chnc_bandit_attack = 0.0
+chnc_mutiny = 0.0
+chnc_lost_path = 0.0 
