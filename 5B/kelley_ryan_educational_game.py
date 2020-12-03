@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <8:43AM> <12/03/20>, <Version 0.40>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <8:54AM> <12/03/20>, <Version 0.45>
 
 # Player Variables
 starting_role = ""
@@ -53,8 +53,18 @@ def main_menu():
     global player_choice
     player_choice = int(input("Please type a number from the menu and press enter.\n"))
     # print(player_choice)
-
-main_menu() 
+    if player_choice == 1:
+        print("The adventure awaits!  Let's get going...\n")
+    elif player_choice == 2:
+        print("Wise choice, let us learn more before we go.\n")
+    elif player_choice == 3:
+        print("Want to see who were the greatest explorers before you eh?\n")
+    else:
+        print("Ahh, no heart for adventure today I see.  Farewell, until next time.\n")
+        exit()
+        
+# main_menu()
+# print(player_choice)
         
 
 
