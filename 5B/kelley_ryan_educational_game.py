@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <8:33AM> <12/03/20>, <Version 0.35>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <8:43AM> <12/03/20>, <Version 0.40>
 
 # Player Variables
 starting_role = ""
@@ -24,7 +24,7 @@ num_wagon_wheel = 0
 num_wagon_axle = 0
 
 # Disaster Variables, % chance it occurs.  
-chc_sick = 0.
+chc_sick = 0.0
 chc_break_wheel = 0.0
 chc_break_axle = 0.0
 chc_hostile_native = 0.0
@@ -50,7 +50,12 @@ def main_menu():
         *                                                           *
         +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
         """)
+    global player_choice
+    player_choice = int(input("Please type a number from the menu and press enter.\n"))
+    # print(player_choice)
 
+main_menu() 
+        
 
 
 
