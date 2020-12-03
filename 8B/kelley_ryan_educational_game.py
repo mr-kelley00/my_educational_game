@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <1:46PM> <12/03/20>, <Version 0.4>
+# <Educational Game>, <Ryan Kelley>, <2:02PM> <12/03/20>, <Version 0.45>
 
 # Player Variables
 player_name = ""
@@ -53,6 +53,7 @@ def main_menu():
     print("+    4. Exit Game                                             +")
     print("+                                                             +")
     print("+=====++=====++=====++=====++=====++=====++=====++=====++=====+")
+    global player_choice
     player_choice = int(input("Please type your choice and press enter.  \n"))
     if player_choice == 1:
         print("Ah, brave adventurer!  Good luck on your journey.  Be safe!\n")
@@ -66,5 +67,15 @@ def main_menu():
     return player_choice
 
 # main_menu()
+
+# Display Info. Function
+def display_info():
+    print("""
+        YOU NEED TO WRITE AT LEAST ONE PARAGRAPH WITH INFORMATION ABOUT YOUR EXPEDITION THAT WILL
+        HELP THE PLAYER.  IT MUST BE FACTUAL AND IN YOUR OWN WORDS.  DO NOT JUST CTRL-C AND CTRL-V
+        FROM WIKIPEDIA.
+        """) 
+
+# display_info() 
     
     
