@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <1:37PM> <12/03/20>, <Version 0.35>
+# <Educational Game>, <Ryan Kelley>, <1:46PM> <12/03/20>, <Version 0.4>
 
 # Player Variables
 player_name = ""
@@ -50,22 +50,21 @@ def main_menu():
     print("+    1. Begin your journey.                                   +")
     print("+    2. Learn more about the journey.                         +")
     print("+    3. See the high scores.                                  +")
-    print("+    4. Enable / Disable Sound                                +")
-    print("+    5. Exit Game                                             +")
+    print("+    4. Exit Game                                             +")
     print("+                                                             +")
     print("+=====++=====++=====++=====++=====++=====++=====++=====++=====+")
     player_choice = int(input("Please type your choice and press enter.  \n"))
     if player_choice == 1:
-        do_this
+        print("Ah, brave adventurer!  Good luck on your journey.  Be safe!\n")
     elif player_choice == 2:
-        do_that
+        print("Wise choice.  Let us learn more before we depart.\n")
     elif player_choice == 3:
-        do_this_other_thing
-    elif player_choice == 4:
-        do_something_else
+        print("Care to see who has done well before you I see...\n")
     else:
+        print("Not all are brave enough for this task.  Farewell!\n") 
         exit() 
+    return player_choice
 
-main_menu()
+# main_menu()
     
     
