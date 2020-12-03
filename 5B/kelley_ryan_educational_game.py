@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:11AM> <12/03/20>, <Version 0.50>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:21AM> <12/03/20>, <Version 0.51>
 
 # Player Variables
 starting_role = ""
@@ -74,5 +74,11 @@ def disp_info():
         to track the expedition because of mercury deposits found in their feces.  Pretty crazy.
         """)
 # disp_info() 
+
+# High Scores
+# def high_scores():
+# Read high_scores save file.
+# print high scores to the screen.
+# exit after printing high scores.
 
 
