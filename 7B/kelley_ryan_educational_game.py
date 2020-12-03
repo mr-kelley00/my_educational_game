@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <1:04PM> <12/03/20>, <Version 0.40>
+# <Educational Game>, <Ryan Kelley>, <1:10PM> <12/03/20>, <Version 0.45>
 
 # Player Variables
 player_role = ""
@@ -50,8 +50,6 @@ def main_menu():
         [    2.  Learn More About the Expedition              ]
         [    3.  Check the High Scores                        ]
         [    4.  Exit the Game                                ]
-        [                                                     ]
-        [                                                     ]
         [=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=]
         """)
     global player_choice # global tells Python that the WHOLE PROGRAM can access this variable.
@@ -70,4 +68,9 @@ def main_menu():
 
 main_menu() # This is known as CALLING the function.     
 
-
+# Display Info. Function
+def disp_info():
+    print("""
+        You need to write a PARAGRAPH in your OWN WORDS that provides information about your
+        expedition.
+        """) 
