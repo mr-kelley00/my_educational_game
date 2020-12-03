@@ -1,8 +1,8 @@
-# <Educational Game>, <Ryan Kelley>, <2:35PM> <12/01/20>, <Version 0.3>
+# <Educational Game>, <Ryan Kelley>, <1:37PM> <12/03/20>, <Version 0.35>
 
 # Player Variables
 player_name = ""
-party_member0 = ""
+party_member0 = "" 
 party_member1 = ""
 party_member2 = ""
 party_member3 = ""
@@ -23,6 +23,19 @@ num_pelts = 0
 num_beads = 0
 num_traps = 0
 money = 0 
+
+# Disaster Variables, % chance of occurrence.
+player_sick = 0.0
+player_death = 0.0
+party_sick = 0.0
+party_death = 0.0
+bad_weather = 0.0
+got_lost = 0.0
+wagon_wheel_break = 0.0
+wagon_axle_break = 0.0
+hostile_natives = 0.0
+animal_attack = 0.0 
+
 
 # Main Menu
 def main_menu():
