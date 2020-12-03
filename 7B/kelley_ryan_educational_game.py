@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <12:47PM> <12/03/20>, <Version 0.35>
+# <Educational Game>, <Ryan Kelley>, <1:04PM> <12/03/20>, <Version 0.40>
 
 # Player Variables
 player_role = ""
@@ -54,6 +54,19 @@ def main_menu():
         [                                                     ]
         [=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=]
         """)
+    global player_choice # global tells Python that the WHOLE PROGRAM can access this variable.
+    player_choice = int(input("Please type your choice from the menu and press enter.\n"))
+    # print(player_choice)
+    if player_choice == 1:
+        print("Brave! Let our journey begin.  Good luck!\n")
+    elif player_choice == 2:
+        print("Wise, you have decided to learn more about this journey.\n")
+    elif player_choice == 3:
+        print("Let us see who has gone before you and done well.\n")
+    else:
+        print("Not all of us are brave enough for this adventure.  Farewell!\n")
+        exit()
+    return player_choice
 
 main_menu() # This is known as CALLING the function.     
 
