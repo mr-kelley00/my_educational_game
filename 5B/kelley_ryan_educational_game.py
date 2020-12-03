@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <8:54AM> <12/03/20>, <Version 0.45>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:11AM> <12/03/20>, <Version 0.50>
 
 # Player Variables
 starting_role = ""
@@ -62,10 +62,17 @@ def main_menu():
     else:
         print("Ahh, no heart for adventure today I see.  Farewell, until next time.\n")
         exit()
-        
 # main_menu()
 # print(player_choice)
         
-
+# Display Info Function
+def disp_info():
+    print("""
+        The Lewis and Clark expedition was pretty cool and stuff.  These dudes went on a long
+        journey with horses and wagons and guns.  They encountered like, natives or something,
+        they had Sacagewa as a Native American guide to help them.  Today scientists were able
+        to track the expedition because of mercury deposits found in their feces.  Pretty crazy.
+        """)
+# disp_info() 
 
 
