@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <2:02PM> <12/03/20>, <Version 0.45>
+# <Educational Game>, <Ryan Kelley>, <2:07PM> <12/03/20>, <Version 0.45a>
 
 # Player Variables
 player_name = ""
@@ -76,6 +76,13 @@ def display_info():
         FROM WIKIPEDIA.
         """) 
 
-# display_info() 
+# display_info()
+
+# Check High Scores Function
+# def high_scores():
+    # Open high_scores file from the hard drive.
+    # Print high_scores file to the screen.
+    # Close high scores file.
+    # Exit
     
     
