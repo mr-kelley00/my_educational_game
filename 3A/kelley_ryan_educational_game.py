@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/04/20> <12:40PM>, <Version 0.35>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/04/20> <12:54PM>, <Version 0.40>
 
 # Player Variables 
 player_score = 0
@@ -54,9 +54,18 @@ def main_menu():
     global player_choice
     player_choice = int(input("Please type a number from the menu and press enter.\n"))
     # print(player_choice)
-
+    if player_choice == 1:
+        print("Good luck brave explorer.  Farewell on your journey!\n")
+    elif player_choice == 2:
+        print("You have decided to study more before adventuring.  Wise choice.\n")
+    elif player_choice == 3:
+        print("Let us see who has gone before you and done well!\n")
+    else:
+        print("Not all are brave enough to take this journey.  Perhaps another time?\n")
+        exit()
+    return player_choice  
     
-main_menu()
+# main_menu()
 
 
 
