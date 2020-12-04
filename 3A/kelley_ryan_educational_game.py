@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/02/20> <12:55PM>, <Version 0.3>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/04/20> <12:40PM>, <Version 0.35>
 
 # Player Variables 
 player_score = 0
@@ -36,7 +36,7 @@ chnc_die = 0.0
 chnc_wheel_break = 0.0
 chnc_axle_break = 0.0
 chnc_bad_weather = 0.0
-player_choice = 0
+
 
 # Main Menu
 def main_menu():
@@ -45,14 +45,17 @@ def main_menu():
     print("|                                 by                             |")
     print("|                        Ryan Kelley Game Studios                |")
     print("|                                                                |")
-    print("|   1) Begin your journey.                                       |")
-    print("|   2) Learn more about the expedition.                          |")
-    print("|   3) See the high scores.                                      |")
-    print("|   4) Enable / Disable Sound.                                   |")
-    print("|   5) Exit game.                                                |")
+    print("|   1) Begin Your Journey                                        |")
+    print("|   2) Learn More about the Lewis and Clark Expedition           |")
+    print("|   3) See the High Scores                                       |")
+    print("|   4) Exit Game                                                 |")
     print("|                                                                |")
     print("++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++")
+    global player_choice
+    player_choice = int(input("Please type a number from the menu and press enter.\n"))
+    # print(player_choice)
 
+    
 main_menu()
 
 
