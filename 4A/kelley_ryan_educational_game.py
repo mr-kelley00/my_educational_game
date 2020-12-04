@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:38PM> <12/02/20>, <Version 0.45>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:31PM> <12/04/20>, <Version 0.50>
 
 # Global Variables
 
