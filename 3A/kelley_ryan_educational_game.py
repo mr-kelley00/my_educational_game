@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/04/20> <12:54PM>, <Version 0.40>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/04/20> <1:02PM>, <Version 0.45>
 
 # Player Variables 
 player_score = 0
@@ -66,6 +66,14 @@ def main_menu():
     return player_choice  
     
 # main_menu()
+
+# Display Info.
+def disp_info():
+    print("Make this function print historical information about the journey.\n")
+    print("Also make it print some tips and tricks to help the player in the game.\n")
+    print("For example, with Oregon trail this part of the game explained the best time to leave.\n
+
+disp_info()           
 
 
 
