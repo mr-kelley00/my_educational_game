@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:38PM> <12/02/20>, <Version 0.45>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:41PM> <12/04/20>, <Version 0.51>
 
 # Global Variables
 
@@ -79,7 +79,13 @@ def player_info():
     party_member2 = input("A third person is joining?  What do I call them?\n")
     party_member3 = input("Last but not least, who is the fourth person in your group?\n")
     print(f"Ok {player_name}.  I hope that {party_member0}, {party_member1}, {party_member2}, and {party_member3} all arrive safely.\n")
-
+    print(f"""On the Lewis and Clark journey the following jobs were important: scout, cook, and trapper.
+    Which job would you like to choose?
+    1) Scout
+    2) Cook
+    3) Trapper
+    """)
+    
 player_info()           
     
     
