@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:21AM> <12/03/20>, <Version 0.51>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:15AM> <12/07/20>, <Version 0.52>
 
 # Player Variables
 starting_role = ""
@@ -68,10 +68,7 @@ def main_menu():
 # Display Info Function
 def disp_info():
     print("""
-        The Lewis and Clark expedition was pretty cool and stuff.  These dudes went on a long
-        journey with horses and wagons and guns.  They encountered like, natives or something,
-        they had Sacagewa as a Native American guide to help them.  Today scientists were able
-        to track the expedition because of mercury deposits found in their feces.  Pretty crazy.
+        Update to actual paragraph of historical facts and game play tips.
         """)
 # disp_info() 
 
@@ -80,5 +77,20 @@ def disp_info():
 # Read high_scores save file.
 # print high scores to the screen.
 # exit after printing high scores.
+
+def player_info():
+    player_name = input("What is your name brave explorer?\n")
+    print(f"Greetings {player_name}.  That is a fine name for a brave explorer such as yourself!\n")
+    party_member0 = input("I see another soul is joining you.  What should I call them?\n")
+    party_member1 = input("You have a third person in the group. What is their name?\n")
+    party_member2 = input("Four people so far, eh?! By what name are they known?\n")
+    party_member3 = input("Ok, last but not least, what name does the last person go by?\n")
+    print(f"{player_name}, you will be joined by {party_member0}, {party_member1}, {party_member2}, and {party_member3}.\n")
+    print("Good luck.  It is a dangerous world to explore.\n") 
+        
+
+player_info() 
+
+
 
 
