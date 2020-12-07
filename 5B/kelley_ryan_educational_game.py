@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:15AM> <12/07/20>, <Version 0.52>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:34AM> <12/07/20>, <Version 0.53>
 
 # Player Variables
 starting_role = ""
@@ -86,9 +86,20 @@ def player_info():
     party_member2 = input("Four people so far, eh?! By what name are they known?\n")
     party_member3 = input("Ok, last but not least, what name does the last person go by?\n")
     print(f"{player_name}, you will be joined by {party_member0}, {party_member1}, {party_member2}, and {party_member3}.\n")
-    print("Good luck.  It is a dangerous world to explore.\n") 
+    print("Good luck.  It is a dangerous world to explore.\n")
+    # The next lines of code should allow the player to choose a starting job role.
+    print(f"""
+        For this journey, Lewis and Clark will need people with different skills and experience. {player_name}, you will need to
+        choose one of these roles.  They are as follows:
         
-
+        1) Cook
+        2) Trapper
+        3) Interpreter
+        
+        Each role brings certain benefits and drawbacks to the journey.  Choose carefully.\n
+        """) 
+    # Let the player choose one.
+    
 player_info() 
 
 
