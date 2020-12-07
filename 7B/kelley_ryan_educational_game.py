@@ -82,6 +82,19 @@ def player_info():
     party_member1 = input("I see you have a third member of the party.  What should I call them?\n")
     party_member2 = input("Four people will be with you?  By what name are they known?\n")
     print(f"{player_name} will joined by {party_member0}, {party_member1}, and {party_member2}.\n")
-    
+    print("""
+Lewis and Clark had many skilled explorers and craftsmen on their journey west.  Each job
+played an important role for the group.  One of the most important jobs for this expedition was
+that of interpreter or translator to communicate with the native tribes encountered.  The role
+of cook was also extremely important.  A well fed expedition will stay healthy and be able to
+make the journey in a shorter period of time.  Finally, one of the other job roles that was quite
+important was that of a trapper.  Lewis and Clark knew they would be able to eat the meat from
+each animal but could also trade the pelts along the way for important supplies.
+
+Which job would you like to pick?
+    1) Translator
+    2) Cook
+    3) Trapper
+    """)
     
 player_info() 
