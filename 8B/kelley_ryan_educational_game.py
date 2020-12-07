@@ -84,5 +84,68 @@ def display_info():
     # Print high_scores file to the screen.
     # Close high scores file.
     # Exit
+
+# Player Info. Function
+def player_info():
+    player_name = input("What is your name brave explorer?  Please type your name and press enter.\n")
+    print(f"It is nice to meet you {player_name}.  I wish you good luck on your journey.\n")
+    # Allow the player to input the names of people in the group.
+    party_member0 = input("I see you have another with you.  What is their name?\n") 
+    party_member1 = input("You are joined by a third.  What should I call them?\n")
+    party_member2 = input("Four people makes quite a crowd.  By what name is this person known?\n")
+    party_member3 = input("Ah yes, the fifth and final member.  Give me their name please.\n")
+    # Print every name back on the screen.
+    print(f"You are being joined by {party_member0}, {party_member1}, {party_member2}, and {party_member3}.\n")
+    # Print out some information describing the different job roles and allow the player to choose one.
+    print("""
+The Lewis and Clark expedition had many important job roles.  Each person had to do their share to ensure
+that the trip went safely.  One of the most important roles was that of translator.  Lewis and Clark would
+encounter many different native tribes along the journey.  Communicating with them was extremely important.
+Other important roles included the cooks.  Eating healthy food was important to make sure that everyone was
+strong enough to make the journey.  Trappers were also vital to the journey as they provided food to eat
+and valuable animal pelts to trade for supplies.
+
+What job would you like?
+ -- Translator
+ -- Cook
+ -- Trapper
+    """)
+    starting_role = input("How would you like to contribute?  Type the job and press enter.\n")
+
+    if starting_role == "translator" or "Translator":
+        print("You have chosen translator. You will receive the highest score bonus and starting money.\n")
+        score_bonus = 3
+        money = 1000
+    elif starting_role == "trapper" or "Trapper":
+        print("You have chosen trapper.  You will receive a good score bonus and more starting money.\n")
+        score_bonus = 2
+        money = 750
+    elif starting_role == "cook" or "Cook":
+        print("You have chosen cook.  You will receive the lowest bonus score and starting money.\n")
+        score_bonus = 1
+        money = 500
+    else:
+        print("You did not pick a job, so you will be a dishwasher.  You will receive no bonus and the least money.\n"
+        score_bonus = 0
+        money = 250
+    
+player_info() 
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
     
     
