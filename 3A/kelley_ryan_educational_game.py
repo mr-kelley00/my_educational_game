@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/04/20> <1:02PM>, <Version 0.45>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/08/20> <12:54PM>, <Version 0.46>
 
 # Player Variables 
 player_score = 0
@@ -75,5 +75,13 @@ def disp_info():
 
 disp_info()           
 
+# Player Info. Function
+def player_info():
+    player_name = input("Greetings brave traveler!  What should I call you?\n")
+    party_member0 = input("I see you have a second person with you.  What is their name?\n")
+    party_member1 = input("You have a third?  By what name are they known?\n")
+    party_member2 = input("Four people makes quite the crowd. Do they have a name?\n")
+    party_member3 = input("Now five of you?  Any more will be too many.  What do I call them?\n")
+    
 
 
