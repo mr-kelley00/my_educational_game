@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/08/20> <1:10PM>, <Version 0.47>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/08/20> <1:10PM>, <Version 0.47a>
 
 # Player Variables 
 player_score = 0
@@ -83,6 +83,10 @@ def player_info():
     party_member2 = input("Four people makes quite the crowd. Do they have a name?\n")
     party_member3 = input("Now five of you?  Any more will be too many.  What do I call them?\n")
     print(f"{player_name}, you are a brave leader.  Good luck to you and {party_member0}, {party_member1}, {party_member2}, and {party_member3}.\n")
-    
+    print("""
+Type your job role information here. 
+
+
+    """)
 player_info()
 
