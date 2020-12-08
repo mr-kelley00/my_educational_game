@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/08/20> <12:54PM>, <Version 0.46>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/08/20> <1:10PM>, <Version 0.47>
 
 # Player Variables 
 player_score = 0
@@ -71,7 +71,7 @@ def main_menu():
 def disp_info():
     print("Make this function print historical information about the journey.\n")
     print("Also make it print some tips and tricks to help the player in the game.\n")
-    print("For example, with Oregon trail this part of the game explained the best time to leave.\n
+    print("For example, with Oregon trail this part of the game explained the best time to leave.\n")
 
 disp_info()           
 
@@ -82,6 +82,7 @@ def player_info():
     party_member1 = input("You have a third?  By what name are they known?\n")
     party_member2 = input("Four people makes quite the crowd. Do they have a name?\n")
     party_member3 = input("Now five of you?  Any more will be too many.  What do I call them?\n")
+    print(f"{player_name}, you are a brave leader.  Good luck to you and {party_member0}, {party_member1}, {party_member2}, and {party_member3}.\n")
     
-
+player_info()
 
