@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <12:44PM> <12/03/20>, <Version 0.47>
+# <Educational Game>, <Ryan Kelley>, <12:44PM> <12/03/20>, <Version 0.48>
 
 # Player Variables
 player_role = ""
