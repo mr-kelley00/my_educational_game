@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <12:44PM> <12/03/20>, <Version 0.48>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:48PM> <12/09/20>, <Version 0.49>
 
 # Player Variables
 player_role = ""
@@ -22,6 +22,21 @@ num_wagon_wheel = 0
 num_wagon_axle = 0
 num_boat_oar = 0
 num_pelts = 0
+
+# Cost Variables
+cost_food = 0.20 # per pound. 
+cost_water = 0.10 # per gallon
+cost_clothing = 1.0 # per set
+cost_wagons = 10.0 # each 
+cost_boats = 20.0 # each 
+cost_horses = 5.0 # each
+cost_guns = 2.0 # each
+cost_bullets = 1.25 # per box of 20.
+cost_wagon_wheel = 2.50 # each
+cost_wagon_axle = 3.50 # each...Lochness Monster! 
+cost_boat_oar = 1.0 # each
+cost_pelts = 0.75 # each
+cost_mult = 1.0 
 
 # Disaster Variables, as a percentage chance of happening. 
 chnc_sick = 0.0
