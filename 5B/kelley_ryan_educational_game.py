@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:34AM> <12/07/20>, <Version 0.53>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:31AM> <12/09/20>, <Version 0.54>
 
 # Player Variables
 starting_role = ""
@@ -22,6 +22,19 @@ num_boats = 0
 num_wagons = 0
 num_wagon_wheel = 0
 num_wagon_axle = 0
+
+# Inventory Costs
+cost_water = 0.10 
+cost_food = 0.25
+cost_clothing = 1.25
+cost_guns = 3.50
+cost_bullets = 1.0
+cost_rope = 0.5
+cost_horses = 1.0
+cost_boats = 5.0
+cost_wagons = 10.0
+cost_wagon_wheel = 1.50
+cost_wagon_axle = 1.50
 
 # Disaster Variables, % chance it occurs.  
 chc_sick = 0.0
@@ -98,7 +111,8 @@ def player_info():
         
         Each role brings certain benefits and drawbacks to the journey.  Choose carefully.\n
         """) 
-    starting_role = input("Which job role do you want?\n") 
+    starting_role = input("Which job role do you want?\n")
+    
             
     
 player_info() 

@@ -1,9 +1,9 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:41PM> <12/04/20>, <Version 0.51>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:47PM> <12/08/20>, <Version 0.52>
 
 # Global Variables
 
 # Player Variables
-occupation = ""
+occupation = "" 
 start_money = 0
 score_bonus = 0
 player_name = ""
@@ -25,7 +25,12 @@ num_wagons = 0
 num_clothing = 0
 num_cows = 0
 num_chickens = 0
-num_pigs = 0 
+num_pigs = 0
+
+# Costs of Supplies
+cost_food = 0
+cost_water = 0
+# Fill in costs for remaining supplies. 
 
 
 # Disaster Variables
@@ -81,14 +86,37 @@ def player_info():
     print(f"Ok {player_name}.  I hope that {party_member0}, {party_member1}, {party_member2}, and {party_member3} all arrive safely.\n")
     print(f"""On the Lewis and Clark journey the following jobs were important: scout, cook, and trapper.
     Which job would you like to choose?
-    1) Scout
-    2) Cook
-    3) Trapper
+    -- Scout
+    -- Cook
+    -- Trapper
     """)
+    occupation = input("Which job do you want to choose?\n")
+    print(occupation)
+    if occupation == "Scout" or occupation == "scout" or occupation == "SCOUT":
+        print("You have chosen the scout role.  You will get the most amount of money and highest score bonus.\n") 
+        score_bonus = 3
+        start_money = 1000
+    elif occupation == "Cook" or occupation == "cook" or occupation == "COOK":
+        print("You have chosen the cook role.  You will get a higher amount of money and score bonus.\n")
+        score_bonus = 2
+        start_money = 750
+    elif occupation == "Trapper" or occupation == "trapper" or occupation == "TRAPPER":
+        print("You have chosen the trapper role.  You will get more money and small score bonus.\n")
+        score_bonus = 1
+        start_money = 500
+    else:
+        print("You did not choose a job from the list so you will be a dishwasher.  You get nothing.\n")
+        score_bonus = 0
+        start_money = 250
+    print(f"{player_name}, you will have {start_money} DOLLARS / YEN / GOLD.\n")
+    print(f"You will also receive a score multiplier of {score_bonus} when you finish.\n")
+    
     
 player_info()           
     
-    
+
+
+
 
 
 
