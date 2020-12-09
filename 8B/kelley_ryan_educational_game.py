@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <2:31PM> <12/09/20>, <Version 0.47>
+# <Educational Game>, <Ryan Kelley>, <2:46PM> <12/09/20>, <Version 0.47a>
 
 # Player Variables
 player_name = ""
@@ -39,8 +39,12 @@ cost_pelts = 0.75 # each
 cost_beads = 0.10 # each
 cost_traps = 1.0 # each
 
-
-
+# Location Variables 
+starting_point = "St. Louis, Missouri"
+ending_point = "Fort Calstop"
+locat0 = " "
+locat1 = " "
+locat2 = " " 
 
 # Disaster Variables, % chance of occurrence.
 player_sick = 0.0
@@ -54,7 +58,7 @@ wagon_axle_break = 0.0
 hostile_natives = 0.0
 animal_attack = 0.0
 
-# Add Location Name Variables
+
 
 
 # Main Menu Function
