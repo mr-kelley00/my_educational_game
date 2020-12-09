@@ -111,7 +111,8 @@ def player_info():
         
         Each role brings certain benefits and drawbacks to the journey.  Choose carefully.\n
         """) 
-    starting_role = input("Which job role do you want?\n") 
+    starting_role = input("Which job role do you want?\n")
+    
             
     
 player_info() 
