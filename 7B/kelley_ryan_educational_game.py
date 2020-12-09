@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:48PM> <12/09/20>, <Version 0.49>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <1:17PM> <12/09/20>, <Version 0.51>
 
 # Player Variables
 player_role = ""
@@ -47,7 +47,21 @@ chnc_native_attack = 0.0
 chnc_bear_attack = 0.0
 chnc_bandit_attack = 0.0
 chnc_mutiny = 0.0
-chnc_lost_path = 0.0 
+chnc_lost_path = 0.0
+
+# Location Variables
+starting_point = "St. Louis, Missouri"
+end_point = "Fort Clatsop"
+location0 = "St. Charles, Missouri"
+loc0_dist = 0
+location1 = "Missouri and Bad River Crossing"
+loc1_dist = 0
+location2 = "Lehmi Pass"
+loc2_dist = 0
+location3 = "Fort Mandan"
+loc3_dist = 0
+location4 = "Mount Hood" 
+loc4_dist = 0 
 
 # Main Menu Function
 def main_menu():
@@ -107,9 +121,17 @@ important was that of a trapper.  Lewis and Clark knew they would be able to eat
 each animal but could also trade the pelts along the way for important supplies.
 
 Which job would you like to pick?
-    1) Translator
-    2) Cook
-    3) Trapper
+    -- Translator
+    -- Cook
+    -- Trapper
     """)
+    player_role = input("Please type a job name and press enter.\n")
+    if player_role == "Translator" or player_role == "translator" or player_role == "TRANSLATOR": 
+        print("You have selected translator.\n")
+    elif player_role == "Cook" or player_role == "cook" or player_role == "COOK":
+        print("You have selected cook.\n")
+    elif player_role == "Trapper" or player_role == "trapper" or player_role == "TRAPPER":
+        print("You have selected trapper.\n")
+    else: 
     
 player_info() 
