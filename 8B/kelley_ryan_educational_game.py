@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <10:08AM> <12/09/20>, <Version 0.46a>
+# <Educational Game>, <Ryan Kelley>, <2:31PM> <12/09/20>, <Version 0.47>
 
 # Player Variables
 player_name = ""
@@ -24,8 +24,23 @@ num_pelts = 0
 num_beads = 0
 num_traps = 0
 
-# Add Inventory Cost Variables
+# Inventory Cost Variables
 cost_mult = 1.0
+cost_food = 0.25 # per pound
+cost_water = 0.50 # per 10 gallons
+cost_wagons = 10.0 # each
+cost_boats = 20.0 # each
+cost_guns = 3.50 # Dang you Lochness Monster! 
+cost_bullets = 1.0 # box of 20
+cost_horses = 2.50 # each
+cost_wagon_wheel = 1.75 # each
+cost_wagon_axle = 1.25 # each
+cost_pelts = 0.75 # each
+cost_beads = 0.10 # each
+cost_traps = 1.0 # each
+
+
+
 
 # Disaster Variables, % chance of occurrence.
 player_sick = 0.0
