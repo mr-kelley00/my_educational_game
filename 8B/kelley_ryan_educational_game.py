@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <2:07PM> <12/03/20>, <Version 0.45a>
+# <Educational Game>, <Ryan Kelley>, <10:08AM> <12/09/20>, <Version 0.46a>
 
 # Player Variables
 player_name = ""
@@ -8,10 +8,11 @@ party_member2 = ""
 party_member3 = ""
 starting_role = ""
 score_bonus = 0
+money = 0
 
 # Inventory Variables
-amt_food = 0
-amt_water = 0
+num_food = 0
+num_water = 0
 num_wagons = 0
 num_boats = 0
 num_guns = 0
@@ -22,7 +23,9 @@ num_wagon_axle = 0
 num_pelts = 0
 num_beads = 0
 num_traps = 0
-money = 0 
+
+# Add Inventory Cost Variables
+cost_mult = 1.0
 
 # Disaster Variables, % chance of occurrence.
 player_sick = 0.0
@@ -34,10 +37,12 @@ got_lost = 0.0
 wagon_wheel_break = 0.0
 wagon_axle_break = 0.0
 hostile_natives = 0.0
-animal_attack = 0.0 
+animal_attack = 0.0
+
+# Add Location Name Variables
 
 
-# Main Menu
+# Main Menu Function
 def main_menu():
     print("+=====++=====++=====++=====++=====++=====++=====++=====++=====+")
     print("+                          Ryan Kelley Games                  +")
@@ -89,14 +94,11 @@ def display_info():
 def player_info():
     player_name = input("What is your name brave explorer?  Please type your name and press enter.\n")
     print(f"It is nice to meet you {player_name}.  I wish you good luck on your journey.\n")
-    # Allow the player to input the names of people in the group.
     party_member0 = input("I see you have another with you.  What is their name?\n") 
     party_member1 = input("You are joined by a third.  What should I call them?\n")
     party_member2 = input("Four people makes quite a crowd.  By what name is this person known?\n")
     party_member3 = input("Ah yes, the fifth and final member.  Give me their name please.\n")
-    # Print every name back on the screen.
     print(f"You are being joined by {party_member0}, {party_member1}, {party_member2}, and {party_member3}.\n")
-    # Print out some information describing the different job roles and allow the player to choose one.
     print("""
 The Lewis and Clark expedition had many important job roles.  Each person had to do their share to ensure
 that the trip went safely.  One of the most important roles was that of translator.  Lewis and Clark would
@@ -111,10 +113,11 @@ What job would you like?
  -- Trapper
     """)
     starting_role = input("How would you like to contribute?  Type the job and press enter.\n")
-
+    
+    # Fix the following if/elif/else statements with starting_role == for each option. 
     if starting_role == "translator" or "Translator":
         print("You have chosen translator. You will receive the highest score bonus and starting money.\n")
-        score_bonus = 3
+        score_bonus = 1
         money = 1000
     elif starting_role == "trapper" or "Trapper":
         print("You have chosen trapper.  You will receive a good score bonus and more starting money.\n")
@@ -122,7 +125,7 @@ What job would you like?
         money = 750
     elif starting_role == "cook" or "Cook":
         print("You have chosen cook.  You will receive the lowest bonus score and starting money.\n")
-        score_bonus = 1
+        score_bonus = 3
         money = 500
     else:
         print("You did not pick a job, so you will be a dishwasher.  You will receive no bonus and the least money.\n"
@@ -131,6 +134,9 @@ What job would you like?
     
 player_info() 
     
+
+
+
 
     
     
