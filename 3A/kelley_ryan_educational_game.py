@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/08/20> <1:10PM>, <Version 0.47a>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/10/20> <1:02PM>, <Version 0.49>
 
 # Player Variables 
 player_score = 0
@@ -14,15 +14,36 @@ start_money = 0
 num_boats = 0
 num_guns = 0
 num_bullets = 0
-amount_food = 0
-amount_water = 0
+num_food = 0
+num_water = 0
 num_wagons = 0
 num_horses = 0
 num_wagon_wheel = 0
 num_wagon_axle = 0
 num_clothing = 0
 num_pelts = 0
-num_traps = 0 
+num_traps = 0
+
+# Cost Variables 
+cost_boats = 20.0 # Price per boat. 
+cost_guns = 5.0 # price per gun. 
+cost_bullets = 2.50 # Box of 50. 
+cost_food = 0.25 # per pound.
+cost_water = 0.10 # per gallon.
+cost_wagons = 10.0 # per wagon.
+cost_horses = 5.0 # per pair. 
+cost_wagon_wheel = 3.50 # each
+cost_wagon_axle = 3.50 # each 
+cost_clothing = 1.0 # per set
+cost_pelts = 2.0 # each 
+cost_traps = 1.0 # each
+
+# Location Variables
+starting_point = "St. Louis, Missouri"
+ending_point = "Fort Calstop" 
+location0 = " "
+location1 = " "
+location2= " "
 
 # Time / Date / Distance Variables 
 game_time = 0
