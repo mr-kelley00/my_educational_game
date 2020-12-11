@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <1:17PM> <12/09/20>, <Version 0.51>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:58PM> <12/11/20>, <Version 0.52>
 
 # Player Variables
 player_role = ""
@@ -128,10 +128,24 @@ Which job would you like to pick?
     player_role = input("Please type a job name and press enter.\n")
     if player_role == "Translator" or player_role == "translator" or player_role == "TRANSLATOR": 
         print("You have selected translator.\n")
+        starting_resources = 1000
+        score_bonus = 0.5
+        player_role = 0
     elif player_role == "Cook" or player_role == "cook" or player_role == "COOK":
         print("You have selected cook.\n")
+        starting_resources = 750
+        score_bonus = 1.0
+        player_role = 1
     elif player_role == "Trapper" or player_role == "trapper" or player_role == "TRAPPER":
         print("You have selected trapper.\n")
-    else: 
+        starting_resources = 500
+        score_bonus = 1.5
+        player_role = 2
+    else:
+        print("You will just be a pot scrubber.\n")
+        starting_resources = 250
+        score_bonus = 2.0
+        player_role = 3
+    print(f"You will have {starting_resources} dollars and receive a {score_bonus} score multiplier.\n")
     
 player_info() 
