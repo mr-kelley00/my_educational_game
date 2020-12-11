@@ -36,6 +36,14 @@ cost_wagons = 10.0
 cost_wagon_wheel = 1.50
 cost_wagon_axle = 1.50
 
+# Location Variables
+starting_point = "St. Louis, Missouri"
+ending_point = "Fort Calstop"
+location0 =  " "
+location1 =  " "
+location2 =  " "
+location3 =  " "
+
 # Disaster Variables, % chance it occurs.  
 chc_sick = 0.0
 chc_break_wheel = 0.0
