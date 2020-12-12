@@ -1,7 +1,5 @@
 # <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:41PM> <12/04/20>, <Version 0.51>
 
-# Global Variables
-
 # Player Variables
 occupation = ""
 start_money = 0
