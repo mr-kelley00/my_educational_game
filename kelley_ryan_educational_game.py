@@ -27,7 +27,6 @@ num_cows = 0
 num_chickens = 0
 num_pigs = 0 
 
-
 # Disaster Variables
 chnc_sick = 0.0
 chnc_die = 0.0
