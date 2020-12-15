@@ -164,20 +164,30 @@ player_info()
 def show_inventory():
     print(f"""
 {player_name}, this is what you have in your inventory right now:
-    {amt_food} 
-    {amt_water} 
-    {amt_clothing} 
-    {amt_wagons}
-    {amt_boats}
-    {amt_horses}
-    {num_guns}
-    {num_bullets}
-    {num_wagon_wheel}
-    {num_wagon_axle}
-    {num_boat_oar}
-    {num_pelts}
+    {amt_food} pounds of food remain in your stores.
+    {amt_water} gallons of fresh water remaining.  
+    {amt_clothing} sets of clothing remain for you and your party. 
+    {amt_wagons} wagons are still operational.  
+    {amt_boats} boats are safe for travel.
+    {amt_horses} horses fit and healthy to ride.
+    {num_guns} guns available for defense and hunting.
+    {num_bullets} bullets still remain in our ammo locker.
+    {num_wagon_wheel} wheels left in case of emergency repairs.
+    {num_wagon_axle} axles are in good working order.
+    {num_boat_oar} oars still exist in our supplies.
+    {num_pelts} animal pelts are available for trade. 
     \n
     """)
 
-show_inventory()    
+show_inventory()
+
+def buy_sell():
+    # You will need to declare the inventory items as GLOBAL variables.
+    # How much money does the player have?
+    # What items are available to buy and sell?
+    # What is the cost multiplier for the current location?
+    # If I buy 5 "copies" of an item, how much does that cost me?
+    # If I sell 10 "copies" of an item, how much money do I get?
+    
+
     
