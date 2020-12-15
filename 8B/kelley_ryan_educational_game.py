@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <2:46PM> <12/09/20>, <Version 0.47a>
+# <Educational Game>, <Ryan Kelley>, <2:34PM> <12/15/20>, <Version 0.50>
 
 # Player Variables
 player_name = ""
@@ -58,9 +58,6 @@ wagon_axle_break = 0.0
 hostile_natives = 0.0
 animal_attack = 0.0
 
-
-
-
 # Main Menu Function
 def main_menu():
     print("+=====++=====++=====++=====++=====++=====++=====++=====++=====+")
@@ -111,6 +108,16 @@ def display_info():
 
 # Player Info. Function
 def player_info():
+    
+    global player_name
+    global party_member0
+    global party_member1
+    global party_member2
+    global party_member3
+    global starting_role
+    global score_bonus
+    global starting_money
+        
     player_name = input("What is your name brave explorer?  Please type your name and press enter.\n")
     print(f"It is nice to meet you {player_name}.  I wish you good luck on your journey.\n")
     party_member0 = input("I see you have another with you.  What is their name?\n") 
@@ -134,26 +141,45 @@ What job would you like?
     starting_role = input("How would you like to contribute?  Type the job and press enter.\n")
     
     # Fix the following if/elif/else statements with starting_role == for each option. 
-    if starting_role == "translator" or "Translator":
+    if starting_role == "translator" or starting_role == "Translator" or starting_role == "TRANSLATOR":
         print("You have chosen translator. You will receive the highest score bonus and starting money.\n")
         score_bonus = 1
         money = 1000
-    elif starting_role == "trapper" or "Trapper":
+    elif starting_role == "trapper" or starting_role == "Trapper" or starting_role == "TRAPPER":
         print("You have chosen trapper.  You will receive a good score bonus and more starting money.\n")
         score_bonus = 2
         money = 750
-    elif starting_role == "cook" or "Cook":
+    elif starting_role == "cook" or starting_role == "Cook" or starting_role == "COOK":
         print("You have chosen cook.  You will receive the lowest bonus score and starting money.\n")
         score_bonus = 3
         money = 500
     else:
-        print("You did not pick a job, so you will be a dishwasher.  You will receive no bonus and the least money.\n"
+        print("You did not pick a job, so you will be a dishwasher.  You will receive no bonus and the least money.\n")
         score_bonus = 0
         money = 250
-    
+    print(f"You will start with {money} dollars and a {score_bonus} score multiplier.\n") 
 player_info() 
     
+# Show Inventory
+def show_inventory():
+    print(f"""
+{num_food} pounds of food. 
+{num_water} gallons of water.
+{num_wagons} working wagons. 
+{num_boats} boats that float.
+{num_guns} guns that go boom! 
+{num_bullets} bullets that go pew pew. 
+{num_horses} horses that say Neigh!   
+{num_wagon_wheel} wagon wheels for emergency repairs. 
+{num_wagon_axle} wagon axles for emergency repairs.
+{num_pelts} animal pelts for trade.
+{num_beads} beads for trade. 
+{num_traps} operational traps for catching animals. 
+\n
+""")
 
+show_inventory() 
+    
 
 
 
