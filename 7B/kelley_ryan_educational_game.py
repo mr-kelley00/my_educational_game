@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:58PM> <12/11/20>, <Version 0.52>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:40PM> <12/15/20>, <Version 0.53>
 
 # Player Variables
 player_role = ""
@@ -104,6 +104,15 @@ def disp_info():
 
 # Player Info. Function
 def player_info():
+    # Declare these variables as global so they are saved for the whole program.
+    global player_name
+    global party_member0
+    global party_member1
+    global party_member2
+    global player_role
+    global starting_resources
+    global score_bonus
+    
     player_name = input("Please give me your name brave adventurer.  What should I call you?\n")
     print(f"Wow!  I have never met anyone named {player_name}.  It's great to meet you!\n")
     # Next few lines of code will need to get the names of the other people in the party.
@@ -147,5 +156,28 @@ Which job would you like to pick?
         score_bonus = 2.0
         player_role = 3
     print(f"You will have {starting_resources} dollars and receive a {score_bonus} score multiplier.\n")
-    
+    return player_name, party_member0, party_member1, party_member2, starting_resources, score_bonus
+
 player_info() 
+
+# Buying and Selling Items
+def show_inventory():
+    print(f"""
+{player_name}, this is what you have in your inventory right now:
+    {amt_food} 
+    {amt_water} 
+    {amt_clothing} 
+    {amt_wagons}
+    {amt_boats}
+    {amt_horses}
+    {num_guns}
+    {num_bullets}
+    {num_wagon_wheel}
+    {num_wagon_axle}
+    {num_boat_oar}
+    {num_pelts}
+    \n
+    """)
+
+show_inventory()    
+    
