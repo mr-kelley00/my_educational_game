@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:31AM> <12/09/20>, <Version 0.54>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:13AM> <12/15/20>, <Version 0.55>
 
 # Player Variables
 starting_role = ""
@@ -113,13 +113,30 @@ def player_info():
         For this journey, Lewis and Clark will need people with different skills and experience. {player_name}, you will need to
         choose one of these roles.  They are as follows:
         
-        1) Cook
-        2) Trapper
-        3) Interpreter
+        -- Cook
+        -- Trapper
+        -- Interpreter
         
         Each role brings certain benefits and drawbacks to the journey.  Choose carefully.\n
         """) 
     starting_role = input("Which job role do you want?\n")
+    if starting_role == "Cook" or starting_role == "cook" or starting_role == "COOK":
+        print("You have chosen the role of cook.\n")
+        starting_money = 500
+        score_bonus = 3.0
+    elif starting_role == "Trapper" or starting_role == "trapper" or starting_role == "TRAPPER":
+        print("You have chosen the role of trapper.\n")
+        starting_money = 750
+        score_bonus = 2.0
+    elif starting_role == "Interpreter" or starting_role == "interpreter" or starting_role == "INTERPRETER":
+        print("You have chosen the role of interpreter.\n")
+        starting_money = 1000
+        score_bonus = 1.0
+    else:
+        print("You did not pick a role correctly.  You wil be washing pots and pans.\n")
+        starting_money = 250
+        score_bonus = 0.5 
+    print(f"You will start with ${starting_money} dollars and a {score_bonus} score multiplier.\n")     
     
             
     
