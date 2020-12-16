@@ -1,6 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:25PM> <12/16/20>, <Version 0.53a>
-
-# Global Variables
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:36PM> <12/16/20>, <Version 0.53b>
 
 # Player Variables
 occupation = "" 
@@ -30,7 +28,18 @@ num_pigs = 0
 # Costs of Supplies
 cost_food = 0
 cost_water = 0
-# Fill in costs for remaining supplies. 
+cost_boats = 0
+cost_guns = 0
+cost_bullets = 0
+cost_swords = 0
+cost_axes = 0
+cost_horses = 0
+cost_wagons = 0
+cost_clothing = 0
+cost_cows = 0
+cost_chickens = 0
+cost_pigs = 0
+
 
 
 # Disaster Variables
@@ -69,11 +78,14 @@ def main_menu():
         exit() 
     return player_choice
 
+#main_menu() 
+
 # Display info about the expedition.  
 def disp_info():
     print("""
         Write at least ONE PARAGRAPH of FACTUAL INFORMATION ABOUT YOUR EXPEDITION.\n
         """)
+#disp_info()
 
 # Player Info Function
 def player_info():
@@ -112,11 +124,11 @@ def player_info():
         score_bonus = 0
         start_money = 250
     print(f"{player_name}, you will have {start_money} DOLLARS / YEN / GOLD.\n")
-    print(f"You will also receive a score multiplier of {score_bonus} when you finish.\n")
+    print(f"You will also receive a score multiplier of {score_bonus} when you finish.\n")   
     
-    
-player_info()
+# player_info()
 
+# Show Inventory Function 
 def show_inventory():
     print(f"""
 {amount_food} pounds of food. 
