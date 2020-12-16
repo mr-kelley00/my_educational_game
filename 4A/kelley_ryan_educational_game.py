@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:47PM> <12/08/20>, <Version 0.52>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:25PM> <12/16/20>, <Version 0.53a>
 
 # Global Variables
 
@@ -77,6 +77,9 @@ def disp_info():
 
 # Player Info Function
 def player_info():
+    global player_name, party_member0, party_member1, party_member2, party_member3
+    global score_bonus, start_money, occupation
+    
     player_name = input("What should I call you?\n")
     print(f"{player_name} is a mighty fine name.  What about the other people in your group?\n")
     party_member0 = input("Who else is traveling with you?\n")
@@ -112,7 +115,22 @@ def player_info():
     print(f"You will also receive a score multiplier of {score_bonus} when you finish.\n")
     
     
-player_info()           
+player_info()
+
+def show_inventory():
+    print(f"""
+{amount_food} pounds of food. 
+{amount_water} gallons of water.
+{num_boats} boats that sail. 
+{num_guns} guns that go pew pew!
+{num_bullets} bullets available for defense.
+{num_horses} healthy horses.
+{num_wagons} working wagons.
+{num_clothing} comfortable sets of clothing. 
+\n
+""")
+
+show_inventory() 
     
 
 
