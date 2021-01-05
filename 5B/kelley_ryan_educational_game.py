@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:13AM> <12/15/20>, <Version 0.55>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:23AM> <01/05/21>, <Version 0.60>
 
 # Player Variables
 starting_role = ""
@@ -137,11 +137,23 @@ def player_info():
         starting_money = 250
         score_bonus = 0.5 
     print(f"You will start with ${starting_money} dollars and a {score_bonus} score multiplier.\n")     
-    
-            
-    
-player_info() 
+   
+# player_info() 
 
+def show_inventory():
+    print(f"""
+    {amt_water} gallons of water remain.
+    {amt_food} pounds of food are safe to eat.
+    {num_clothing} sets of clothing are clean.
+    {num_guns} guns are operational.
+    {num_bullets} bullets are available to the expedition. 
+    {amt_rope} feet of rope are safe and secure.
+    {num_horses} healthy horses are at our service.
+    {num_boats} boats float safely for river crossings.
+    {num_wagons} working wagons are ready for transport.
+    {num_wagon_wheel} wagon wheels can be used for repairs.
+    {num_wagon_axle} wagon axles are sturdy enough for use. 
+    \n
+    """)
 
-
-
+show_inventory()
