@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <12/10/20> <1:02PM>, <Version 0.49>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/06/21> <12:52PM>, <Version 0.50>
 
 # Player Variables 
 player_score = 0
@@ -94,10 +94,17 @@ def disp_info():
     print("Also make it print some tips and tricks to help the player in the game.\n")
     print("For example, with Oregon trail this part of the game explained the best time to leave.\n")
 
-disp_info()           
+# disp_info()           
 
 # Player Info. Function
 def player_info():
+
+    global player_name
+    global party_member0
+    global party_member1
+    global party_member2
+    global party_member3
+    
     player_name = input("Greetings brave traveler!  What should I call you?\n")
     party_member0 = input("I see you have a second person with you.  What is their name?\n")
     party_member1 = input("You have a third?  By what name are they known?\n")
@@ -105,8 +112,17 @@ def player_info():
     party_member3 = input("Now five of you?  Any more will be too many.  What do I call them?\n")
     print(f"{player_name}, you are a brave leader.  Good luck to you and {party_member0}, {party_member1}, {party_member2}, and {party_member3}.\n")
     print("""
-Type your job role information here. 
+The Lewis and Clark expedition had many important job roles.  Each person had to do their share
+to ensure that the trip went safely.  One of the most important roles was that of translator.  Lewis
+and Clark would encounter many native tribes along the journey, communicating with them was extremely
+important. The trappers that accompanied Lewis and Clark were able to provide food and pelts, both of
+which could be used as valuable trade items with the tribes.  Finally, the cooks were also important
+members of the group.  Keeping the expedition well fed meant better health for everyone.
 
+What job would you like?
+-- Translator
+-- Trapper
+-- Cook
 
     """)
 player_info()
