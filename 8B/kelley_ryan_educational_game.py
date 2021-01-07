@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <2:34PM> <12/15/20>, <Version 0.50>
+# <Educational Game>, <Ryan Kelley>, <2:22PM> <1/07/21>, <Version 0.51>
 
 # Player Variables
 player_name = ""
@@ -72,7 +72,7 @@ def main_menu():
     print("+    2. Learn more about the journey.                         +")
     print("+    3. See the high scores.                                  +")
     print("+    4. Exit Game                                             +")
-    print("+                                                             +")
+    print("                                                              +")
     print("+=====++=====++=====++=====++=====++=====++=====++=====++=====+")
     global player_choice
     player_choice = int(input("Please type your choice and press enter.  \n"))
@@ -178,7 +178,32 @@ def show_inventory():
 \n
 """)
 
-show_inventory() 
+show_inventory()
+
+# Trading Functions
+
+def buy_item(): 
+    # identify player balance
+    # display list of items for sale
+    
+    # display costs of items
+    # allow player to pick item and quantity from list
+    # calculate cost (num_items * item_cost)
+    # pay (player_money - cost)
+    # add item to player inventory
+    
+def sell_item(): 
+    # identify vendor balance
+    # display list of items for sale from player
+    # display buyback values of items 
+    # allow player to pick item and quantity from inventory to sell
+    # calculate total_value (num_items * item_value)
+    # pay player (player_money += total_value)
+    # subtract item from player inventory
+
+
+
+
     
 
 
