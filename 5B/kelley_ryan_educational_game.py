@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:23AM> <01/05/21>, <Version 0.60>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <8:45AM> <01/07/21>, <Version 0.61>
 
 # Player Variables
 starting_role = ""
@@ -157,3 +157,22 @@ def show_inventory():
     """)
 
 show_inventory()
+
+# Trading Functions
+def buy_item():
+
+    # how much $ do I have?
+    # cost of the item
+    # amount of item available
+    # pay for it (starting_money - cost) 
+    # add it to inventory (num_wheels += 1 or num_bullets += 50) 
+
+def sell_item(): 
+    # how much $ does the vendor have?
+    # value of the item
+    # amount of item I have 
+    # sell it (value_item * num_items) 
+    # subtract it to inventory (num_wheels += -1 or num_bullets += -50) 
+
+
+# def 
