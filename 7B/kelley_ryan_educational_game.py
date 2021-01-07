@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:40PM> <12/15/20>, <Version 0.53>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <1:09PM> <01/07/20>, <Version 0.54>
 
 # Player Variables
 player_role = ""
@@ -181,13 +181,24 @@ def show_inventory():
 
 show_inventory()
 
-def buy_sell():
-    # You will need to declare the inventory items as GLOBAL variables.
-    # How much money does the player have?
-    # What items are available to buy and sell?
-    # What is the cost multiplier for the current location?
-    # If I buy 5 "copies" of an item, how much does that cost me?
-    # If I sell 10 "copies" of an item, how much money do I get?
-    
+# Trading Functions
+
+def buy_item():
+    # check player money balance
+    # what is for sale?
+    # how much is it?
+    # how many are available?
+    # pay for it.  (player_money - cost)
+    # add the items to the player inventory
+    # remove from vendor inventory (optional, bonus points if you can make it work.)
+
+def sell_item(): 
+    # check vendor balance
+    # what does the player have to sell? is it worth anything?
+    # what value does the item have?
+    # how many to buy from player?
+    # pay player (player_money += item_value)
+    # remove from player inventory
+    # (optional) add to vendor inventory 
 
     
