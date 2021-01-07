@@ -8,7 +8,7 @@ party_member1 = ""
 party_member2 = ""
 party_member3 = ""
 player_job = ""
-start_money = 0
+money = 0
 
 # Inventory Variables 
 num_boats = 0
@@ -125,5 +125,18 @@ What job would you like?
 -- Cook
 
     """)
+    global player_job
+    player_job = input("Please type the name of the job and press enter.\n")
+    global score_bonus
+    
+    if player_job == "translator" or player_job == "Translator" or player_job == "TRANSLATOR":
+        print("You have chosen to be a translator.\n")
+        score_bonus = 1
+        money = 1000
+    elif What goes here? 
+
+    else: 
+    
+    
 player_info()
 
