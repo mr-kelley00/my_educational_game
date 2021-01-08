@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/08/21> <12:13PM>, <Version 0.51>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/08/21> <12:19PM>, <Version 0.52>
 
 # Player Variables 
 player_score = 0
@@ -141,6 +141,7 @@ What job would you like?
         print("You have chosen to be a cook.\n")
         score_bonus = 3
         money = 500
+    print(f"You will start with a score bonus of {score_bonus} and ${money} dollars.\n") 
     
     
 player_info()
