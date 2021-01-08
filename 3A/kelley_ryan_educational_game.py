@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/06/21> <12:52PM>, <Version 0.50>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/08/21> <12:13PM>, <Version 0.51>
 
 # Player Variables 
 player_score = 0
@@ -133,9 +133,14 @@ What job would you like?
         print("You have chosen to be a translator.\n")
         score_bonus = 1
         money = 1000
-    elif What goes here? 
-
-    else: 
+    elif player_job == "trapper" or player_job == "Trapper" or player_job == "TRAPPER":
+        print("You have chosen to be a trapper.\n")
+        score_bonus = 2
+        money = 750
+    else:
+        print("You have chosen to be a cook.\n")
+        score_bonus = 3
+        money = 500
     
     
 player_info()
