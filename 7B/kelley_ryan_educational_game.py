@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:39PM> <01/11/21>, <Version 1.0.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <1:10PM> <01/11/21>, <Version 1.0.1>
 
 # Player Variables
 player_role = ""
@@ -36,7 +36,7 @@ cost_wagon_wheel = 2.50 # each
 cost_wagon_axle = 3.50 # each...Lochness Monster! 
 cost_boat_oar = 1.0 # each
 cost_pelts = 0.75 # each
-cost_mult = 1.0 
+cost_multi = 1.0 
 
 # Disaster Variables, as a percentage chance of happening. 
 chnc_sick = 0.0
@@ -61,7 +61,8 @@ loc2_dist = 0
 location3 = "Fort Mandan"
 loc3_dist = 0
 location4 = "Mount Hood" 
-loc4_dist = 0 
+loc4_dist = 0
+current_location = starting_point
 
 # Main Menu Function
 def main_menu():
@@ -179,7 +180,7 @@ def show_inventory():
     \n
     """)
 
-show_inventory()
+# show_inventory()
 
 # Trading Functions
 
@@ -204,10 +205,53 @@ def buy_item():
     global num_wagon_wheel 
     global num_wagon_axle 
     global num_boat_oar 
-    global num_pelts 
-    
+    global num_pelts
 
-def sell_item(): 
+    if current_location == "St. Louis, Missouri":
+        store_name = "Welcome to Bob's Building Supply and General Store!\n"
+        cost_multi = 0.75
+    elif current_location == "St. Charles, Missouri":
+        store_name = "Welcome to the St. Charles Supermart!\n"
+        cost_multi = 1.0
+    elif current_location == "Missouri and Bad River Crossing":
+        store_name = "Welcome to Bad River Outfitters!\n"
+        cost_multi = 1.5
+    elif current_location == "Lehmi Pass":
+        store_name = "Welcome to Lehmi Pass General Store! We PASS the savings on to you!\n"
+        cost_multi = 1.75
+    elif current_location == "Fort Mandan":
+        store_name = "Welcome to the Fort Mandan Supply Depot!\n"
+        cost_multi = 1.75
+    else: 
+        store_name = "Welcome to Mount Hood Munitions and Rations!\n"
+        cost_multi = 2.0
+
+    while True:
+        
+        print(f"""
+                                {store_name}
+
+        [=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=]
+        [ Your Balance: ${money}                              ]
+        [ 00) Water                                           ]
+        [ 01) Food                                            ]
+        [ 02) Clothing                                        ]
+        [ 03) Guns                                            ]
+        [ 04) Bullets                                         ]
+        [ 05) Rope                                            ]
+        [ 06) Horses                                          ]
+        [ 07) Boats                                           ]
+        [ 08) Wagons                                          ]
+        [ 09) Wagon Wheels                                    ]
+        [ 10) Wagon Axle                                      ]                      
+        [ 20) Exit Shop                                       ]
+        [=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=]
+        """)
+        break 
+
+buy_item()
+    
+# def sell_item(): 
     # check vendor balance
     # what does the player have to sell? is it worth anything?
     # what value does the item have?
