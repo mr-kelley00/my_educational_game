@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <2:00PM> <1/11/21>, <Version 1.0.0>
+# <Educational Game>, <Ryan Kelley>, <2:44PM> <1/11/21>, <Version 1.0.1>
 
 # Player Variables
 player_name = ""
@@ -25,7 +25,7 @@ num_beads = 0
 num_traps = 0
 
 # Inventory Cost Variables
-cost_mult = 1.0
+cost_multi = 1.0 # cost multiplier 
 cost_food = 0.25 # per pound
 cost_water = 0.50 # per 10 gallons
 cost_wagons = 10.0 # each
@@ -42,9 +42,10 @@ cost_traps = 1.0 # each
 # Location Variables 
 starting_point = "St. Louis, Missouri"
 ending_point = "Fort Calstop"
-locat0 = " "
-locat1 = " "
-locat2 = " " 
+locat0 = "Test 0"
+locat1 = "Test 1"
+locat2 = "Test 2"
+current_location = starting_point 
 
 # Disaster Variables, % chance of occurrence.
 player_sick = 0.0
@@ -116,7 +117,7 @@ def player_info():
     global party_member3
     global starting_role
     global score_bonus
-    global starting_money
+    global money
         
     player_name = input("What is your name brave explorer?  Please type your name and press enter.\n")
     print(f"It is nice to meet you {player_name}.  I wish you good luck on your journey.\n")
@@ -202,12 +203,47 @@ def buy_item():
     global num_wagon_axle 
     global num_pelts 
     global num_beads 
-    global num_traps 
+    global num_traps
+    global money 
+    
+    # Assign Store Name and Cost Multiplier based on current_location
+    if current_location == "St. Louis, Missouri": 
+        store_name = "Sue's St. Louis Super Supply Store!\n"
+        cost_multi = 0.75 
+    elif current_location == "Test 0":
+        store_name = "Test 1 Store!\n"
+        cost_multi = 1.5 
+    else: # THIS WILL BE THE LAST STORE YOU CAN VISIT BEFORE WINNING.
+        store_name = "Test 2 Store"
+        cost_multi = 2.0
+
+    while True:
+        print(f"""
+                        {store_name}
+        Your Available Funds: ${money}
+        [---------------------------------------------------------------]
+        [                     Items Available for Sale                  ]
+        [ 0)  Food                                                      ]
+        [ 1)  Water                                                     ]
+        [ 2)  Wagons                                                    ]
+        [ 3)  Boats                                                     ]
+        [ 4)  Guns                                                      ]
+        [ 5)  Bullets                                                   ]
+        [ 6)  Horses                                                    ]
+        [ 7)  Wagon Wheels                                              ]
+        [ 8)  Wagon Axles                                               ]
+        [ 9)  Pelts                                                     ]
+        [ 10) Traps                                                     ]
+        [---------------------------------------------------------------]
+
+        """)
+        break 
+buy_item() 
+        
     
     
     
-    
-def sell_item(): 
+# def sell_item(): 
     # identify vendor balance
     # display list of items for sale from player
     # display buyback values of items 
