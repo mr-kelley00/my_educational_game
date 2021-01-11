@@ -1,4 +1,4 @@
-# <Educational Game>, <Ryan Kelley>, <2:22PM> <1/07/21>, <Version 0.51>
+# <Educational Game>, <Ryan Kelley>, <2:00PM> <1/11/21>, <Version 1.0.0>
 
 # Player Variables
 player_name = ""
@@ -185,12 +185,27 @@ show_inventory()
 def buy_item(): 
     # identify player balance
     # display list of items for sale
-    
     # display costs of items
     # allow player to pick item and quantity from list
     # calculate cost (num_items * item_cost)
     # pay (player_money - cost)
     # add item to player inventory
+
+    global num_food 
+    global num_water
+    global num_wagons 
+    global num_boats 
+    global num_guns 
+    global num_bullets 
+    global num_horses 
+    global num_wagon_wheel 
+    global num_wagon_axle 
+    global num_pelts 
+    global num_beads 
+    global num_traps 
+    
+    
+    
     
 def sell_item(): 
     # identify vendor balance
