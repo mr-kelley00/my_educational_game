@@ -85,14 +85,15 @@ def main_menu():
     else:
         print("Ahh, no heart for adventure today I see.  Farewell, until next time.\n")
         exit()
+
 # main_menu()
-# print(player_choice)
         
 # Display Info Function
 def disp_info():
     print("""
         Update to actual paragraph of historical facts and game play tips.
         """)
+
 # disp_info() 
 
 # High Scores
@@ -161,12 +162,13 @@ def show_inventory():
 # show_inventory()
 
 # Trading Functions
+
 def buy_item():
     
     # how much $ do I have?
     # cost of the item
     # amount of item available
-    #pay for it (starting_money - cost) 
+    # pay for it (starting_money - cost) 
     # add it to inventory (num_wheels += 1 or num_bullets += 50)
 
     global money
@@ -369,11 +371,6 @@ def buy_item():
         else:
             print("Thanks for shopping.  Come back any time!\n")
             break
-        exit_shop = 20 
-
-    
-            
-    
 
 buy_item()
 
@@ -384,5 +381,4 @@ buy_item()
     # sell it (value_item * num_items) 
     # subtract it to inventory (num_wheels += -1 or num_bullets += -50) 
 
-
-# def 
+# Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.  
