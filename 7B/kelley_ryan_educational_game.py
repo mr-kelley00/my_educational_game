@@ -1,8 +1,8 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <1:09PM> <01/07/20>, <Version 0.54>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:39PM> <01/11/21>, <Version 1.0.0>
 
 # Player Variables
 player_role = ""
-starting_resources = 0
+money = 0
 score_bonus = 0
 player_name = ""
 party_member0 = ""
@@ -110,7 +110,7 @@ def player_info():
     global party_member1
     global party_member2
     global player_role
-    global starting_resources
+    global money
     global score_bonus
     
     player_name = input("Please give me your name brave adventurer.  What should I call you?\n")
@@ -137,26 +137,26 @@ Which job would you like to pick?
     player_role = input("Please type a job name and press enter.\n")
     if player_role == "Translator" or player_role == "translator" or player_role == "TRANSLATOR": 
         print("You have selected translator.\n")
-        starting_resources = 1000
+        money = 1000
         score_bonus = 0.5
         player_role = 0
     elif player_role == "Cook" or player_role == "cook" or player_role == "COOK":
         print("You have selected cook.\n")
-        starting_resources = 750
+        money = 750
         score_bonus = 1.0
         player_role = 1
     elif player_role == "Trapper" or player_role == "trapper" or player_role == "TRAPPER":
         print("You have selected trapper.\n")
-        starting_resources = 500
+        money = 500
         score_bonus = 1.5
         player_role = 2
     else:
         print("You will just be a pot scrubber.\n")
-        starting_resources = 250
+        money = 250
         score_bonus = 2.0
         player_role = 3
-    print(f"You will have {starting_resources} dollars and receive a {score_bonus} score multiplier.\n")
-    return player_name, party_member0, party_member1, party_member2, starting_resources, score_bonus
+    print(f"You will have {money} dollars and receive a {score_bonus} score multiplier.\n")
+    return player_name, party_member0, party_member1, party_member2, money, score_bonus
 
 player_info() 
 
@@ -191,6 +191,21 @@ def buy_item():
     # pay for it.  (player_money - cost)
     # add the items to the player inventory
     # remove from vendor inventory (optional, bonus points if you can make it work.)
+
+    global money
+    global amt_food 
+    global amt_water
+    global amt_clothing
+    global amt_wagons 
+    global amt_boats 
+    global amt_horses 
+    global num_guns 
+    global num_bullets
+    global num_wagon_wheel 
+    global num_wagon_axle 
+    global num_boat_oar 
+    global num_pelts 
+    
 
 def sell_item(): 
     # check vendor balance
