@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:58AM> <01/11/21>, <Version 0.62>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:03AM> <01/13/21>, <Version 1.0.0>
 
 # Player Variables
 starting_role = ""
@@ -225,7 +225,7 @@ def buy_item():
             """)
         item_buy = int(input("What do you want to buy?  Type the number and press enter.\n"))
 
-        if item_buy == 0:
+        if item_buy == 0: # Water
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -238,7 +238,7 @@ def buy_item():
                 print(f"You now have {amt_water} gallons of water.\n")
             else:
                 print("Ok, perhaps another item?\n") 
-        elif item_buy == 1:
+        elif item_buy == 1: # Food
             item_cost = cost_food * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -251,7 +251,7 @@ def buy_item():
                 print(f"You now have {amt_water} pounds of food.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 2:
+        elif item_buy == 2: # Clothing
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -264,7 +264,7 @@ def buy_item():
                 print(f"You now have {amt_water} gallons of water.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 3:
+        elif item_buy == 3: # Guns
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -277,7 +277,7 @@ def buy_item():
                 print(f"You now have {amt_water} gallons of water.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 4:
+        elif item_buy == 4: # Bullets
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -290,7 +290,7 @@ def buy_item():
                 print(f"You now have {amt_water} gallons of water.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 5:
+        elif item_buy == 5: # Rope
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -303,7 +303,7 @@ def buy_item():
                 print(f"You now have {amt_water} gallons of water.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 6:
+        elif item_buy == 6: # Horses
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -316,7 +316,7 @@ def buy_item():
                 print(f"You now have {amt_water} gallons of water.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 7:
+        elif item_buy == 7: # Boats
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -329,7 +329,7 @@ def buy_item():
                 print(f"You now have {amt_water} gallons of water.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 8:
+        elif item_buy == 8: # Wagons
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -342,7 +342,7 @@ def buy_item():
                 print(f"You now have {amt_water} gallons of water.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 9:
+        elif item_buy == 9: # Wagon Wheels
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -355,7 +355,7 @@ def buy_item():
                 print(f"You now have {amt_water} gallons of water.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 10:
+        elif item_buy == 10: # Wagon Axles 
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
