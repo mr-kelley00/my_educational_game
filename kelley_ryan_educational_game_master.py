@@ -21,7 +21,7 @@ num_horses = 0
 num_boats = 0
 num_wagons = 0
 num_wagon_wheel = 0
-num_wagon_axle = 0 
+num_wagon_axle = 0
 
 # Inventory Costs
 cost_water = 0.10 
@@ -166,10 +166,13 @@ def show_inventory():
 def buy_item():
     
     # how much $ do I have?
-    # cost of the item
+    # cost of the item, 
     # amount of item available
-    # pay for it (starting_money - cost) 
+    # calculate total cost (num of items * cost per item)
+    # pay for it (money - total cost) 
     # add it to inventory (num_wheels += 1 or num_bullets += 50)
+
+
 
     global money
     global amt_water

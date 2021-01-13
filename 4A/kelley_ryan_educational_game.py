@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:36PM> <12/16/20>, <Version 0.53b>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:45PM> <01/12/21>, <Version 1.0.1>
 
 # Player Variables
 occupation = "" 
@@ -144,10 +144,30 @@ def show_inventory():
 
 show_inventory() 
     
+# Trading Transactions
 
+def buy_item():
+    global num_bullets
+    global num_wagons
+    global amount_food
+    global amount_water 
+    global num_boats 
+    global num_guns 
+    global num_bullets 
+    global num_horses 
+    global num_wagons 
+    global num_clothing 
+    global num_cows 
+    global num_chickens 
+    global num_pigs 
 
-
-
+    if current_location == "St. Louis, Missouri":
+        store_name = "Sally's St. Louis Super Mart!\n")
+        cost_multi = 0.75
+    elif ?:
+        store_name =
+        cost_multi =
+    else:  
 
 
 
