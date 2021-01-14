@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/14/21> <12:37PM>, <Version 1.0.1>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/14/21> <12:58PM>, <Version 1.0.2>
 
 # Player Variables 
 player_score = 0
@@ -105,6 +105,7 @@ def player_info():
     global party_member1
     global party_member2
     global party_member3
+    global money 
     
     player_name = input("Greetings brave traveler!  What should I call you?\n")
     party_member0 = input("I see you have a second person with you.  What is their name?\n")
@@ -186,7 +187,26 @@ def buy_item():
         store_name = "Last Location before End Point!\n"
         cost_multiplier = 2.0 
         
-    
+    while True:
+        print(f"""
+                            {store_name}
+        Your Balance: ${money}
+        ++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++
+        |                      Available Items for Sale                  |
+        |                                                                |
+        | 0) Boats    1) Guns     2) Bullets    3) Food                  |
+        | 4) Water    5) Horses   6) Wheels     7) Axles                 | 
+        | 8) Pelts    9) Traps                                           |
+        | 20) Exit Store                                                 |
+        ++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++
+        \n
+        """)
+        item_buy = int(input("Please type a number and press enter.\n"))
+        print(item_buy)
+        break
+
+buy_item() 
+        
     
     
     
