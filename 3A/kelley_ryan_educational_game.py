@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/14/21> <12:25PM>, <Version 1.0.0>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/14/21> <12:37PM>, <Version 1.0.1>
 
 # Player Variables 
 player_score = 0
@@ -44,6 +44,7 @@ ending_point = "Fort Calstop"
 location0 = " "
 location1 = " "
 location2= " "
+current_location = starting_point
 
 # Time / Date / Distance Variables 
 game_time = 0
@@ -166,7 +167,26 @@ def buy_item():
     global num_wagon_wheel 
     global num_wagon_axle 
     global num_pelts 
-    global num_traps 
+    global num_traps
+    global money
+
+    if current_location == "St. Louis, Missouri":
+        store_name = "Sally's St. Louis Super Store!\n"
+        cost_multiplier = 0.75
+    elif current_location == "Test Location 1":
+        store_name = "Test Store #1!\n"
+        cost_multiplier = 1.0
+    elif current_location == "Test Location 2":
+        store_name = "Test Store #2!\n"
+        cost_multiplier = 1.25
+    elif current_location == "Test Location 3":
+        store_name = "Test Store #2!\n"
+        cost_multiplier = 1.25
+    else: # This will be the LAST location before the end_point.
+        store_name = "Last Location before End Point!\n"
+        cost_multiplier = 2.0 
+        
+    
     
     
     
