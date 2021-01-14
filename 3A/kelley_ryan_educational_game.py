@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/08/21> <12:19PM>, <Version 0.52>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/14/21> <12:25PM>, <Version 1.0.0>
 
 # Player Variables 
 player_score = 0
@@ -146,3 +146,27 @@ What job would you like?
     
 player_info()
 
+
+# Trading Transactions
+
+def buy_item():
+    # figure out player money
+    # cost of the items
+    # menu of items
+    # total cost = number of items * cost of item
+    # pay for item (subtract total cost from player balance)
+    # add the item to player inventory
+    
+    global num_boats 
+    global num_guns 
+    global num_bullets 
+    global num_food 
+    global num_water 
+    global num_horses 
+    global num_wagon_wheel 
+    global num_wagon_axle 
+    global num_pelts 
+    global num_traps 
+    
+    
+    
