@@ -187,11 +187,12 @@ def buy_item():
         |                                                             |
         | 0) Food    1) Water    2) Guns  3) Bullets                  |
         | 4) Horses  5) Wagons   6) Boat  7) Clothing                 |
-        | 8) Cows    7) Chickens 8) Pigs                              |
+        | 8) Cows    9) Chickens 10) Pigs                             |
+        | 20) Exit Store                                              |
         +=============================================================+
         \n
         """)
-
+        # Write the code here to let the player select an item.  Save it as an INTEGER.  
         break
 
 buy_item() 
