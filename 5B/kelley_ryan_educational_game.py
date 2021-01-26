@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:44AM> <01/13/21>, <Version 1.0.1>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:29AM> <01/26/21>, <Version 1.2.x>
 
 # Player Variables
 starting_role = ""
@@ -381,4 +381,17 @@ buy_item()
     # sell it (value_item * num_items) 
     # subtract it to inventory (num_wheels += -1 or num_bullets += -50) 
 
-# Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.  
+# Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.
+
+# Display Map
+def display_map():
+    from PIL import Image
+
+    current_map = Image.open("gfx/maps/world_map.png")
+    current_map.show()
+    # Need to update code to display map based on current location.  
+
+display_map() 
+    
+
+
