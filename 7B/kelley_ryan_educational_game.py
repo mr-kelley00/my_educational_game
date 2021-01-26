@@ -405,8 +405,21 @@ def buy_item():
 
 def show_map():
     from PIL import Image
-    start_map = Image.open("gfx/map_template.png")
-    start_map.show() 
+    if current_location == "St. Louis, Missouri":
+        the_map = Image.open("gfx/map_template.png")    
+    elif current_location == "St. Charles, Missouri":
+        the_map = Image.open("gfx/map_st_charles.png")       
+    elif current_location == "Missouri and Bad River Crossing":
+        the_map = Image.open("gfx/map_miss_bad_river.png")    
+    elif current_location == "Lehmi Pass":
+        the_map = Image.open("gfx/map_lehmi_pass.png")    
+    elif current_location == "Fort Mandan":
+        the_map = Image.open("gfx/map_ft_mandan.png")    
+    else: 
+         the_map = Image.open("gfx/map_ft_calstop.png")    
+    
+    the_map.show() 
+
     
 
 show_map()
