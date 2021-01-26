@@ -159,7 +159,8 @@ What job would you like?
         score_bonus = 0
         money = 250
     print(f"You will start with {money} dollars and a {score_bonus} score multiplier.\n") 
-player_info() 
+
+# player_info() 
     
 # Show Inventory
 def show_inventory():
@@ -179,7 +180,7 @@ def show_inventory():
 \n
 """)
 
-show_inventory()
+# show_inventory()
 
 # Trading Functions
 
@@ -238,11 +239,8 @@ def buy_item():
 
         """)
         break 
-buy_item() 
-        
-    
-    
-    
+# buy_item() 
+   
 # def sell_item(): 
     # identify vendor balance
     # display list of items for sale from player
@@ -252,7 +250,23 @@ buy_item()
     # pay player (player_money += total_value)
     # subtract item from player inventory
 
+# Display Map Function
+def display_map():
+    from PIL import Image
 
+    if current_location == "St. Louis, Missouri": 
+        the_map = Image.open("gfx/world_map.png") 
+    elif current_location == "Test 0":
+        the_map = Image.open("gfx/world_map_location0.png")
+    elif current_location == "Test 1":
+        the_map = Image.open("gfx/world_map_location2.png")
+    else: # This will be the final map before reaching the final destination. 
+        the_map = Image.open("gfx/world_map_location3.png")
+
+    the_map.show()
+
+display_map() 
+    
 
 
     
