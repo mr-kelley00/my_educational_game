@@ -401,7 +401,15 @@ def buy_item():
         
          
 
-buy_item()
+# buy_item()
+
+def show_map():
+    from PIL import Image
+    start_map = Image.open("gfx/map_template.png")
+    start_map.show() 
+    
+
+show_map()
     
 # def sell_item(): 
     # check vendor balance
