@@ -145,7 +145,7 @@ def show_inventory():
 \n
 """)
 
-show_inventory() 
+# show_inventory() 
     
 # Trading Transactions
 
@@ -195,7 +195,27 @@ def buy_item():
         # Write the code here to let the player select an item.  Save it as an INTEGER.  
         break
 
-buy_item() 
+# buy_item()
+
+
+# Display Map
+def display_map():
+    from PIL import Image 
+
+    if current_location == "St. Louis, Missouri":
+        the_map = Image.open("gfx/world_map.png") 
+    elif current_location == "Test 0":
+        the_map = Image.open("gfx/world_map0.png") 
+    elif current_location == "Test 1":
+        the_map = Image.open("gfx/world_map1.png")
+    elif current_location == "Test 2":
+        the_map = Image.open("gfx/world_map2.png") 
+    else:
+        the_map = Image.open("gfx/world_map3png")
+
+    the_map.show()
+
+display_map() # Function call for display map. 
 
 
 
