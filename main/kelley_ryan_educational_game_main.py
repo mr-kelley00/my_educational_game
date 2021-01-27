@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:58AM> <01/11/21>, <Version 0.62>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <11:31AM> <01/27/21>, <Version 1.2.99a>
 
 # Player Variables
 starting_role = ""
@@ -88,8 +88,8 @@ def main_menu():
 
 # main_menu()
         
-# Display Info Function
-def disp_info():
+# Game Information Function
+def game_info():
     print("""
         Update to actual paragraph of historical facts and game play tips.
         """)
@@ -172,8 +172,6 @@ def buy_item():
     # pay for it (money - total cost) 
     # add it to inventory (num_wheels += 1 or num_bullets += 50)
 
-
-
     global money
     global amt_water
     global amt_food 
@@ -188,7 +186,7 @@ def buy_item():
     global num_wagon_axle 
         
     if current_location == "St. Louis, Missouri":
-        store_name = "The St. Louis General Goods Emporium"
+        store_name = "Sally's St. Louis General Goods Emporium"
         cost_multi = 0.75
     elif current_location == "Test 0":
         store_name = "Test 0 General Store"
@@ -206,10 +204,10 @@ def buy_item():
     while True:
         
         print(f"""
+                                        {store_name}
+            Balance: ${money}
             [+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]
-            [                        {store_name}                       ]
-            [                                                           ]
-            [ Your Balance: ${money}                                    ]
+            [                                                           ]           
             [ Inventory for Sale                                        ]
             [ 0) Water                                                  ]
             [ 1) Food                                                   ]
@@ -222,7 +220,7 @@ def buy_item():
             [ 8) Wagons                                                 ]
             [ 9) Wagon Wheels                                           ]
             [ 10) Wagon Axle                                            ]
-            [ 20) Exit Store
+            [ 20) Exit Store                                            ]
             [+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]
             \n
             """)
@@ -382,6 +380,43 @@ buy_item()
     # value of the item
     # amount of item I have 
     # sell it (value_item * num_items) 
-    # subtract it to inventory (num_wheels += -1 or num_bullets += -50) 
+    # subtract it to inventory (num_wheels += -1 or num_bullets += -50)
 
-# Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.  
+# Display Map
+
+def display_map():
+    from PIL import Image
+
+    # Display different map based on current location of player. 
+    if current_location == "St. Louis, Missouri":
+        the_map = Image.open("gfx/world_map_start.png")        
+    elif current_location == "Test 0":
+        the_map = Image.open("gfx/world_map_0.png")        
+    elif current_location == "Test 1":
+        the_map = Image.open("gfx/world_map_1.png")        
+    elif current_location == "Test 2":
+        the_map = Image.open("gfx/world_map_2.png")        
+    else:
+        the_map = Image.open("gfx/world_map_3.png")
+
+    the_map.show() # .show() method opens the image using the system photo viewer. 
+
+display_map() # Comment out this function call once it works. 
+
+# Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.
+
+# Play Game Loop
+def play_game():
+    main_menu()
+
+    if player_choice == 1:
+        player_info()
+    elif player_choice == 2:
+        game_info()
+    elif player_choice == 3:
+        # high_scores()
+    else:
+        print("Come back again sometime.\n")
+        exit()
+
+    
