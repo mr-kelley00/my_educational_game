@@ -405,6 +405,9 @@ display_map() # Comment out this function call once it works.
 
 # Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.
 
+# Win Game: Write the function to determine if the player wins and calculates the final score and saves it to a file in the scores/ directory.
+
+
 # Play Game Loop
 def play_game():
     main_menu()
