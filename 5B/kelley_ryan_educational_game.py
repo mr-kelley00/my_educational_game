@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:29AM> <01/26/21>, <Version 1.2.x>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:26AM> <01/28/21>, <Version 1.3.0>
 
 # Player Variables
 starting_role = ""
@@ -386,8 +386,20 @@ buy_item()
 # Display Map
 def display_map():
     from PIL import Image
+    # Select map based on location of player. 
+    if current_location == "St. Louis, Missouri":
+        current_map = Image.open("gfx/maps/world_map.png")
+    elif current_location == "Test 0":
+        current_map = Image.open("gfx/maps/world_map0.png")
+    elif current_location == "Test 1":
+        current_map = Image.open("gfx/maps/world_map1.png")
+    elif current_location == "Test 2":
+        current_map = Image.open("gfx/maps/world_map2.png")
+    else:
+        current_map = Image.open("gfx/maps/world_map3.png")
 
-    current_map = Image.open("gfx/maps/world_map.png")
+
+    
     current_map.show()
     # Need to update code to display map based on current location.  
 
