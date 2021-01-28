@@ -226,6 +226,8 @@ def buy_item():
             """)
         item_buy = int(input("What do you want to buy?  Type the number and press enter.\n"))
 
+        # The following code will most likely work better as a loop.  Start at index[0], iterate through item list until match is found, assign correct values for transaction. 
+
         if item_buy == 0:
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
@@ -373,7 +375,7 @@ def buy_item():
             print("Thanks for shopping.  Come back any time!\n")
             break
 
-buy_item()
+# buy_item()
 
 # def sell_item(): 
     # how much $ does the vendor have?
@@ -382,7 +384,7 @@ buy_item()
     # sell it (value_item * num_items) 
     # subtract it to inventory (num_wheels += -1 or num_bullets += -50)
 
-# Display Map
+# Display Map -- Open the OS image program and display map graphics.  
 
 def display_map():
     from PIL import Image
@@ -401,12 +403,11 @@ def display_map():
 
     the_map.show() # .show() method opens the image using the system photo viewer. 
 
-display_map() # Comment out this function call once it works. 
+# display_map() # Comment out this function call once it works. 
 
 # Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.
 
 # Win Game: Write the function to determine if the player wins and calculates the final score and saves it to a file in the scores/ directory.
-
 
 # Play Game Loop
 def play_game():
