@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:37PM> <01/27/2021>, <Version 0.3.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:49PM> <01/27/2021>, <Version 0.4.0>
 
 # Player Variables 
 starting_role = " "
@@ -35,3 +35,13 @@ cost_boats = 5.0
 cost_wagons = 10.0
 cost_wagon_wheel = 1.50
 cost_wagon_axle = 1.0
+
+# Location Variables 
+starting_point = "Name of starting location."
+ending_point = "Where it ended."
+location0 = "Fill in the Name"
+location1 = "Fill in the Name"
+location2 = "Fill in the Name"
+location3 = "Fill in the Name"
+current_location = starting_point 
+
