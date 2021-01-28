@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:31PM> <01/27/2021>, <Version 0.2.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:37PM> <01/27/2021>, <Version 0.3.0>
 
 # Player Variables 
 starting_role = " "
@@ -22,3 +22,16 @@ num_boats = 0
 num_wagons = 0
 num_wagon_wheel = 0
 num_wagon_axle = 0
+
+# Cost Variables 
+cost_water = 0.10 
+cost_food = 0.25
+cost_clothing = 1.25
+cost_guns = 3.5
+cost_bullets = 1.0
+cost_rope = 0.5
+cost_horses = 1.0
+cost_boats = 5.0
+cost_wagons = 10.0
+cost_wagon_wheel = 1.50
+cost_wagon_axle = 1.0
