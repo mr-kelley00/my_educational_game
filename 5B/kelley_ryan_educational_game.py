@@ -397,13 +397,11 @@ def display_map():
         current_map = Image.open("gfx/maps/world_map2.png")
     else:
         current_map = Image.open("gfx/maps/world_map3.png")
-
-
     
     current_map.show()
     # Need to update code to display map based on current location.  
 
-display_map() 
+# display_map() # Uncomment this to test. 
     
 
 
