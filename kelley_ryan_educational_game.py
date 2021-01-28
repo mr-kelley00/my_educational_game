@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:49PM> <01/27/2021>, <Version 0.4.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:53PM> <01/27/2021>, <Version 0.5.0>
 
 # Player Variables 
 starting_role = " "
@@ -45,3 +45,12 @@ location2 = "Fill in the Name"
 location3 = "Fill in the Name"
 current_location = starting_point 
 
+# Disaster Variables 
+chc_sick = 0.0
+chc_break_wheel = 0.0
+chc_break_axle = 0.0
+chc_hostile_native = 0.0
+chc_bad_weather = 0.0
+chc_boat_sink = 0.0
+chc_horse_fall = 0.0
+chc_bandits = 0.0
