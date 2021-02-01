@@ -1,9 +1,13 @@
 # <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <11:15AM> <02/01/21>, <Version 1.3.9a>
 
 # TO-DO List [Update as necessary.]
-# Blah blah blah. 
-# Blah blah blah blah. 
-# Blah blah blah blah blah. 
+# Create variables for health of each party member, assign them a value.  
+# Create a how_fast() function to determine how fast the group is traveling. 
+# Create a how_far() function to determine how far between each location. 
+# Create a how_long() function to determine how long it will take to travel. 
+# In buy_item() what happens if the player cannot afford the item? 
+# In sell_item() what happens if the player does not have enough items to sell? 
+
 
 # Player Variables
 starting_role = ""
