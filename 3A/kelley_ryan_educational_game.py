@@ -1,4 +1,13 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <01/14/21> <12:58PM>, <Version 1.0.2>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/02/21> <12:58PM>, <Version 1.3.0>
+
+# To-Do List 
+# Create variables to track the health (HP) for each person in the group. 
+# In buy_item() what will happen if the player does not have enough money to make a purchase? 
+# In sell_item() what will happen if the player doees not have enough of an item to sell back? 
+# Create how_fast() function to determine how fast the group is traveling and its effects (hunger, thirst, etc.)
+# Create how_far() function to determine how far each location is and amount of distance traveled. 
+# Create how_long() function to determine amount of time it takes to travel (DISTANCE / SPEED). 
+
 
 # Player Variables 
 player_score = 0
@@ -338,11 +347,32 @@ def buy_item():
             print("Thank you for shopping.  Come back any time!\n")
             break 
 
-
-        
-
-
+     
 buy_item() 
+
+
+# Map Display 
+def display_map(): 
+    from PIL import Image 
+
+    if current_location == "St. Louis, Missouri":
+        the_map = Image.open("gfx/world_map.png")
+    elif current_location == "Test Location 1":
+        the_map = Image.open("gfx/world_map_1.png")
+    elif current_location == "Test Location 2":
+        the_map = Image.open("gfx/world_map_2.png")
+    elif current_location == "Test Location 3":
+        the_map = Image.open("gfx/world_map_3.png")
+    else: # This will be the LAST location before the end_point.
+        the_map = Image.open("gfx/world_map_4.png")
+
+    the_map.show() 
+
+display_map() 
+
+
+
+
         
     
     
