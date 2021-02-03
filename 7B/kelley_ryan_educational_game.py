@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <1:15PM> <01/13/21>, <Version 1.0.2a>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:31PM> <02/03/21>, <Version 1.1.0>
 
 # Player Variables
 player_role = ""
@@ -396,13 +396,226 @@ def buy_item():
         else:
             print(f"Ok, thanks for shopping at {store_name}\n")
             break 
-            
-            
-        
-         
 
 # buy_item()
 
+def sell_item(): 
+    # check vendor balance
+    # what does the player have to sell? is it worth anything?
+    # what value does the item have?
+    # how many to buy from player?
+    # pay player (player_money += item_value)
+    # remove from player inventory
+    # (optional) add to vendor inventory 
+    global money
+    global amt_food 
+    global amt_water
+    global amt_clothing
+    global amt_wagons 
+    global amt_boats 
+    global amt_horses 
+    global num_guns 
+    global num_bullets
+    global num_wagon_wheel 
+    global num_wagon_axle 
+    global num_boat_oar 
+    global num_pelts
+
+    if current_location == "St. Louis, Missouri":
+        store_name = "Welcome to Bob's Building Supply and General Store!\n"
+        cost_multi = 0.50
+    elif current_location == "St. Charles, Missouri":
+        store_name = "Welcome to the St. Charles Supermart!\n"
+        cost_multi = 0.75
+    elif current_location == "Missouri and Bad River Crossing":
+        store_name = "Welcome to Bad River Outfitters!\n"
+        cost_multi = 1.0
+    elif current_location == "Lehmi Pass":
+        store_name = "Welcome to Lehmi Pass General Store! We PASS the savings on to you!\n"
+        cost_multi = 1.25
+    elif current_location == "Fort Mandan":
+        store_name = "Welcome to the Fort Mandan Supply Depot!\n"
+        cost_multi = 1.25
+    else: 
+        store_name = "Welcome to Mount Hood Munitions and Rations!\n"
+        cost_multi = 1.5
+
+    while True:
+        
+        print(f"""
+                                {store_name}
+
+        [=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=]
+        [ Your Balance: ${money}                              ]
+        [ 0) Water                                            ]
+        [ 1) Food                                             ]
+        [ 2) Clothing                                         ]
+        [ 3) Guns                                             ]
+        [ 4) Bullets                                          ]
+        [ 5) Rope                                             ]
+        [ 6) Horses                                           ]
+        [ 7) Boats                                            ]
+        [ 8) Wagons                                           ]
+        [ 9) Wagon Wheels                                     ]
+        [ 10) Wagon Axle                                      ]                      
+        [ 20) Exit Shop                                       ]
+        [=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=]
+        """)
+
+        item_sell = int(input("What do you want to sell?  Type the number and press enter.\n"))
+
+        if item_sell == 0: # Water
+            item_cost = cost_water * cost_multi
+            print(f"I will give you ${item_cost} dollars per gallon.\n")
+            how_many = int(input("How many do you want to sell?  Type the number and press enter.\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost} total that I will pay you.\n")
+            sell = input("Do you still want to sell it?  Type yes or no.\n")
+            if sell == "yes" or sell == "Yes" or sell == "y":
+                money = money + total_cost 
+                amt_water += -how_many
+                print(f"You have {amt_water} gallons of water now.\n")
+            else:
+                print("Ok, perhaps you can get something else?\n") 
+        elif item_sell == 1: # Food
+            item_cost = cost_water * cost_multi
+            print(f"That will cost ${item_cost} per gallon.\n")
+            how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
+            total_cost = item_cost * how_many
+            print(f"That will cost ${total_cost} total.\n")
+            sell = input("Do you still want to buy it?  Type yes or no.\n")
+            if sell == "yes" or sell == "Yes" or sell == "y":
+                money = money - total_cost 
+                amt_water += how_many
+                print(f"You have {amt_water} gallons of water now.\n")
+            else:
+                print("Ok, perhaps you can get something else?\n")
+        elif item_sell == 2: # Clothing
+            item_cost = cost_water * cost_multi
+            print(f"That will cost ${item_cost} per gallon.\n")
+            how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
+            total_cost = item_cost * how_many
+            print(f"That will cost ${total_cost} total.\n")
+            sell = input("Do you still want to buy it?  Type yes or no.\n")
+            if sell == "yes" or sell == "Yes" or sell == "y":
+                money = money - total_cost 
+                amt_water += how_many
+                print(f"You have {amt_water} gallons of water now.\n")
+            else:
+                print("Ok, perhaps you can get something else?\n")
+        elif item_sell == 3: # Guns
+            item_cost = cost_water * cost_multi
+            print(f"That will cost ${item_cost} per gallon.\n")
+            how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
+            total_cost = item_cost * how_many
+            print(f"That will cost ${total_cost} total.\n")
+            sell = input("Do you still want to buy it?  Type yes or no.\n")
+            if sell == "yes" or sell == "Yes" or sell == "y":
+                money = money - total_cost 
+                amt_water += how_many
+                print(f"You have {amt_water} gallons of water now.\n")
+            else:
+                print("Ok, perhaps you can get something else?\n")
+        elif item_sell == 4: # Bullets
+            item_cost = cost_water * cost_multi
+            print(f"That will cost ${item_cost} per gallon.\n")
+            how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
+            total_cost = item_cost * how_many
+            print(f"That will cost ${total_cost} total.\n")
+            sell = input("Do you still want to buy it?  Type yes or no.\n")
+            if sell == "yes" or sell == "Yes" or sell == "y":
+                money = money - total_cost 
+                amt_water += how_many
+                print(f"You have {amt_water} gallons of water now.\n")
+            else:
+                print("Ok, perhaps you can get something else?\n")
+        elif item_sell == 5: # Rope
+            item_cost = cost_water * cost_multi
+            print(f"That will cost ${item_cost} per gallon.\n")
+            how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
+            total_cost = item_cost * how_many
+            print(f"That will cost ${total_cost} total.\n")
+            sell = input("Do you still want to buy it?  Type yes or no.\n")
+            if sell == "yes" or sell == "Yes" or sell == "y":
+                money = money - total_cost 
+                amt_water += how_many
+                print(f"You have {amt_water} gallons of water now.\n")
+            else:
+                print("Ok, perhaps you can get something else?\n")
+        elif item_sell == 6: # Horses
+            item_cost = cost_water * cost_multi
+            print(f"That will cost ${item_cost} per gallon.\n")
+            how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
+            total_cost = item_cost * how_many
+            print(f"That will cost ${total_cost} total.\n")
+            sell = input("Do you still want to buy it?  Type yes or no.\n")
+            if sell == "yes" or sell == "Yes" or sell == "y":
+                money = money - total_cost 
+                amt_water += how_many
+                print(f"You have {amt_water} gallons of water now.\n")
+            else:
+                print("Ok, perhaps you can get something else?\n")
+        elif item_sell == 7: # Boats
+            item_cost = cost_water * cost_multi
+            print(f"That will cost ${item_cost} per gallon.\n")
+            how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
+            total_cost = item_cost * how_many
+            print(f"That will cost ${total_cost} total.\n")
+            sell = input("Do you still want to buy it?  Type yes or no.\n")
+            if sell == "yes" or sell == "Yes" or sell == "y":
+                money = money - total_cost 
+                amt_water += how_many
+                print(f"You have {amt_water} gallons of water now.\n")
+            else:
+                print("Ok, perhaps you can get something else?\n")
+        elif item_sell == 8: # Wagons
+            item_cost = cost_water * cost_multi
+            print(f"That will cost ${item_cost} per gallon.\n")
+            how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
+            total_cost = item_cost * how_many
+            print(f"That will cost ${total_cost} total.\n")
+            sell = input("Do you still want to buy it?  Type yes or no.\n")
+            if sell == "yes" or sell == "Yes" or sell == "y":
+                money = money - total_cost 
+                amt_water += how_many
+                print(f"You have {amt_water} gallons of water now.\n")
+            else:
+                print("Ok, perhaps you can get something else?\n")
+        elif item_sell == 9: # Wagon Wheels
+            item_cost = cost_wagon_wheels * cost_multi
+            print(f"That will cost ${item_cost} per gallon.\n")
+            how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
+            total_cost = item_cost * how_many
+            print(f"That will cost ${total_cost} total.\n")
+            sell = input("Do you still want to buy it?  Type yes or no.\n")
+            if sell == "yes" or sell == "Yes" or sell == "y":
+                money = money - total_cost 
+                amt_water += how_many
+                print(f"You have {num_wagon_wheels} wagon wheels.\n")
+            else:
+                print("Ok, perhaps you can get something else?\n")
+        elif item_sell == 10: # Wagon Axles
+            item_cost = cost_water * cost_multi
+            print(f"That will cost ${item_cost} per gallon.\n")
+            how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
+            total_cost = item_cost * how_many
+            print(f"That will cost ${total_cost} total.\n")
+            sell = input("Do you still want to buy it?  Type yes or no.\n")
+            if sell == "yes" or sell == "Yes" or sell == "y":
+                money = money - total_cost 
+                amt_water += how_many
+                print(f"You have {amt_water} gallons of water now.\n")
+            else:
+                print("Ok, perhaps you can get something else?\n")
+        else:
+            print(f"Ok, thanks for shopping at {store_name}\n")
+            break 
+
+sell_item() 
+
+
+
+# Show Map function
 def show_map():
     from PIL import Image
     if current_location == "St. Louis, Missouri":
@@ -420,17 +633,8 @@ def show_map():
     
     the_map.show() 
 
-    
-
 show_map()
     
-# def sell_item(): 
-    # check vendor balance
-    # what does the player have to sell? is it worth anything?
-    # what value does the item have?
-    # how many to buy from player?
-    # pay player (player_money += item_value)
-    # remove from player inventory
-    # (optional) add to vendor inventory 
+
 
     
