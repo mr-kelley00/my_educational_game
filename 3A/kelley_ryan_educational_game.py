@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/02/21> <12:58PM>, <Version 1.3.0>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/04/21> <12:31PM>, <Version 1.3.1>
 
 # To-Do List 
 # Create variables to track the health (HP) for each person in the group. 
@@ -12,10 +12,20 @@
 # Player Variables 
 player_score = 0
 player_name = ""
+player_hp = 100 
+
 party_member0 = ""
+party_member0_hp = 100 
+
 party_member1 = ""
+party_member1_hp = 100 
+
 party_member2 = ""
+party_member2_hp = 100 
+
 party_member3 = ""
+party_member3_hp = 100 
+
 player_job = ""
 money = 0
 
