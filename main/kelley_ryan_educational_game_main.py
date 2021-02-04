@@ -67,6 +67,8 @@ chc_horse_fall = 0.0
 # Main Menu Function
 
 def main_menu():
+    global player_choice
+    
     print("""
         +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
         *                        Ryan Kelley Game Studios           *
@@ -82,9 +84,9 @@ def main_menu():
         *                                                           *
         +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
         """)
-    global player_choice
+    
     player_choice = int(input("Please type a number from the menu and press enter.\n"))
-    # print(player_choice)
+   
     if player_choice == 1:
         print("The adventure awaits!  Let's get going...\n")
     elif player_choice == 2:
@@ -183,19 +185,9 @@ def buy_item():
     # pay for it (money - total cost) 
     # add it to inventory (num_wheels += 1 or num_bullets += 50)
 
-    global money
-    global amt_water
-    global amt_food 
-    global num_clothing 
-    global num_guns 
-    global num_bullets 
-    global amt_rope 
-    global num_horses 
-    global num_boats 
-    global num_wagons 
-    global num_wheels 
-    global num_axles 
-        
+    global money, amt_water, amt_food, num_clothing, num_guns, num_bullets, amt_rope
+    global num_horses, num_boats, num_wagons, num_wheels, num_axles
+           
     if current_location == "St. Louis, Missouri":
         store_name = "Sally's St. Louis General Goods Emporium"
         cost_multi = 0.75
@@ -394,18 +386,8 @@ def sell_item():
     # sell it (value_item * num_items) 
     # subtract it to inventory (num_wheels += -1 or num_bullets += -50)
 
-    global money
-    global amt_water
-    global amt_food 
-    global num_clothing 
-    global num_guns 
-    global num_bullets 
-    global amt_rope 
-    global num_horses 
-    global num_boats 
-    global num_wagons 
-    global num_wheels 
-    global num_axles 
+    global money, amt_water, amt_food, num_clothing, num_guns, num_bullets, amt_rope
+    global num_horses, num_boats, num_wagons, num_wheels, num_axles
         
     if current_location == "St. Louis, Missouri":
         store_name = "Sally's St. Louis General Goods Emporium"
