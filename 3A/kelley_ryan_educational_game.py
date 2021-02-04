@@ -1,8 +1,7 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/04/21> <12:31PM>, <Version 1.3.1>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/04/21> <12:31PM>, <Version 1.4.0>
 
 # To-Do List 
-# Create variables to track the health (HP) for each person in the group. 
-# In buy_item() what will happen if the player does not have enough money to make a purchase? 
+
 # In sell_item() what will happen if the player doees not have enough of an item to sell back? 
 # Create how_fast() function to determine how fast the group is traveling and its effects (hunger, thirst, etc.)
 # Create how_far() function to determine how far each location is and amount of distance traveled. 
@@ -222,6 +221,8 @@ def buy_item():
         """)
         item_buy = int(input("Please type a number and press enter.\n"))
 
+        # MAKE SURE TO UPDATE ITEM VARIABLES FOR EACH MENU ITEM!!!!!!!!!!!!!!!
+        # SERIOUSLY RYAN DON'T FORGET TO FIX THIS.  BRO.  IT'S THE WORST IF YOU DON'T.
 
         if item_buy == 0: # Boats 
             item_cost = cost_boats * cost_multiplier
@@ -229,7 +230,11 @@ def buy_item():
             how_many = int(input("How many would you like to purchase?\n"))
             total_cost = item_cost * how_many
             print(f"The total cost will be ${total_cost}.\n")
-            purchase = input("Do you still want to buy it?  Yes / No\n")
+            if total_cost > money: 
+                print("You do not have enough money to complete this purchase.")
+                purchase = "No"
+            else: 
+                purchase = input("Do you still want to buy it?  Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost 
                 num_boats += how_many 
@@ -242,7 +247,11 @@ def buy_item():
             how_many = int(input("How many would you like to purchase?\n"))
             total_cost = item_cost * how_many
             print(f"The total cost will be ${total_cost}.\n")
-            purchase = input("Do you still want to buy it?  Yes / No\n")
+            if total_cost > money: 
+                print("You do not have enough money to complete this purchase.")
+                purchase = "No"
+            else: 
+                purchase = input("Do you still want to buy it?  Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost 
                 num_guns += how_many 
@@ -255,7 +264,11 @@ def buy_item():
             how_many = int(input("How many would you like to purchase?\n"))
             total_cost = item_cost * how_many
             print(f"The total cost will be ${total_cost}.\n")
-            purchase = input("Do you still want to buy it?  Yes / No\n")
+            if total_cost > money: 
+                print("You do not have enough money to complete this purchase.")
+                purchase = "No"
+            else: 
+                purchase = input("Do you still want to buy it?  Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost 
                 num_guns += how_many 
@@ -268,7 +281,11 @@ def buy_item():
             how_many = int(input("How many would you like to purchase?\n"))
             total_cost = item_cost * how_many
             print(f"The total cost will be ${total_cost}.\n")
-            purchase = input("Do you still want to buy it?  Yes / No\n")
+            if total_cost > money: 
+                print("You do not have enough money to complete this purchase.")
+                purchase = "No"
+            else: 
+                purchase = input("Do you still want to buy it?  Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost 
                 num_guns += how_many 
@@ -281,7 +298,11 @@ def buy_item():
             how_many = int(input("How many would you like to purchase?\n"))
             total_cost = item_cost * how_many
             print(f"The total cost will be ${total_cost}.\n")
-            purchase = input("Do you still want to buy it?  Yes / No\n")
+            if total_cost > money: 
+                print("You do not have enough money to complete this purchase.")
+                purchase = "No"
+            else: 
+                purchase = input("Do you still want to buy it?  Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost 
                 num_guns += how_many 
@@ -294,7 +315,11 @@ def buy_item():
             how_many = int(input("How many would you like to purchase?\n"))
             total_cost = item_cost * how_many
             print(f"The total cost will be ${total_cost}.\n")
-            purchase = input("Do you still want to buy it?  Yes / No\n")
+            if total_cost > money: 
+                print("You do not have enough money to complete this purchase.")
+                purchase = "No"
+            else: 
+                purchase = input("Do you still want to buy it?  Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost 
                 num_guns += how_many 
@@ -307,7 +332,11 @@ def buy_item():
             how_many = int(input("How many would you like to purchase?\n"))
             total_cost = item_cost * how_many
             print(f"The total cost will be ${total_cost}.\n")
-            purchase = input("Do you still want to buy it?  Yes / No\n")
+            if total_cost > money: 
+                print("You do not have enough money to complete this purchase.")
+                purchase = "No"
+            else: 
+                purchase = input("Do you still want to buy it?  Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost 
                 num_guns += how_many 
@@ -320,7 +349,11 @@ def buy_item():
             how_many = int(input("How many would you like to purchase?\n"))
             total_cost = item_cost * how_many
             print(f"The total cost will be ${total_cost}.\n")
-            purchase = input("Do you still want to buy it?  Yes / No\n")
+            if total_cost > money: 
+                print("You do not have enough money to complete this purchase.")
+                purchase = "No"
+            else: 
+                purchase = input("Do you still want to buy it?  Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost 
                 num_guns += how_many 
@@ -333,7 +366,11 @@ def buy_item():
             how_many = int(input("How many would you like to purchase?\n"))
             total_cost = item_cost * how_many
             print(f"The total cost will be ${total_cost}.\n")
-            purchase = input("Do you still want to buy it?  Yes / No\n")
+            if total_cost > money: 
+                print("You do not have enough money to complete this purchase.")
+                purchase = "No"
+            else: 
+                purchase = input("Do you still want to buy it?  Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost 
                 num_guns += how_many 
@@ -346,7 +383,11 @@ def buy_item():
             how_many = int(input("How many would you like to purchase?\n"))
             total_cost = item_cost * how_many
             print(f"The total cost will be ${total_cost}.\n")
-            purchase = input("Do you still want to buy it?  Yes / No\n")
+            if total_cost > money: 
+                print("You do not have enough money to complete this purchase.")
+                purchase = "No"
+            else: 
+                purchase = input("Do you still want to buy it?  Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost 
                 num_guns += how_many 
