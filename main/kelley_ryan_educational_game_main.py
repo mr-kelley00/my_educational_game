@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:01AM> <02/05/21>, <Version 1.4.01b>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <10:07AM> <02/05/21>, <Version 1.4.99b>
 
 # TO-DO List [Update as necessary.]
 # Create a how_fast() function to determine how fast the group is traveling. 
@@ -16,6 +16,7 @@ money = 0
 score_bonus = 0
 player_name = ""
 player_hp = 100
+party_size = 5 # Total number of people in the party to start. 
 
 # Party Member Variables 
 party_member0 = ""
@@ -54,7 +55,7 @@ cost_wagon_wheel = 1.50
 cost_wagon_axle = 1.50
 cost_multi = 1.0 
 
-# Location Variables
+# Location Variables 
 starting_point = "St. Louis, Missouri"
 ending_point = "Fort Calstop"
 location0 =  "Test 0"
@@ -62,6 +63,11 @@ location1 =  "Test 1"
 location2 =  "Test 2"
 location3 =  "Test 3"
 current_location = starting_point
+
+# Travel Variables 
+num_days = 0
+dist_travel = 0 
+travel_pace = 0 
 
 # Disaster Variables, % chance it occurs.  
 chc_sick = 0.0
@@ -117,6 +123,7 @@ def game_info():
 
 def player_info():
     global money, score_bonus 
+    global player_name, party_member0, party_member1, party_member2, party_member3
 
     player_name = input("What is your name brave explorer?\n")
     print(f"Greetings {player_name}.  That is a fine name for a brave explorer such as yourself!\n")
@@ -154,7 +161,7 @@ def player_info():
         print("You did not pick a role correctly.  You wil be washing pots and pans.\n")
         money = 250
         score_bonus = 0.5 
-    print(f"You will start with ${starting_money} dollars and a {score_bonus} score multiplier.\n")     
+    print(f"You will start with ${money} dollars and a {score_bonus} score multiplier.\n")     
    
 # player_info() 
 
@@ -615,27 +622,93 @@ def how_fast(): # Determine how fast the player wants to travel, assign travel s
         *                                                           *
         * Please choose a traveling speed from the menu below.      *
         *                                                           *
-        *   1. Slow [15 miles per day]                              *
-        *   2. Medium [30 miles per day]                            *
-        *   3. Fast [45 miles per day]                              *
+        *   1. Slow [10 miles per day]                              *
+        *   2. Medium [20 miles per day]                            *
+        *   3. Fast [30 miles per day]                              *
         +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+    
     \n""")
 
     global travel_pace, speed, resource_consume
 
     travel_pace = int(input("Please enter a number and press enter.\n"))
+
     if travel_pace == 1: 
-        speed = 15
+        speed = 10
         resource_consume = 1
     elif travel_pace == 2: 
-        speed = 30 
+        speed = 20 
         resource_consume = 2
     else: 
-        speed = 45
+        speed = 30
         resource_consume = 3
 
-# def travel(): 
+# how_fast() 
+
+def travel(): 
     # This function will determine how far the party travels each day. 
+    global num_days, dist_travel, party_size, amt_food, amt_water
+    global player_name, party_member0, party_member1, party_member2, party_member3
+    global player_hp, party_member0_hp, party_member1_hp, party_member2_hp, party_member3_hp
+
+    do_travel = True 
+    
+    while do_travel == True: 
+        dist_travel += speed
+        num_days += 1
+        amt_food += -(resource_consume * party_size)
+        if amt_food <= 0: 
+            amt_food = 0
+        
+        amt_water += -(resource_consume * party_size)
+        if amt_water <= 0: 
+            amt_water = 0
+          
+        print(f"You have traveled {dist_travel} miles in {num_days} days.\n")
+        print(f"You have {amt_food} pounds of food and {amt_water} gallons of water remaining.\n")
+        
+        if amt_food <= 0:  
+            player_hp += -5
+            party_member0_hp += -5 
+            party_member1_hp += -5 
+            party_member2_hp += -5 
+            party_member3_hp += -5 
+        else: 
+            player_hp += -2
+            party_member0_hp += -2
+            party_member1_hp += -2 
+            party_member2_hp += -2 
+            party_member3_hp += -2
+
+        if amt_water <= 0: 
+            player_hp += -10
+            party_member0_hp += -10 
+            party_member1_hp += -10
+            party_member2_hp += -10
+            party_member3_hp += -10
+        
+        do_travel = input("Do you want to continue traveling? [Yes / No]\n")
+        if do_travel == "Yes" or do_travel == "yes" or do_travel == "y":
+            do_travel = True
+        else: 
+            do_travel = False 
+            print("You decide to stop and rest for the night.\n")
+            player_hp += 5
+            party_member0_hp += 5 
+            party_member1_hp += 5
+            party_member2_hp += 5
+            party_member3_hp += 5
+        print(f"""
+        {player_name} has {player_hp} HP remaining.
+        {party_member0} has {party_member0_hp} HP remaining.
+        {party_member1} has {party_member1_hp} HP remaining.
+        {party_member2} has {party_member2_hp} HP remaining.
+        {party_member3} has {party_member3_hp} HP remaining.
+        
+        \n""")
+
+# travel() 
+
+
 
 
 # Win Game: Write the function to determine if the player wins and calculates the final score and saves it to a file in the scores/ directory.
@@ -646,6 +719,9 @@ def play_game():
 
     if player_choice == 1:
         player_info()
+        buy_item()
+        how_fast()
+        travel()
     elif player_choice == 2:
         game_info()
     elif player_choice == 3:
@@ -656,3 +732,5 @@ def play_game():
         exit()
 
     
+# Start Game Loop
+play_game() 
