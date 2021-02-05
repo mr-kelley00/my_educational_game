@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <11:15AM> <02/01/21>, <Version 1.3.9a>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:01AM> <02/05/21>, <Version 1.4.01b>
 
 # TO-DO List [Update as necessary.]
 # Create a how_fast() function to determine how fast the group is traveling. 
@@ -17,15 +17,13 @@ score_bonus = 0
 player_name = ""
 player_hp = 100
 
+# Party Member Variables 
 party_member0 = ""
 party_member0_hp = 100
-
 party_member1 = ""
 party_member1_hp = 100
-
 party_member2 = ""
 party_member2_hp = 100
-
 party_member3 = ""
 party_member3_hp = 100
 
@@ -234,7 +232,7 @@ def buy_item():
 
         # The following code will most likely work better as a loop.  Start at index[0], iterate through item list until match is found, assign correct values for transaction. 
 
-        if item_buy == 0:
+        if item_buy == 0: # Water
             item_cost = cost_water * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -247,7 +245,7 @@ def buy_item():
                 print(f"You now have {amt_water} gallons of water.\n")
             else:
                 print("Ok, perhaps another item?\n") 
-        elif item_buy == 1:
+        elif item_buy == 1: # Food
             item_cost = cost_food * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
@@ -257,11 +255,11 @@ def buy_item():
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost
                 amt_food += how_many
-                print(f"You now have {amt_water} pounds of food.\n")
+                print(f"You now have {amt_food} pounds of food.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 2:
-            item_cost = cost_water * cost_multi
+        elif item_buy == 2: # Clothing
+            item_cost = cost_clothing * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
             total_cost = item_cost * how_many
@@ -269,12 +267,12 @@ def buy_item():
             purchase = input("Do you still want to buy it? Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost
-                amt_water += how_many
-                print(f"You now have {amt_water} gallons of water.\n")
+                num_clothing += how_many
+                print(f"You now have {num_clothing} sets of clothing.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 3:
-            item_cost = cost_water * cost_multi
+        elif item_buy == 3: # Guns
+            item_cost = cost_guns * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
             total_cost = item_cost * how_many
@@ -282,12 +280,12 @@ def buy_item():
             purchase = input("Do you still want to buy it? Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost
-                amt_water += how_many
-                print(f"You now have {amt_water} gallons of water.\n")
+                num_guns += how_many
+                print(f"You now have {num_guns} guns.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 4:
-            item_cost = cost_water * cost_multi
+        elif item_buy == 4: # Bullets
+            item_cost = cost_bullets * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
             total_cost = item_cost * how_many
@@ -295,12 +293,12 @@ def buy_item():
             purchase = input("Do you still want to buy it? Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost
-                amt_water += how_many
-                print(f"You now have {amt_water} gallons of water.\n")
+                num_bullets += how_many
+                print(f"You now have {num_bullets} bullets.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 5:
-            item_cost = cost_water * cost_multi
+        elif item_buy == 5: # Rope
+            item_cost = cost_rope * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
             total_cost = item_cost * how_many
@@ -308,12 +306,12 @@ def buy_item():
             purchase = input("Do you still want to buy it? Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost
-                amt_water += how_many
-                print(f"You now have {amt_water} gallons of water.\n")
+                amt_rope += how_many
+                print(f"You now have {amt_rope} feet of rope.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 6:
-            item_cost = cost_water * cost_multi
+        elif item_buy == 6: # Horses
+            item_cost = cost_horses * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
             total_cost = item_cost * how_many
@@ -321,12 +319,12 @@ def buy_item():
             purchase = input("Do you still want to buy it? Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost
-                amt_water += how_many
-                print(f"You now have {amt_water} gallons of water.\n")
+                num_horses += how_many
+                print(f"You now have {num_horses} horses.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 7:
-            item_cost = cost_water * cost_multi
+        elif item_buy == 7: # Boats
+            item_cost = cost_boats * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
             total_cost = item_cost * how_many
@@ -334,12 +332,12 @@ def buy_item():
             purchase = input("Do you still want to buy it? Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost
-                amt_water += how_many
-                print(f"You now have {amt_water} gallons of water.\n")
+                num_boats += how_many
+                print(f"You now have {num_boats} boats.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 8:
-            item_cost = cost_water * cost_multi
+        elif item_buy == 8: # Wagons
+            item_cost = cost_wagons * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
             total_cost = item_cost * how_many
@@ -347,12 +345,12 @@ def buy_item():
             purchase = input("Do you still want to buy it? Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost
-                amt_water += how_many
-                print(f"You now have {amt_water} gallons of water.\n")
+                num_wagons += how_many
+                print(f"You now have {num_wagons} wagons.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 9:
-            item_cost = cost_water * cost_multi
+        elif item_buy == 9: # Wheels
+            item_cost = cost_wagon_wheel * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
             total_cost = item_cost * how_many
@@ -360,12 +358,12 @@ def buy_item():
             purchase = input("Do you still want to buy it? Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost
-                amt_water += how_many
-                print(f"You now have {amt_water} gallons of water.\n")
+                num_wheels += how_many
+                print(f"You now have {num_wheels} spare wagon wheels.\n")
             else:
                 print("Ok, perhaps another item?\n")            
-        elif item_buy == 10:
-            item_cost = cost_water * cost_multi
+        elif item_buy == 10: # Axles
+            item_cost = cost_wagon_axle * cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
             total_cost = item_cost * how_many
@@ -373,8 +371,8 @@ def buy_item():
             purchase = input("Do you still want to buy it? Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
                 money = money - total_cost
-                amt_water += how_many
-                print(f"You now have {amt_water} gallons of water.\n")
+                num_axles += how_many
+                print(f"You now have {num_axles} spare wagon axles.\n")
             else:
                 print("Ok, perhaps another item?\n")            
         else:
@@ -605,7 +603,7 @@ def display_map():
 
 # Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.
 
-def how_fast(): # Determine how fast the player wants to travel. 
+def how_fast(): # Determine how fast the player wants to travel, assign travel speed and resource consumption. 
     print("""
         +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
         *                     Traveling Speed                       *
@@ -615,15 +613,28 @@ def how_fast(): # Determine how fast the player wants to travel.
         * consume.  The chance of sickness or injury will increase  *
         * as well.                                                  *
         *                                                           *
-        *   1. Start your journey.                                  *
-        *   2. Learn more about the expedition.                     *
-        *   3. See the high scores.                                 *
-        *   4. Exit game.                                           *
+        * Please choose a traveling speed from the menu below.      *
         *                                                           *
+        *   1. Slow [15 miles per day]                              *
+        *   2. Medium [30 miles per day]                            *
+        *   3. Fast [45 miles per day]                              *
         +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+    
-    \n"""")
+    \n""")
 
-# def how_far(): 
+    global travel_pace, speed, resource_consume
+
+    travel_pace = int(input("Please enter a number and press enter.\n"))
+    if travel_pace == 1: 
+        speed = 15
+        resource_consume = 1
+    elif travel_pace == 2: 
+        speed = 30 
+        resource_consume = 2
+    else: 
+        speed = 45
+        resource_consume = 3
+
+# def travel(): 
     # This function will determine how far the party travels each day. 
 
 
