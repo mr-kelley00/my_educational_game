@@ -1,13 +1,25 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:31PM> <02/03/21>, <Version 1.1.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:46PM> <02/05/21>, <Version 1.1.5>
 
 # Player Variables
 player_role = ""
 money = 0
 score_bonus = 0
+
 player_name = ""
+player_hp = 100 
+
 party_member0 = ""
+party_member0_hp = 100
+
 party_member1 = ""
+party_member1_hp = 100
+
 party_member2 = ""
+party_member2_hp = 100
+
+party_member3 = ""
+party_member3_hp = 100 
+
 
 # Inventory Variables
 amt_food = 0
