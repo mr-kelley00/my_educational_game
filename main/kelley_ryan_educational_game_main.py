@@ -1,12 +1,13 @@
 # <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <11:15AM> <02/01/21>, <Version 1.3.9a>
 
 # TO-DO List [Update as necessary.]
-# Create variables for health of each party member, assign them a value.  
 # Create a how_fast() function to determine how fast the group is traveling. 
 # Create a how_far() function to determine how far between each location. 
 # Create a how_long() function to determine how long it will take to travel. 
 # In buy_item() what happens if the player cannot afford the item? 
 # In sell_item() what happens if the player does not have enough items to sell? 
+# Create calc_scores() function to determine player score. 
+# Create high_scores() function to display previous high scores.   
 
 
 # Player Variables
@@ -14,10 +15,19 @@ starting_role = ""
 money = 0
 score_bonus = 0
 player_name = ""
+player_hp = 100
+
 party_member0 = ""
+party_member0_hp = 100
+
 party_member1 = ""
+party_member1_hp = 100
+
 party_member2 = ""
+party_member2_hp = 100
+
 party_member3 = ""
+party_member3_hp = 100
 
 # Inventory Variables
 amt_water = 0
@@ -106,12 +116,6 @@ def game_info():
         """)
 
 # disp_info() 
-
-# High Scores
-# def high_scores():
-# Read high_scores save file.
-# print high scores to the screen.
-# exit after printing high scores.
 
 def player_info():
     global money, score_bonus 
@@ -601,9 +605,23 @@ def display_map():
 
 # Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.
 
-# def how_fast(): 
-    # This function will determine how fast the party is traveling. 
-    # Travel speed will impact amount of resources used, distance traveled, and % of disasters occurring. 
+def how_fast(): # Determine how fast the player wants to travel. 
+    print("""
+        +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+        *                     Traveling Speed                       *
+        *                                                           *
+        * How fast do you want to travel each day?                  *
+        * The faster you travel, the more food and water you will   *
+        * consume.  The chance of sickness or injury will increase  *
+        * as well.                                                  *
+        *                                                           *
+        *   1. Start your journey.                                  *
+        *   2. Learn more about the expedition.                     *
+        *   3. See the high scores.                                 *
+        *   4. Exit game.                                           *
+        *                                                           *
+        +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+    
+    \n"""")
 
 # def how_far(): 
     # This function will determine how far the party travels each day. 
