@@ -205,19 +205,8 @@ def buy_item():
     # add the items to the player inventory
     # remove from vendor inventory (optional, bonus points if you can make it work.)
 
-    global money
-    global amt_food 
-    global amt_water
-    global amt_clothing
-    global amt_wagons 
-    global amt_boats 
-    global amt_horses 
-    global num_guns 
-    global num_bullets
-    global num_wagon_wheel 
-    global num_wagon_axle 
-    global num_boat_oar 
-    global num_pelts
+    global money, amt_food, amt_water, amt_clothing, amt_wagons, amt_boats, amt_horses, num_guns 
+    global num_bullets, num_wagon_wheel, num_wagon_axle, num_boat_oar, num_pelts
 
     if current_location == "St. Louis, Missouri":
         store_name = "Welcome to Bob's Building Supply and General Store!\n"
@@ -242,9 +231,8 @@ def buy_item():
         
         print(f"""
                                 {store_name}
-
+        Your Balance: ${money}
         [=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=]
-        [ Your Balance: ${money}                              ]
         [ 0) Water                                            ]
         [ 1) Food                                             ]
         [ 2) Clothing                                         ]
@@ -268,7 +256,17 @@ def buy_item():
             how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
             total_cost = item_cost * how_many
             print(f"That will cost ${total_cost} total.\n")
-            purchase = input("Do you still want to buy it?  Type yes or no.\n")
+            if total_cost > money: 
+                print("Sorry, it seems you cannot afford that purchase right now.\n")
+                purchase = "no"
+            else: 
+                purchase = input("Do you still want to buy it?  Type yes or no.\n")
+                # FINISH ADDING THE IF/ELSE CHECKS TO REMAINIG ITEMS!!!!!!!!!
+                # FINISH ADDING THE IF/ELSE CHECKS TO REMAINIG ITEMS!!!!!!!!!
+                # FINISH ADDING THE IF/ELSE CHECKS TO REMAINIG ITEMS!!!!!!!!!
+                # FINISH ADDING THE IF/ELSE CHECKS TO REMAINIG ITEMS!!!!!!!!!
+                # FINISH ADDING THE IF/ELSE CHECKS TO REMAINIG ITEMS!!!!!!!!!
+                # FINISH ADDING THE IF/ELSE CHECKS TO REMAINIG ITEMS!!!!!!!!!
             if purchase == "yes" or purchase == "Yes" or purchase == "y":
                 money = money - total_cost 
                 amt_water += how_many
@@ -281,7 +279,11 @@ def buy_item():
             how_many = int(input("How many do you want to buy?  Type the number and press enter.\n"))
             total_cost = item_cost * how_many
             print(f"That will cost ${total_cost} total.\n")
-            purchase = input("Do you still want to buy it?  Type yes or no.\n")
+            if total_cost > money: 
+                print("Sorry, it seems you cannot afford that purchase right now.\n")
+                purchase = "no"
+            else: 
+                purchase = input("Do you still want to buy it?  Type yes or no.\n")
             if purchase == "yes" or purchase == "Yes" or purchase == "y":
                 money = money - total_cost 
                 amt_water += how_many
