@@ -107,6 +107,7 @@ def main_menu():
 
 def display_info():
     import webbrowser
+    
     print("""
     THIS PRINT STATEMENT SHOULD HAVE INFORMATION ABOUT THE GAME ITSELF. IT SHOULD BE ONE PARAGRAPH AT LEAST. 
     \n""")
