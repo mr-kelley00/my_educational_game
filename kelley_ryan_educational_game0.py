@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <8:39PM> <02/08/2021>, <Version 0.9.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <8:53PM> <02/08/2021>, <Version 1.0.0>
 
 # Player Variables 
 starting_role = " "
@@ -106,5 +106,21 @@ def main_menu():
 
 # main_menu() # This is a FUNCTION CALL.  
 
+# Display Information 
 
+def display_info():
+    import webbrowser
+    print("""
+    THIS PRINT STATEMENT SHOULD HAVE INFORMATION ABOUT THE GAME ITSELF. IT SHOULD BE ONE PARAGRAPH AT LEAST. 
+    \n""")
+
+    print("I can open a web browser and provide more historical information about this expedition if you want.\n")
+    learn_more = input("Do you want me to open the browser for you? Please type yes or no.\n")
+
+    if learn_more == "Yes" or learn_more == "yes" or learn_more == "y":
+        webbrowser.open('https://kids.nationalgeographic.com/explore/history/lewis-and-clark/')
+    else: 
+        print("Perhaps another time.\n")
+
+# display_info() 
     
