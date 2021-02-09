@@ -120,7 +120,7 @@ def display_info():
     else: 
         print("Perhaps another time.\n")
 
-# display_info() 
+display_info() 
 
 
     
