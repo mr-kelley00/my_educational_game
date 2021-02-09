@@ -81,13 +81,10 @@ def main_menu():
         *                               presents                         *
         *                     The Lewis and Clark Expedition             *
         *                                                                *
-        *                                                                *
-        *                                                                *
         *   1) Start the Expedition                                      *
         *   2) Learn more about the Expedition                           *
         *   3) High Scores                                               * 
         *   4) Exit Game                                                 *
-        *                                                                *
         *                                                                *
         +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+
     \n""")
