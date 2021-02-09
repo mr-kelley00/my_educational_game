@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <8:18PM> <02/08/2021>, <Version 0.7.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <8:29PM> <02/08/2021>, <Version 0.8.1>
 
 # Player Variables 
 starting_role = " "
@@ -69,3 +69,25 @@ num_days = 0
 dist_travel = 0 
 travel_pace = 0 # Determine travel pace (slow, medium, fast). 
 speed = 0 
+
+# Main Menu Function 
+
+def main_menu():
+    global player_choice # The keyword global tells Python to save any changes to this variable for the whole program to access.  
+
+    print("""
+        +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+
+        *                        Ryan Kelley Game Studios                *
+        *                               presents                         *
+        *                     The Lewis and Clark Expedition             *
+        *                                                                *
+        *                                                                *
+        *                                                                *
+        *   1) Start the Expedition                                      *
+        *   2) Learn more about the Expedition                           *
+        *   3) High Scores                                               * 
+        *   4) Exit Game                                                 *
+        *                                                                *
+        *                                                                *
+        +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+
+    \n""")
