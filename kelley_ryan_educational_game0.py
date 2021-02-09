@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <8:29PM> <02/08/2021>, <Version 0.8.1>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <8:39PM> <02/08/2021>, <Version 0.9.0>
 
 # Player Variables 
 starting_role = " "
@@ -91,3 +91,20 @@ def main_menu():
         *                                                                *
         +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+
     \n""")
+
+    player_choice = int(input("Please type a number from the menu and press enter.\n"))
+
+    if player_choice == 1: 
+        print("The adventure begins!  Good luck on your journey!\n")
+    elif player_choice == 2: 
+        print("Wise choice, it is important to know what you are facing on this expedition!\n")
+    elif player_choice == 3:
+        print("You want to see who has gone before you and done well?  Let's see those scores!\n")
+    else: 
+        print("I am sorry to see you go.  You would have made a brave explorer.\n")
+        exit() 
+
+# main_menu() # This is a FUNCTION CALL.  
+
+
+    
