@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:49PM> <01/27/2021>, <Version 0.4.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:49PM> <02/08/2021>, <Version 0.6.0>
 
 # Player Variables 
 starting_role = " "
@@ -54,3 +54,9 @@ chc_bad_weather = 0.0
 chc_boat_sink = 0.0
 chc_horse_fall = 0.0
 chc_bandits = 0.0 
+
+# Travel Variables 
+num_days = 0 
+dist_travel = 0 
+travel_pace = 0 # Determine travel pace (slow, medium, fast). 
+speed = 0 
