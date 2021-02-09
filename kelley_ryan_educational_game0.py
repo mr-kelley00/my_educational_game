@@ -45,3 +45,12 @@ location2 = "Fill in the Name"
 location3 = "Fill in the Name"
 current_location = starting_point 
 
+# Disaster Variables 
+chc_sick = 0.0
+chc_break_wheel = 0.0
+chc_break_axle = 0.0
+chc_hostile_native = 0.0
+chc_bad_weather = 0.0
+chc_boat_sink = 0.0
+chc_horse_fall = 0.0
+chc_bandits = 0.0 
