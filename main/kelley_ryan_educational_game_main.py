@@ -649,7 +649,7 @@ def travel():
     global num_days, dist_travel, party_size, amt_food, amt_water
     global player_name, party_member0, party_member1, party_member2, party_member3
     global player_hp, party_member0_hp, party_member1_hp, party_member2_hp, party_member3_hp
-
+    
     do_travel = True 
     
     while do_travel == True: 
