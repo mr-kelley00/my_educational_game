@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:49PM> <02/08/2021>, <Version 0.6.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <8:18PM> <02/08/2021>, <Version 0.7.0>
 
 # Player Variables 
 starting_role = " "
@@ -9,6 +9,15 @@ party_member0 = " "
 party_member1 = " "
 party_member2 = " "
 party_member3 = " "
+
+# Health Variables 
+player_hp = 100
+party_member0_hp = 100
+party_member1_hp = 100
+party_member2_hp = 100
+party_member3_hp = 100
+party_size = 5
+
 
 # Inventory Variables 
 amt_water = 0 
