@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <10:07AM> <02/05/21>, <Version 1.4.99b>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:20AM> <02/11/21>, <Version 1.5.0>
 
 # TO-DO List [Update as necessary.]
 # Create a how_fast() function to determine how fast the group is traveling. 
@@ -629,18 +629,70 @@ def how_fast(): # Determine how fast the player wants to travel, assign travel s
     \n""")
 
     global travel_pace, speed, resource_consume
+    global chc_sick, chc_break_axle, chc_break_wheel, chc_hostile_native, chc_bad_weather, chc_boat_sink, chc_horse_fall
 
     travel_pace = int(input("Please enter a number and press enter.\n"))
 
     if travel_pace == 1: 
         speed = 10
         resource_consume = 1
+        chc_sick = 0.05
+        chc_break_wheel = 0.05
+        chc_break_axle = 0.05
+        chc_hostile_native = 0.05
+        chc_bad_weather = 0.10
+        chc_boat_sink = 0.05
+        chc_horse_fall = 0.05
     elif travel_pace == 2: 
         speed = 20 
         resource_consume = 2
+        chc_sick = 0.05
+        chc_break_wheel = 0.10
+        chc_break_axle = 0.10
+        chc_hostile_native = 0.10
+        chc_bad_weather = 0.20
+        chc_boat_sink = 0.25
+        chc_horse_fall = 0.15
     else: 
         speed = 30
         resource_consume = 3
+        chc_sick = 0.25
+        chc_break_wheel = 0.33
+        chc_break_axle = 0.33
+        chc_hostile_native = 0.33
+        chc_bad_weather = 0.25
+        chc_boat_sink = 0.33
+        chc_horse_fall = 0.33
+
+def disaster(): 
+    import random
+
+    disaster_type = random.randint(1, 7)
+    d100 = random.random() 
+    print(d100) 
+
+    if disaster_type == 1: # Chance of sickness. 
+        print("Yolo")   
+    elif disaster_type == 2: # Chance of breaking a wheel. 
+        # YOLO 
+        print("Yolo")
+    elif disaster_type == 3: # Chance of breaking an axle. 
+        # YOLO 
+        print("Yolo")
+    elif disaster_type == 4: # Chance of hostile native attack. 
+        # YOLO 
+        print("Yolo")
+    elif disaster_type == 5: # Chance of bad weather. 
+        # YOLO 
+        print("Yolo")
+    elif disaster_type == 6: # Chance of boat sinking.
+        # YOLO 
+        print("Yolo")
+    else: # Chance of horse falling.  
+        # YOLO 
+        print("Yolo")
+
+disaster() 
 
 # how_fast() 
 
@@ -709,8 +761,6 @@ def travel():
 # travel() 
 
 
-
-
 # Win Game: Write the function to determine if the player wins and calculates the final score and saves it to a file in the scores/ directory.
 
 # Play Game Loop
@@ -733,4 +783,4 @@ def play_game():
 
     
 # Start Game Loop
-play_game() 
+# play_game() 
