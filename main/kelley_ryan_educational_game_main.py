@@ -668,7 +668,7 @@ def disaster():
     import random
 
     disaster_type = random.randint(1, 7)
-    d100 = random.random() 
+    d100 = random.uniform(0.01, 1.0) 
     print(d100) 
 
     if disaster_type == 1: # Chance of sickness. 
