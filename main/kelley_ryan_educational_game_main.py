@@ -666,16 +666,27 @@ def how_fast(): # Determine how fast the player wants to travel, assign travel s
 
 def disaster(): 
     import random
-
-    disaster_type = random.randint(1, 7)
+    # need to add global variables. 
+    # need to add global variables. 
+    # need to add global variables. 
+    # need to add global variables. 
+    # need to add global variables. 
+    # need to add global variables. 
+    # need to add global variables. 
+    disaster_type = random.randint(1, 7) # This should have the MAXIMUM value for your possible disasters. 
     d100 = random.uniform(0.01, 1.0) 
     print(d100) 
 
     if disaster_type == 1: # Chance of sickness. 
         print("Yolo")   
+        if chc_sick <= d100: 
+            print("Somone in your party has fallen ill.\n  If they do not get help, they will die.\n")
     elif disaster_type == 2: # Chance of breaking a wheel. 
         # YOLO 
         print("Yolo")
+        if chc_break_wheel <= d100: 
+            print("A wheel has broke on your wagon!\n")
+            num_wheels += -1 
     elif disaster_type == 3: # Chance of breaking an axle. 
         # YOLO 
         print("Yolo")
