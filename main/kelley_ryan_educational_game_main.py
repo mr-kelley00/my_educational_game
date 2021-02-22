@@ -703,7 +703,7 @@ def disaster():
         # YOLO 
         print("Yolo")
 
-disaster() 
+# disaster() 
 
 # how_fast() 
 
@@ -771,6 +771,15 @@ def travel():
 
 # travel() 
 
+# Calculating Score 
+
+def calc_score(): 
+    score = (amt_food * 0.25) + (amt_water * 0.25) + (amt_rope * 0.1) + (num_axles * 2) + (num_guns * 3) + (money * 5) 
+    score = score * score_bonus 
+    print(score)
+
+player_info()
+calc_score() 
 
 # Win Game: Write the function to determine if the player wins and calculates the final score and saves it to a file in the scores/ directory.
 
