@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/04/21> <12:31PM>, <Version 1.4.0>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/23/21> <12:14PM>, <Version 1.5.0>
 
 # To-Do List 
 
@@ -399,7 +399,7 @@ def buy_item():
             break 
 
      
-buy_item() 
+# buy_item() 
 
 
 # Map Display 
@@ -419,10 +419,16 @@ def display_map():
 
     the_map.show() 
 
-display_map() 
+# display_map() 
 
+# Calculating Final Score 
+def calc_score(): 
+    global score_bonus 
+    final_score = (money * 5) + (num_food * 0.5) + (num_water * 0.5) # Add remaining inventory items to this line.
+    final_score = final_score * score_bonus
+    print(f"Your final score was {final_score} points!\n")
 
-
+calc_score()
 
         
     
