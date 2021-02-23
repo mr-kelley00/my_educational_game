@@ -606,7 +606,8 @@ def display_map():
 
     the_map.show() # .show() method opens the image using the system photo viewer. 
 
-# display_map() # Comment out this function call once it works. 
+
+display_map() # Comment out this function call once it works. 
 
 # Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.
 
