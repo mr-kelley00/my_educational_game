@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:29PM> <01/14/21>, <Version 1.0.2>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:29PM> <02/23/21>, <Version 1.2.3>
 
 # Player Variables
 occupation = "" 
@@ -9,6 +9,13 @@ party_member0 = ""
 party_member1 = ""
 party_member2 = ""
 party_member3 = ""
+
+party_size = 5
+player_hp = 100
+party_member0_hp = 100
+party_member1_hp = 100
+party_member2_hp = 100
+party_member3_hp = 100
 
 # Supply Variables
 amount_food = 0
@@ -193,7 +200,156 @@ def buy_item():
         \n
         """)
         # Write the code here to let the player select an item.  Save it as an INTEGER.  
-        break
+         item_buy = int(input("What do you want to buy?  Type the number and press enter.\n"))
+
+        # The following code will most likely work better as a loop.  Start at index[0], iterate through item list until match is found, assign correct values for transaction. 
+
+        if item_buy == 0: # Water
+            item_cost = cost_water * cost_multi
+            print(f"That will cost ${item_cost} each.")
+            how_many = int(input("How many would you like to buy?\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost}.\n")
+            purchase = input("Do you still want to buy it? Yes / No\n")
+            if purchase == "yes" or purchase == "y" or purchase == "Yes":
+                money = money - total_cost
+                amt_water += how_many
+                print(f"You now have {amt_water} gallons of water.\n")
+            else:
+                print("Ok, perhaps another item?\n") 
+        elif item_buy == 1: # Food
+            item_cost = cost_food * cost_multi
+            print(f"That will cost ${item_cost} each.")
+            how_many = int(input("How many would you like to buy?\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost}.\n")
+            purchase = input("Do you still want to buy it? Yes / No\n")
+            if purchase == "yes" or purchase == "y" or purchase == "Yes":
+                money = money - total_cost
+                amt_food += how_many
+                print(f"You now have {amt_food} pounds of food.\n")
+            else:
+                print("Ok, perhaps another item?\n")            
+        elif item_buy == 2: # Clothing
+            item_cost = cost_clothing * cost_multi
+            print(f"That will cost ${item_cost} each.")
+            how_many = int(input("How many would you like to buy?\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost}.\n")
+            purchase = input("Do you still want to buy it? Yes / No\n")
+            if purchase == "yes" or purchase == "y" or purchase == "Yes":
+                money = money - total_cost
+                num_clothing += how_many
+                print(f"You now have {num_clothing} sets of clothing.\n")
+            else:
+                print("Ok, perhaps another item?\n")            
+        elif item_buy == 3: # Guns
+            item_cost = cost_guns * cost_multi
+            print(f"That will cost ${item_cost} each.")
+            how_many = int(input("How many would you like to buy?\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost}.\n")
+            purchase = input("Do you still want to buy it? Yes / No\n")
+            if purchase == "yes" or purchase == "y" or purchase == "Yes":
+                money = money - total_cost
+                num_guns += how_many
+                print(f"You now have {num_guns} guns.\n")
+            else:
+                print("Ok, perhaps another item?\n")            
+        elif item_buy == 4: # Bullets
+            item_cost = cost_bullets * cost_multi
+            print(f"That will cost ${item_cost} each.")
+            how_many = int(input("How many would you like to buy?\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost}.\n")
+            purchase = input("Do you still want to buy it? Yes / No\n")
+            if purchase == "yes" or purchase == "y" or purchase == "Yes":
+                money = money - total_cost
+                num_bullets += how_many
+                print(f"You now have {num_bullets} bullets.\n")
+            else:
+                print("Ok, perhaps another item?\n")            
+        elif item_buy == 5: # Rope
+            item_cost = cost_rope * cost_multi
+            print(f"That will cost ${item_cost} each.")
+            how_many = int(input("How many would you like to buy?\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost}.\n")
+            purchase = input("Do you still want to buy it? Yes / No\n")
+            if purchase == "yes" or purchase == "y" or purchase == "Yes":
+                money = money - total_cost
+                amt_rope += how_many
+                print(f"You now have {amt_rope} feet of rope.\n")
+            else:
+                print("Ok, perhaps another item?\n")            
+        elif item_buy == 6: # Horses
+            item_cost = cost_horses * cost_multi
+            print(f"That will cost ${item_cost} each.")
+            how_many = int(input("How many would you like to buy?\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost}.\n")
+            purchase = input("Do you still want to buy it? Yes / No\n")
+            if purchase == "yes" or purchase == "y" or purchase == "Yes":
+                money = money - total_cost
+                num_horses += how_many
+                print(f"You now have {num_horses} horses.\n")
+            else:
+                print("Ok, perhaps another item?\n")            
+        elif item_buy == 7: # Boats
+            item_cost = cost_boats * cost_multi
+            print(f"That will cost ${item_cost} each.")
+            how_many = int(input("How many would you like to buy?\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost}.\n")
+            purchase = input("Do you still want to buy it? Yes / No\n")
+            if purchase == "yes" or purchase == "y" or purchase == "Yes":
+                money = money - total_cost
+                num_boats += how_many
+                print(f"You now have {num_boats} boats.\n")
+            else:
+                print("Ok, perhaps another item?\n")            
+        elif item_buy == 8: # Wagons
+            item_cost = cost_wagons * cost_multi
+            print(f"That will cost ${item_cost} each.")
+            how_many = int(input("How many would you like to buy?\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost}.\n")
+            purchase = input("Do you still want to buy it? Yes / No\n")
+            if purchase == "yes" or purchase == "y" or purchase == "Yes":
+                money = money - total_cost
+                num_wagons += how_many
+                print(f"You now have {num_wagons} wagons.\n")
+            else:
+                print("Ok, perhaps another item?\n")            
+        elif item_buy == 9: # Wheels
+            item_cost = cost_wagon_wheel * cost_multi
+            print(f"That will cost ${item_cost} each.")
+            how_many = int(input("How many would you like to buy?\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost}.\n")
+            purchase = input("Do you still want to buy it? Yes / No\n")
+            if purchase == "yes" or purchase == "y" or purchase == "Yes":
+                money = money - total_cost
+                num_wheels += how_many
+                print(f"You now have {num_wheels} spare wagon wheels.\n")
+            else:
+                print("Ok, perhaps another item?\n")            
+        elif item_buy == 10: # Axles
+            item_cost = cost_wagon_axle * cost_multi
+            print(f"That will cost ${item_cost} each.")
+            how_many = int(input("How many would you like to buy?\n"))
+            total_cost = item_cost * how_many
+            print(f"That will be ${total_cost}.\n")
+            purchase = input("Do you still want to buy it? Yes / No\n")
+            if purchase == "yes" or purchase == "y" or purchase == "Yes":
+                money = money - total_cost
+                num_axles += how_many
+                print(f"You now have {num_axles} spare wagon axles.\n")
+            else:
+                print("Ok, perhaps another item?\n")            
+        else:
+            print("Thanks for shopping.  Come back any time!\n")
+            break
 
 # buy_item()
 
@@ -218,8 +374,24 @@ def display_map():
 display_map() # Function call for display map. 
 
 
-
-        
+# Calculate Final Score 
+def calc_score(): 
+    
+    
+    # num_boats = 0
+    #num_3guns = 0
+    # num_bullets = 0
+    # num_horses = 0
+    #   num_wagons = 0
+    #num_clothing = 0
+    #num_cows = 0
+    #num_chickens = 0
+    #num_pigs = 0
+    final_score = (money * 5) + (party_size * 100) + (amount_food * 0.25) + (amount_water * 0.25) # Finish
+    final_score = final_score * score_bonus
+    print(f"You have finished with {final_score} points!\n")
+    
+calc_score()        
         
         
         
