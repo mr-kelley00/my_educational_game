@@ -265,7 +265,17 @@ def display_map():
 
     the_map.show()
 
-display_map() 
+# display_map() 
+
+# Score Calculations 
+
+def calc_score(): 
+    score = (amt_food * 0.25) + (amt_water * 0.1) + (num_boats * 2.0) + (num_bullets * 0.05) + (num_food * ?) + (num_guns * ?) 
+    score = score * score_bonus 
+    print(f"Your final score is {score}.\n") 
+
+calc_score() 
+
     
 
 
