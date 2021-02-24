@@ -120,7 +120,7 @@ def display_info():
     else: 
         print("Perhaps another time.\n")
 
-display_info() 
+# display_info() 
 
 # Player Information 
 def player_info():
@@ -171,3 +171,5 @@ def player_info():
     
     print(f"You will start with ${money} dollars and a {score_bonus} score multiplier.\n")
     # YOUR EXPEDITION MIGHT NOT USE DOLLARS, SO MAKE SURE TO CHANGE IT TO MATCH. 
+
+player_info()    
