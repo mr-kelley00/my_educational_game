@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:49PM> <02/23/2021>, <Version 1.0.1>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:02PM> <02/23/2021>, <Version 1.0.2>
 
 # Player Variables 
 starting_role = " "
@@ -136,3 +136,38 @@ def player_info():
     party_member3 = input("What is the name of the fourth person traveling with you?\n")
 
     print(f"{player_name}, good luck.  The lives of {party_member0}, {party_member1}, {party_member2}, {party_member3} depend on your skill!\n ")
+
+    # You need at LEAST three different job roles for the player to pick. Whichever job gives the MOST money to start should have the LOWEST score bonus. 
+
+    print(f"""
+        For this journey, Lewis and Clark will neeed people with different skills and experiences.  You will need to choose one of these roles.  The roles are: 
+
+        -- Cook
+        -- Trapper 
+        -- Interpreter 
+
+        Cooks will start with the least amount of money but receive the highest score bonus.  Interpreters will start with the highest amount of money but receive the lowest score bonus. 
+        Please choose your role carefully.\n
+        """)
+
+    starting_role = input("Which job role do you want to take?\n")
+
+    if starting_role == "Cook" or starting_role == "cook" or starting_role == "COOK": 
+        print(f"{player_name}, you have chosen to be a cook.\n")
+        money = 500 
+        score_bonus = 3.0 
+    elif starting_role == "Trapper" or starting_role == "trapper" or starting_role == "TRAPPER": 
+        print(f"{player_name}, you have chosen to be a trapper.\n")
+        money = 750 
+        score_bonus = 2.0
+    elif starting_role == "Interpreter" or starting_role == "interpreter" or starting_role == "INTERPRETER": 
+        print(f"{player_name}, you have chosen to be an interpreter.\n")
+        money = 1000 
+        score_bonus = 1.0
+    else:
+        print("You did not pick a role correctly.  You will be scrubbing pots and pans and taking out the trash.\n")
+        money = 250 
+        score_bonus = 5.0 
+    
+    print(f"You will start with ${money} dollars and a {score_bonus} score multiplier.\n")
+    # YOUR EXPEDITION MIGHT NOT USE DOLLARS, SO MAKE SURE TO CHANGE IT TO MATCH. 
