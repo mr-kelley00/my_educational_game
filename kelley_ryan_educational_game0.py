@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:14PM> <02/23/2021>, <Version 1.1.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:43PM> <02/23/2021>, <Version 1.2.0>
 
 # Player Variables 
 starting_role = " "
@@ -173,3 +173,24 @@ def player_info():
     # YOUR EXPEDITION MIGHT NOT USE DOLLARS, SO MAKE SURE TO CHANGE IT TO MATCH. 
 
 # player_info()
+
+# Show Inventory Items 
+
+def show_inventory(): 
+    # Global variables are not needed because we are not changing the data. 
+    print(f"""
+    {amt_water} gallons of water. 
+    {amt_food} pound of food. 
+    {num_clothing} sets of clothing. 
+    {num_guns} working guns. 
+    {num_bullets} bullets for the guns. 
+    {amt_rope} feet of rope. 
+    {num_horses} horses. 
+    {num_boats} boats. 
+    {num_wagons} working wagons. 
+    {num_wagon_wheel} spare wagon wheels. 
+    {num_wagon_axle} spare wagon axles.  
+    
+    """)
+
+# show_inventory() 
