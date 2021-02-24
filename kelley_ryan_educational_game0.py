@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <8:53PM> <02/08/2021>, <Version 1.0.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:33PM> <02/23/2021>, <Version 1.0.1>
 
 # Player Variables 
 starting_role = " "
@@ -122,5 +122,20 @@ def display_info():
 
 display_info() 
 
+# Player Information 
 
+def player_info(): 
+    global money, score_bonus
+    global player_name, party_member0, party_member1, party_member2, party_member3
     
+    player_name = input("What is your name?\n")
+    print(f"Hello {player_name}.  That is a might fine name!\n")
+
+    party_member0 = input("What is the name of the first person joining you?\n")
+    party_member1 = input("What is the name of the second person joining you?\n")
+    party_member2 = input("What is the name of the third person joining you?\n")
+    party_member3 = input("What is the name of the fourth person joining you?\n")
+
+    print(f"{player_name}, good luck!  {party_member0}, {party_member1}, {party_member2}, {party_member3} are counting on you for survival!\n")
+
+
