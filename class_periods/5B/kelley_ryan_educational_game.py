@@ -227,7 +227,7 @@ def buy_item():
             [ 8) Wagons                                                 ]
             [ 9) Wagon Wheels                                           ]
             [ 10) Wagon Axle                                            ]
-            [ 20) Exit Store
+            [ 20) Exit Store                                            ]
             [+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]
             \n
             """)
