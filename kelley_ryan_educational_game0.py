@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:02PM> <02/23/2021>, <Version 1.0.2>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:14PM> <02/23/2021>, <Version 1.1.0>
 
 # Player Variables 
 starting_role = " "
@@ -172,4 +172,4 @@ def player_info():
     print(f"You will start with ${money} dollars and a {score_bonus} score multiplier.\n")
     # YOUR EXPEDITION MIGHT NOT USE DOLLARS, SO MAKE SURE TO CHANGE IT TO MATCH. 
 
-player_info()    
+# player_info()
