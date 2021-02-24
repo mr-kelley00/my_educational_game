@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <8:54AM> <02/24/21>, <Version 1.4.0>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <8:55AM> <02/24/21>, <Version 1.4.0a>
 
 # Player Variables
 starting_role = ""
@@ -623,5 +623,5 @@ def calc_score():
 
     print(final_score)
 
-player_info() 
-calc_score() 
+# player_info() 
+# calc_score() 
