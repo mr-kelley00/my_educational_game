@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:46PM> <02/05/21>, <Version 1.1.5>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:46PM> <02/24/21>, <Version 1.2.0>
 
 # Player Variables
 player_role = ""
@@ -19,6 +19,9 @@ party_member2_hp = 100
 
 party_member3 = ""
 party_member3_hp = 100 
+
+party_size = 5 
+
 
 
 # Inventory Variables
@@ -627,8 +630,6 @@ def sell_item():
 
 sell_item() 
 
-
-
 # Show Map function
 def show_map():
     from PIL import Image
@@ -649,6 +650,14 @@ def show_map():
 
 show_map()
     
+# Calculating Final Score 
+def calc_score(): 
+ 
+    final_score = (party_size * 1000) + (money * 10) + (amt_food * 0.25) + (amt_water * 0.25) + (amt_clothing * 1) + (amt_wagons * 5)
+    final_score += (amt_boats * 10) + (amt_horses * 25) + (num_guns * 5) + (num_bullets * 0.25) + (num_pelts * 2)
+    final_score += (num_wagon_wheel * 2.5) + (num_wagon_axle * 2.5)
 
+    final_score = final_score * score_bonus
+    print(f"Congratulations {player_name}.  You finished with {final_score} points!\n")
 
     
