@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:26AM> <01/28/21>, <Version 1.3.0>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <8:54AM> <02/24/21>, <Version 1.4.0>
 
 # Player Variables
 starting_role = ""
@@ -9,6 +9,14 @@ party_member0 = ""
 party_member1 = ""
 party_member2 = ""
 party_member3 = ""
+
+player_hp = 100 
+party_member0_hp = 100
+party_member1_hp = 100
+party_member2_hp = 100
+party_member3_hp = 100
+party_size = 5
+
 
 # Inventory Variables
 amt_water = 0
@@ -139,7 +147,7 @@ def player_info():
         print("You did not pick a role correctly.  You wil be washing pots and pans.\n")
         money = 250
         score_bonus = 0.5 
-    print(f"You will start with ${starting_money} dollars and a {score_bonus} score multiplier.\n")     
+    print(f"You will start with ${money} dollars and a {score_bonus} score multiplier.\n")     
    
 # player_info() 
 
@@ -372,7 +380,7 @@ def buy_item():
             print("Thanks for shopping.  Come back any time!\n")
             break
 
-buy_item()
+# buy_item()
 
 def sell_item(): 
     # how much $ does the vendor have?
@@ -605,3 +613,15 @@ def display_map():
     
 # Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.
 
+# Calculate Final Score 
+def calc_score(): 
+
+    final_score = (party_size * 250) + (money * 50) + (amt_water * 0.5) + (amt_food * 0.5) + (num_clothing * 1.0)  
+    final_score += (num_guns * 2.0) + (num_bullets * 0.25) + (num_rope * 1.0) + (num_horses * 5.0) + (num_boats * 25.0)  
+    final_score += (num_wagons * 10.0) + (num_wagon_wheel * 2.5) + (num_wagon_axle * 2.5)
+    final_score = final_score * score_bonus # Multiply final_score by the score_bonus.  
+
+    print(final_score)
+
+player_info() 
+calc_score() 
