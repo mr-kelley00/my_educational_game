@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/23/21> <12:14PM>, <Version 1.5.0>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/25/21> <12:59PM>, <Version 1.6.0>
 
 # To-Do List 
 
@@ -426,7 +426,10 @@ def display_map():
 # Calculating Final Score 
 def calc_score(): 
     global score_bonus 
-    final_score = (money * 5) + (num_food * 0.5) + (num_water * 0.5) # Add remaining inventory items to this line.
+
+    final_score = (money * 5) + (num_food * 0.5) + (num_water * 0.5) + (num_boats * 5.0) + (num_bullets * 0.25) + (num_guns * 2.0) 
+    final_score += (num_wagons * 5.0) + (num_horses * 10.0) + (num_wagon_wheel * 2.5) + (num_wagon_axle * 2.5)
+    final_score += (num_clothing * 1.5) + (num_pelts * 2.0) + (num_traps * 1.5) # Add remaining inventory items to this line.
     final_score = final_score * score_bonus
     print(f"Your final score was {final_score} points!\n")
 
