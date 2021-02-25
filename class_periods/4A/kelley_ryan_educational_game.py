@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:29PM> <02/23/21>, <Version 1.2.3>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <2:57PM> <02/25/21>, <Version 1.2.5>
 
 # Player Variables
 occupation = "" 
@@ -200,7 +200,7 @@ def buy_item():
         \n
         """)
         # Write the code here to let the player select an item.  Save it as an INTEGER.  
-         item_buy = int(input("What do you want to buy?  Type the number and press enter.\n"))
+        item_buy = int(input("What do you want to buy?  Type the number and press enter.\n"))
 
         # The following code will most likely work better as a loop.  Start at index[0], iterate through item list until match is found, assign correct values for transaction. 
 
@@ -371,7 +371,64 @@ def display_map():
 
     the_map.show()
 
-display_map() # Function call for display map. 
+# display_map() # Function call for display map. 
+
+# Travel Functions 
+def how_fast(): 
+    print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print("*                            Traveling Speed                        *")
+    print("*                                                                   *")
+    print("*  On this menu you can choose how fast you want to travel.         *")
+    print("*                                                                   *")
+    print("*  WARNING:  The faster you travel, the more food & water you use.  *")
+    print("*  Traveling at high rates of speed also increases the chance of    *")
+    print("*  accidents or other disasters.                                    *")
+    print("*                                                                   *")
+    print("*                                                                   *")
+    print("*    1. Slow [15 Miles Daily]                                       *")
+    print("*    2. Moderate [30 Miles Daily]                                   *")
+    print("*    3. Fast [60 Miles Daily]                                       *")
+    print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+    global travel_pace, speed, resource_consume 
+    global chnc_sick, chnc_die, chnc_injury, chnc_hostile_natives, chnc_wagon_accident, chnc_bear_attack
+
+    travel_pace = int(input("Please choose a number from the menu and press enter.\n"))
+    print(travel_pace)
+
+    if travel_pace == 1: 
+        speed = 15
+        resource_consume = 1.0
+        chnc_sick = 10 # 10% Chance 
+        chnc_die = 25 # 25% Chance 
+        chnc_injury = 50 # 50% Chance
+        chnc_hostile_natives = 60 = # 60% Chance
+        chnc_wagon_accident = 0 # 0% Chance
+        chnc_bear_attack = 100 # 100% Chance 
+    elif ?: 
+        ?
+        ?
+        ?
+        ?
+        ?
+        ?
+        ?
+        ?
+    else: 
+        ?
+        ?
+        ?
+        ?
+        ?
+        ?
+        ?
+        ?
+
+
+
+how_fast()
+
+
 
 
 # Calculate Final Score 
@@ -391,7 +448,7 @@ def calc_score():
     final_score = final_score * score_bonus
     print(f"You have finished with {final_score} points!\n")
     
-calc_score()        
+# calc_score()        
         
         
         
