@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/25/21> <12:59PM>, <Version 1.6.0>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/25/21> <1:10PM>, <Version 1.6.1>
 
 # To-Do List 
 
@@ -164,7 +164,7 @@ What job would you like?
     print(f"You will start with a score bonus of {score_bonus} and ${money} dollars.\n") 
     
     
-player_info()
+# player_info()
 
 
 # Trading Transactions
@@ -433,7 +433,33 @@ def calc_score():
     final_score = final_score * score_bonus
     print(f"Your final score was {final_score} points!\n")
 
-calc_score()
+#  calc_score()
+
+# Travel Speed 
+
+def how_fast():
+    print(f"""
+        ++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++
+        |                      Traveling Speed                                   |
+        |                                                                        |
+        | Please select how fast you want to travel each day.                    |
+        | The faster you travel, the more food and water you will use each day.  | 
+        | Faster travel also increases the chance of sickness or accidents.      |
+        |                                                                        |
+        | Please choose one of the following travel speeds.                      |
+        |                                                                        |
+        |   1.  Slow [10 Miles Daily]                                            |
+        |   2.  Moderate [30 Miles Daily]                                        |
+        |   3.  Fast [60 Miles Daily]                                            |
+        ++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++
+        \n
+        """)
+
+how_fast() 
+
+
+
+
 
         
     
