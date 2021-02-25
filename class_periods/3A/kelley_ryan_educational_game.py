@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/25/21> <1:10PM>, <Version 1.6.1>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/25/21> <1:17PM>, <Version 1.6.2>
 
 # To-Do List 
 
@@ -454,6 +454,14 @@ def how_fast():
         ++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++==++
         \n
         """)
+    
+    global travel_pace, speed, resource_consume 
+    global chnc_sick, chnc_die, chnc_wheel_break, chnc_axle_break, chnc_bad_weather 
+
+    travel_pace = int(input("Please enter a number from the menu and press enter.\n"))
+    # print(travel_pace)
+
+
 
 how_fast() 
 
