@@ -1,4 +1,4 @@
-# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <02/25/21> <1:17PM>, <Version 1.6.2>
+# <Lewis and Clark Expedition Extravaganza>, <Ryan Kelley>, <03/03/21> <12:30PM>, <Version 1.7.0>
 
 # To-Do List 
 
@@ -460,6 +460,41 @@ def how_fast():
 
     travel_pace = int(input("Please enter a number from the menu and press enter.\n"))
     # print(travel_pace)
+
+    if travel_pace == 1: 
+        speed = 10 
+        resource_consume = 1 # This is the 'normal' amount of resource usage.  
+        chnc_sick = 5 # This is the % chance of this disaster happening. 
+        chnc_die = 1
+        chnc_wheel_break = 10
+        chnc_axle_break = 10
+        chnc_bad_weather = 20
+    elif travel_pace == 2:
+        speed = 30 
+        resource_consume = 2 # This is the 'normal' amount of resource usage.  
+        chnc_sick = 10 # This is the % chance of this disaster happening. 
+        chnc_die = 5
+        chnc_wheel_break = 20
+        chnc_axle_break = 20
+        chnc_bad_weather = 35 
+    else:
+        speed = 60 
+        resource_consume = 3 # This is the 'normal' amount of resource usage.  
+        chnc_sick = 20 # This is the % chance of this disaster happening. 
+        chnc_die = 15
+        chnc_wheel_break = 33
+        chnc_axle_break = 33
+        chnc_bad_weather = 40
+
+    #print(f"""
+    #    {speed} is the speed.  
+    #    {resource_consume} is the rate for resource consumption. 
+    #    {chnc_sick} % chance of sickness
+    #    {chnc_die} % chance of death
+    #    {chnc_wheel_break} % chance of wheel break 
+    #    {chnc_axle_break} % chance of axle break
+    #    {chnc_bad_weather} % chance of bad weather
+    #    """)
 
 
 

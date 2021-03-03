@@ -637,23 +637,23 @@ def how_fast(): # Determine how fast the player wants to travel, assign travel s
     if travel_pace == 1: 
         speed = 10
         resource_consume = 1
-        chc_sick = 0.05
-        chc_break_wheel = 0.05
-        chc_break_axle = 0.05
-        chc_hostile_native = 0.05
-        chc_bad_weather = 0.10
-        chc_boat_sink = 0.05
-        chc_horse_fall = 0.05
+        chc_sick = 5 # This is the % chance of it happening.  
+        chc_break_wheel = 5
+        chc_break_axle = 5
+        chc_hostile_native = 5
+        chc_bad_weather = 10
+        chc_boat_sink = 5
+        chc_horse_fall = 5
     elif travel_pace == 2: 
         speed = 20 
         resource_consume = 2
-        chc_sick = 0.05
-        chc_break_wheel = 0.10
-        chc_break_axle = 0.10
-        chc_hostile_native = 0.10
-        chc_bad_weather = 0.20
-        chc_boat_sink = 0.25
-        chc_horse_fall = 0.15
+        chc_sick = 5
+        chc_break_wheel = 10
+        chc_break_axle = 10
+        chc_hostile_native = 10
+        chc_bad_weather = 20
+        chc_boat_sink = 25
+        chc_horse_fall = 15
     else: 
         speed = 30
         resource_consume = 3
