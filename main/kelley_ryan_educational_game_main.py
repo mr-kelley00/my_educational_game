@@ -1,7 +1,7 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:20AM> <02/11/21>, <Version 1.5.0>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <12:38AM> <03/10/21>, <Version 1.5.0a>
 
 # TO-DO List [Update as necessary.]
-# Create a how_fast() function to determine how fast the group is traveling. 
+
 # Create a how_far() function to determine how far between each location. 
 # Create a how_long() function to determine how long it will take to travel. 
 # In buy_item() what happens if the player cannot afford the item? 
@@ -9,26 +9,9 @@
 # Create calc_scores() function to determine player score. 
 # Create high_scores() function to display previous high scores.   
 
+# import inventory
 
-# Player Variables
-starting_role = ""
-money = 0
-score_bonus = 0
-player_name = ""
-player_hp = 100
-party_size = 5 # Total number of people in the party to start. 
-
-# Party Member Variables 
-party_member0 = ""
-party_member0_hp = 100
-party_member1 = ""
-party_member1_hp = 100
-party_member2 = ""
-party_member2_hp = 100
-party_member3 = ""
-party_member3_hp = 100
-
-# Inventory Variables
+# Inventory Amounts
 amt_water = 0
 amt_food = 0
 num_clothing = 0 
@@ -55,6 +38,25 @@ cost_wagon_wheel = 1.50
 cost_wagon_axle = 1.50
 cost_multi = 1.0 
 
+# Player Variables
+player_choice = ""
+starting_role = ""
+money = 0
+score_bonus = 0
+player_name = ""
+player_hp = 100
+party_size = 5 # Total number of people in the party to start. 
+
+# Party Member Variables 
+party_member0 = ""
+party_member0_hp = 100
+party_member1 = ""
+party_member1_hp = 100
+party_member2 = ""
+party_member2_hp = 100
+party_member3 = ""
+party_member3_hp = 100
+
 # Location Variables 
 starting_point = "St. Louis, Missouri"
 ending_point = "Fort Calstop"
@@ -68,6 +70,8 @@ current_location = starting_point
 num_days = 0
 dist_travel = 0 
 travel_pace = 0 
+speed = 0
+resource_consume = 0
 
 # Disaster Variables, % chance it occurs.  
 chc_sick = 0.0
@@ -78,7 +82,9 @@ chc_bad_weather = 0.0
 chc_boat_sink = 0.0
 chc_horse_fall = 0.0
 
-# Main Menu Function
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# MAIN MENU 
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def main_menu():
     global player_choice
@@ -120,6 +126,10 @@ def game_info():
         """)
 
 # disp_info() 
+
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# PLAYER INFO 
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def player_info():
     global money, score_bonus 
@@ -165,6 +175,19 @@ def player_info():
    
 # player_info() 
 
+
+
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# INVENTORY AND TRADE FUNCTIONS
+# show_inventory() simply prints a list of items in the player's inventory. 
+# buy_item() allows players to buy items from stores.  We are assuming all items are available in unlimited supply at each store. 
+# sell_item() allows players to sell items to stores.  Assuming vendors have unlimited money as long as player has supply. 
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# SHOW INVENTORY 
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 def show_inventory():
     print(f"""
     {amt_water} gallons of water remain.
@@ -181,19 +204,12 @@ def show_inventory():
     \n
     """)
 
-# show_inventory()
-
-# Trading Functions
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# BUY ITEM
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def buy_item():
     
-    # how much $ do I have?
-    # cost of the item, 
-    # amount of item available
-    # calculate total cost (num of items * cost per item)
-    # pay for it (money - total cost) 
-    # add it to inventory (num_wheels += 1 or num_bullets += 50)
-
     global money, amt_water, amt_food, num_clothing, num_guns, num_bullets, amt_rope
     global num_horses, num_boats, num_wagons, num_wheels, num_axles
            
@@ -386,15 +402,12 @@ def buy_item():
             print("Thanks for shopping.  Come back any time!\n")
             break
 
-# buy_item()
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# SELL ITEM
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def sell_item(): 
-    # how much $ does the vendor have?
-    # value of the item
-    # amount of item I have 
-    # sell it (value_item * num_items) 
-    # subtract it to inventory (num_wheels += -1 or num_bullets += -50)
-
+    
     global money, amt_water, amt_food, num_clothing, num_guns, num_bullets, amt_rope
     global num_horses, num_boats, num_wagons, num_wheels, num_axles
         
@@ -587,9 +600,11 @@ def sell_item():
             print("Thanks for shopping.  Come back any time!\n")
             break
 
-# Display Map -- Open the OS image program and display map graphics.  
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# DISPLAY MAP # 
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-def display_map():
+def display_map(): 
     from PIL import Image
 
     # Display different map based on current location of player. 
@@ -606,10 +621,16 @@ def display_map():
 
     the_map.show() # .show() method opens the image using the system photo viewer. 
 
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# TRAVEL FUNCTIONS
+# show_inventory() simply prints a list of items in the player's inventory. 
+# buy_item() allows players to buy items from stores.  We are assuming all items are available in unlimited supply at each store. 
+# sell_item() allows players to sell items to stores.  Assuming vendors have unlimited money as long as player has supply. 
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-display_map() # Comment out this function call once it works. 
-
-# Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# HOW FAST
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def how_fast(): # Determine how fast the player wants to travel, assign travel speed and resource consumption. 
     print("""
@@ -665,6 +686,10 @@ def how_fast(): # Determine how fast the player wants to travel, assign travel s
         chc_boat_sink = 0.33
         chc_horse_fall = 0.33
 
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# DETERMINE DISASTERS
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 def disaster(): 
     import random
     # need to add global variables. 
@@ -704,9 +729,9 @@ def disaster():
         # YOLO 
         print("Yolo")
 
-# disaster() 
-
-# how_fast() 
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# MAIN TRAVEL LOOP
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 def travel(): 
     # This function will determine how far the party travels each day. 
@@ -794,6 +819,5 @@ def play_game():
         print("Come back again sometime.\n")
         exit()
 
-    
 # Start Game Loop
 # play_game() 
