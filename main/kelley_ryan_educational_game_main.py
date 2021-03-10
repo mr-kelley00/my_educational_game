@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <12:38AM> <03/10/21>, <Version 1.5.0a>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <12:52AM> <03/10/21>, <Version 1.5.1>
 
 # TO-DO List [Update as necessary.]
 
@@ -83,7 +83,7 @@ chc_boat_sink = 0.0
 chc_horse_fall = 0.0
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# MAIN MENU 
+# MAIN MENU -- FUNCTIONAL
 # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def main_menu():
@@ -116,19 +116,28 @@ def main_menu():
     else:
         print("Ahh, no heart for adventure today I see.  Farewell, until next time.\n")
         exit()
+     
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# DISPLAY INFO -- FUNCTIONAL 
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-# main_menu()
-        
-# Game Information Function
-def game_info():
+def display_info():
+    import webbrowser
+    
     print("""
-        Update to actual paragraph of historical facts and game play tips.
-        """)
+    THIS PRINT STATEMENT SHOULD HAVE INFORMATION ABOUT THE GAME ITSELF. IT SHOULD BE ONE PARAGRAPH AT LEAST. 
+    \n""")
 
-# disp_info() 
+    print("I can open a web browser and provide more historical information about this expedition if you want.\n")
+    learn_more = input("Do you want me to open the browser for you? Please type yes or no.\n")
+
+    if learn_more == "Yes" or learn_more == "yes" or learn_more == "y":
+        webbrowser.open('https://kids.nationalgeographic.com/explore/history/lewis-and-clark/')
+    else: 
+        print("Perhaps another time.\n")
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# PLAYER INFO 
+# PLAYER INFO -- FUNCTIONAL 
 # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def player_info():
@@ -173,10 +182,6 @@ def player_info():
         score_bonus = 0.5 
     print(f"You will start with ${money} dollars and a {score_bonus} score multiplier.\n")     
    
-# player_info() 
-
-
-
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # INVENTORY AND TRADE FUNCTIONS
 # show_inventory() simply prints a list of items in the player's inventory. 
@@ -185,7 +190,7 @@ def player_info():
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# SHOW INVENTORY 
+# SHOW INVENTORY -- FUNCTIONAL
 # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def show_inventory():
@@ -205,7 +210,7 @@ def show_inventory():
     """)
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# BUY ITEM
+# BUY ITEM -- FUNCTIONAL 
 # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def buy_item():
@@ -403,7 +408,7 @@ def buy_item():
             break
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# SELL ITEM
+# SELL ITEM -- FUNCTIONAL 
 # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def sell_item(): 
@@ -601,7 +606,7 @@ def sell_item():
             break
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# DISPLAY MAP # 
+# DISPLAY MAP -- NEEDS IMPROVEMENT 
 # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def display_map(): 
@@ -629,7 +634,7 @@ def display_map():
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# HOW FAST
+# HOW FAST -- NEEDS IMPROVEMENT 
 # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def how_fast(): # Determine how fast the player wants to travel, assign travel speed and resource consumption. 
@@ -687,7 +692,7 @@ def how_fast(): # Determine how fast the player wants to travel, assign travel s
         chc_horse_fall = 0.33
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# DETERMINE DISASTERS
+# DETERMINE DISASTERS -- UNFINISHED
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 def disaster(): 
@@ -730,7 +735,7 @@ def disaster():
         print("Yolo")
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# MAIN TRAVEL LOOP
+# MAIN TRAVEL LOOP -- UNFINISHED
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 def travel(): 
@@ -795,13 +800,10 @@ def travel():
         
         \n""")
 
-# travel() 
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# PLAY GAME -- UNFINISHED
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# Calculating Score 
-
-# Win Game: Write the function to determine if the player wins and calculates the final score and saves it to a file in the scores/ directory.
-
-# Play Game Loop
 def play_game():
     main_menu()
 
@@ -811,7 +813,7 @@ def play_game():
         how_fast()
         travel()
     elif player_choice == 2:
-        game_info()
+        display_info()
     elif player_choice == 3:
         # high_scores()
         print("This is a test.\n")
@@ -819,5 +821,6 @@ def play_game():
         print("Come back again sometime.\n")
         exit()
 
-# Start Game Loop
-# play_game() 
+# !@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!
+# !@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!
+# TEST FUNCTION CALLS BELOW THIS LINE 
