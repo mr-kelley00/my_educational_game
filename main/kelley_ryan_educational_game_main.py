@@ -53,7 +53,7 @@ location0 =  "Test 0"
 location1 =  "Test 1"
 location2 =  "Test 2"
 location3 =  "Test 3"
-current_location = starting_point
+current_location = "St. Louis, Missouri"
 
 # Travel Variables 
 num_days = 0
@@ -70,6 +70,8 @@ chc_hostile_native = 0.0
 chc_bad_weather = 0.0
 chc_boat_sink = 0.0
 chc_horse_fall = 0.0
+
+import inventory 
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # MAIN MENU -- FUNCTIONAL
@@ -207,3 +209,5 @@ def play_game():
 # !@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!
 # !@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!
 # TEST FUNCTION CALLS BELOW THIS LINE 
+
+inventory.buy_item()

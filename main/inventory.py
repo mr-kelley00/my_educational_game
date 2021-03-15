@@ -32,7 +32,7 @@ def show_inventory():
 def buy_item():
     
     global money, amt_water, amt_food, num_clothing, num_guns, num_bullets, amt_rope
-    global num_horses, num_boats, num_wagons, num_wheels, num_axles
+    global num_horses, num_boats, num_wagons, num_wheels, num_axles, current_location
            
     if current_location == "St. Louis, Missouri":
         store_name = "Sally's St. Louis General Goods Emporium"
