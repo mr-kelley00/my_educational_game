@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:46PM> <02/24/21>, <Version 1.2.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:39PM> <03/15/21>, <Version 1.3.0>
 
 # Player Variables
 player_role = ""
@@ -10,15 +10,19 @@ player_hp = 100
 
 party_member0 = ""
 party_member0_hp = 100
+party_member0_alive = True
 
 party_member1 = ""
 party_member1_hp = 100
+party_member1_alive = True
 
 party_member2 = ""
 party_member2_hp = 100
+party_member2_alive = True
 
 party_member3 = ""
 party_member3_hp = 100 
+party_member3_alive = True
 
 party_size = 5 
 
