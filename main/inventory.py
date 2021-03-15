@@ -1,3 +1,4 @@
+import variables
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # INVENTORY AND TRADE FUNCTIONS
 # show_inventory() simply prints a list of items in the player's inventory. 
@@ -34,7 +35,7 @@ def buy_item():
     global money, amt_water, amt_food, num_clothing, num_guns, num_bullets, amt_rope
     global num_horses, num_boats, num_wagons, num_wheels, num_axles, current_location
            
-    if current_location == "St. Louis, Missouri":
+    if variables.current_location == "St. Louis, Missouri":
         store_name = "Sally's St. Louis General Goods Emporium"
         cost_multi = 0.75
     elif current_location == "Test 0":
@@ -54,7 +55,7 @@ def buy_item():
         
         print(f"""
                                         {store_name}
-            Balance: ${money}
+            Balance: ${variables.money}
             [+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]
             [ Inventory for Sale                                        ]
             [ 0) Water                                                  ]
@@ -142,16 +143,16 @@ def buy_item():
             else:
                 print("Ok, perhaps another item?\n")            
         elif item_buy == 5: # Rope
-            item_cost = cost_rope * cost_multi
+            item_cost = variables.cost_rope * variables.cost_multi
             print(f"That will cost ${item_cost} each.")
             how_many = int(input("How many would you like to buy?\n"))
             total_cost = item_cost * how_many
             print(f"That will be ${total_cost}.\n")
             purchase = input("Do you still want to buy it? Yes / No\n")
             if purchase == "yes" or purchase == "y" or purchase == "Yes":
-                money = money - total_cost
-                amt_rope += how_many
-                print(f"You now have {amt_rope} feet of rope.\n")
+                variables.money = variables.money - total_cost
+                variables.amt_rope += how_many
+                print(f"You now have {variables.amt_rope} feet of rope.\n")
             else:
                 print("Ok, perhaps another item?\n")            
         elif item_buy == 6: # Horses
