@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <8:55AM> <02/24/21>, <Version 1.4.0a>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <8:55AM> <03/15/21>, <Version 1.5.0>
 
 # Player Variables
 starting_role = ""
@@ -160,10 +160,6 @@ def display_map():
     current_map.show()
     # Need to update code to display map based on current location.  
 
-# display_map() # Uncomment this to test. 
-    
-# Travel: Determine travel speed, calculate distance traveled, check for disasters, consume food / water.
-
 # Calculate Final Score 
 def calc_score(): 
 
@@ -174,5 +170,3 @@ def calc_score():
 
     print(final_score)
 
-# player_info() 
-# calc_score() 
