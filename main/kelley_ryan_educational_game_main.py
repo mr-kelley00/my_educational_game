@@ -35,17 +35,22 @@ starting_role = ""
 money = 0
 score_bonus = 0
 player_name = ""
-player_hp = 100
 party_size = 5 # Total number of people in the party to start. 
 
 # Party Member Variables 
 party_member0 = ""
-party_member0_hp = 100
 party_member1 = ""
-party_member1_hp = 100
 party_member2 = ""
-party_member2_hp = 100
 party_member3 = ""
+
+# +++++++++++++++
+# HEALTH
+# +++++++++++++++
+
+player_hp = 100
+party_member0_hp = 100
+party_member1_hp = 100
+party_member2_hp = 100
 party_member3_hp = 100
 
 # Location Variables 
@@ -833,6 +838,18 @@ def travel():
         {party_member3} has {party_member3_hp} HP remaining.
         
         \n""")
+
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# COMBAT LOOP -- UNFINISHED
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+def combat():
+    # Combat Loop
+    global player_hp, party_member0_hp, party_member1_hp, party_member2_hp, party_member3_hp
+
+    
+def death_check(): 
+    # Did Anyone Die?
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # CALCULATE SCORE -- UNFINISHED
