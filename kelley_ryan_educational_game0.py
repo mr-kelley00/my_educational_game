@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:50AM> <03/23/2021>, <Version 1.4.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:21AM> <03/23/2021>, <Version 1.5.0>
 
 # Player Variables 
 starting_role = " "
@@ -237,4 +237,13 @@ def death_check():
         print(f"{player_name} has passed away.  The journey cannot continue.  Game over.\n")
         # calc_score() 
 
-death_check()   
+# death_check()   
+
+# /////////////////////////////////////////
+# CALCULATE SCORE -- Tally the final score.
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+def calc_score(): 
+    final_score = (amt_water * 0.5) + (amt_food * 0.5) + (num_clothing * 1) + (num_guns * 5) + (num_bullets * 0.25) + (amt_rope * 0.25)
+    final_score += (num_horses * 10) + (num_boats * 20) + (num_wagons * 15) + (num_wagon_wheel * 5) + (num_wagon_axle * 5)
+    # Items that are EXPENSIVE or IMPORTANT for the journey should be worth more points.  
