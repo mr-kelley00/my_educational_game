@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <12:51AM> <03/10/2021>, <Version 1.2.1>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:35AM> <03/23/2021>, <Version 1.3.0>
 
 # Player Variables 
 starting_role = " "
@@ -13,10 +13,19 @@ player_choice = 0
 
 # Health Variables 
 player_hp = 100
+
 party_member0_hp = 100
+party_member0_alive = True 
+
 party_member1_hp = 100
+party_member1_alive = True 
+
 party_member2_hp = 100
+party_member2_alive = True 
+
 party_member3_hp = 100
+party_member3_alive = True 
+
 party_size = 5
 
 
@@ -195,3 +204,4 @@ def show_inventory():
     """)
 
 # show_inventory() 
+
