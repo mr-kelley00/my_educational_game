@@ -53,6 +53,12 @@ party_member1_hp = 100
 party_member2_hp = 100
 party_member3_hp = 100
 
+party_member0_alive = True
+party_member1_alive = True
+party_member2_alive = True
+party_member3_alive = True
+
+
 # Location Variables 
 starting_point = "St. Louis, Missouri"
 ending_point = "Fort Calstop"
@@ -731,19 +737,12 @@ def how_fast(): # Determine how fast the player wants to travel, assign travel s
         chc_horse_fall = 0.33
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# DETERMINE DISASTERS -- UNFINISHED
+# DETERMINE DISASTERS -- UNFINISHED -- THIS CODE WILL BE FINISHED LATER. 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 def disaster(): 
     import random
-    # need to add global variables. 
-    # need to add global variables. 
-    # need to add global variables. 
-    # need to add global variables. 
-    # need to add global variables. 
-    # need to add global variables. 
-    # need to add global variables. 
-    disaster_type = random.randint(1, 7) # This should have the MAXIMUM value for your possible disasters. 
+       disaster_type = random.randint(1, 7) # This should have the MAXIMUM value for your possible disasters. 
     d100 = random.uniform(0.01, 1.0) 
     print(d100) 
 

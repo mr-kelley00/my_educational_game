@@ -26,8 +26,6 @@ party_member3_alive = True
 
 party_size = 5 
 
-
-
 # Inventory Variables
 amt_food = 0
 amt_water = 0
