@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:49AM> <03/15/21>, <Version 1.6.0b>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:59AM> <03/23/21>, <Version 1.6.1>
 
 # /////////////////|
 # Inventory Amounts|
@@ -742,7 +742,8 @@ def how_fast(): # Determine how fast the player wants to travel, assign travel s
 
 def disaster(): 
     import random
-       disaster_type = random.randint(1, 7) # This should have the MAXIMUM value for your possible disasters. 
+    global num_wheels
+    disaster_type = random.randint(1, 7) # This should have the MAXIMUM value for your possible disasters. 
     d100 = random.uniform(0.01, 1.0) 
     print(d100) 
 
@@ -846,9 +847,34 @@ def combat():
     # Combat Loop
     global player_hp, party_member0_hp, party_member1_hp, party_member2_hp, party_member3_hp
 
-    
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# DEATH CHECK -- Did someone die? -- UNFINISHED
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 def death_check(): 
-    # Did Anyone Die?
+    global party_member0_alive, party_member1_alive, party_member2_alive, party_member3_alive
+    
+    if party_member0_alive == True and party_member0_hp <= 0:
+        print(f"{party_member0} has died.  Rest in peace.\n")
+        party_member0_alive == False
+    
+    if party_member1_alive == True and party_member1_hp <= 0:
+        print(f"{party_member1} has died.  Rest in peace.\n")
+        party_member1_alive == False
+    
+    if party_member2_alive == True and party_member2_hp <= 0:
+        print(f"{party_member2} has died.  Rest in peace.\n")
+        party_member2_alive == False
+    
+    if party_member3_alive == True and party_member3_hp <= 0:
+        print(f"{party_member3} has died.  Rest in peace.\n")
+        party_member3_alive == False
+    
+    if player_hp <= 0: 
+        print(f"{player_name} has passed away.  The journey cannot continue without you.  Game over.\n")
+        calc_score()
+    else: 
+        print("You and your party have cheated death yet again!\n")
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # CALCULATE SCORE -- UNFINISHED
@@ -884,4 +910,4 @@ def play_game():
 # !@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!
 # TEST FUNCTION CALLS BELOW THIS LINE 
 
-buy_item()
+death_check()
