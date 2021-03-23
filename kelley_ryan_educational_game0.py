@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:21AM> <03/23/2021>, <Version 1.5.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:36AM> <03/23/2021>, <Version 1.5.1>
 
 # Player Variables 
 starting_role = " "
@@ -12,15 +12,15 @@ party_member3 = " "
 player_choice = 0
 
 # Health Variables 
-player_hp = -100
+player_hp = 100
 
-party_member0_hp = -100
+party_member0_hp = 100
 party_member0_alive = True 
 
-party_member1_hp = -100
+party_member1_hp = 100
 party_member1_alive = True 
 
-party_member2_hp = 0
+party_member2_hp = 100
 party_member2_alive = True 
 
 party_member3_hp = 100
@@ -247,3 +247,22 @@ def calc_score():
     final_score = (amt_water * 0.5) + (amt_food * 0.5) + (num_clothing * 1) + (num_guns * 5) + (num_bullets * 0.25) + (amt_rope * 0.25)
     final_score += (num_horses * 10) + (num_boats * 20) + (num_wagons * 15) + (num_wagon_wheel * 5) + (num_wagon_axle * 5)
     # Items that are EXPENSIVE or IMPORTANT for the journey should be worth more points.  
+
+    final_score += (party_size * 500) + (player_hp * 10) 
+    final_score += (money * 5)
+
+    if num_days <= 365: 
+        final_score += (num_days * 50)
+    elif num_days <= 730: 
+        final_score += (num_days * 25)
+    else:
+        final_score += (num_days * 10)
+
+    final_score = (final_score * score_bonus)
+
+    print(f"Your final score was {final_score} points.\n")
+
+# calc_score() 
+
+
+
