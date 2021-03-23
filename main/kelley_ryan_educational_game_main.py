@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:59AM> <03/23/21>, <Version 1.6.1>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:59AM> <03/23/21>, <Version 1.6.1a>
 
 # /////////////////|
 # Inventory Amounts|
@@ -852,7 +852,7 @@ def combat():
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 def death_check(): 
-    global party_member0_alive, party_member1_alive, party_member2_alive, party_member3_alive
+    global party_member0_alive, party_member1_alive, party_member2_alive, party_member3_alive, party_size
     
     if party_member0_alive == True and party_member0_hp <= 0:
         print(f"{party_member0} has died.  Rest in peace.\n")
