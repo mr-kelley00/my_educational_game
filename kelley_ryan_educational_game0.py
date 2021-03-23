@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:35AM> <03/23/2021>, <Version 1.3.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:50AM> <03/23/2021>, <Version 1.4.0>
 
 # Player Variables 
 starting_role = " "
@@ -12,15 +12,15 @@ party_member3 = " "
 player_choice = 0
 
 # Health Variables 
-player_hp = 100
+player_hp = -100
 
-party_member0_hp = 100
+party_member0_hp = -100
 party_member0_alive = True 
 
-party_member1_hp = 100
+party_member1_hp = -100
 party_member1_alive = True 
 
-party_member2_hp = 100
+party_member2_hp = 0
 party_member2_alive = True 
 
 party_member3_hp = 100
@@ -205,3 +205,36 @@ def show_inventory():
 
 # show_inventory() 
 
+# /////////////////////////////////////
+# DEATH CHECK -- Did someone die?
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+def death_check(): 
+    # Declare all of the global variables this function will use. 
+    global party_size, party_member0_alive, party_member1_alive, party_member2_alive, party_member3_alive
+
+    if party_member0_alive == True and party_member0_hp <= 0: 
+        print(f"{party_member0} has died.  Rest in peace gentle soul.\n")
+        party_member0_alive == False 
+        party_size += -1 
+
+    if party_member1_alive == True and party_member1_hp <= 0: 
+        print(f"{party_member1} has died.  Rest in peace gentle soul.\n")
+        party_member1_alive == False 
+        party_size += -1 
+
+    if party_member2_alive == True and party_member2_hp <= 0: 
+        print(f"{party_member2} has died.  Rest in peace gentle soul.\n")
+        party_member2_alive == False 
+        party_size += -1 
+
+    if party_member3_alive == True and party_member3_hp <= 0: 
+        print(f"{party_member3} has died.  Rest in peace gentle soul.\n")
+        party_member3_alive == False 
+        party_size += -1 
+
+    if player_hp <= 0: 
+        print(f"{player_name} has passed away.  The journey cannot continue.  Game over.\n")
+        # calc_score() 
+
+death_check()   
