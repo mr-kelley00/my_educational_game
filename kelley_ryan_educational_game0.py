@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:36AM> <03/23/2021>, <Version 1.5.1>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:36AM> <03/25/2021>, <Version 1.5.0>
 
 # Player Variables 
 starting_role = " "
@@ -262,7 +262,38 @@ def calc_score():
 
     print(f"Your final score was {final_score} points.\n")
 
-# calc_score() 
+# //////////////////////////////////////////////////
+# HOW FAST -- Determine how fast the player travels.
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+def how_fast(): 
+    print("""
+        +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+
+        *                        Travel Speed Selection                  *
+        *                                                                *
+        *                                                                *
+        *  The faster you travel, the more food and water you will use   *
+        *  each day.  Faster travel also increases the chances for some  *
+        *  disasters or accidents to happen as well.                     *
+        *                                                                *
+        *  Please choose a traveling speed from the menu below.          *
+        *                                                                *
+        *   1) Slow [10 miles per day]                                   *
+        *   2) Medium [20 miles per day]                                 *
+        *   3) Fast [30 miles per day]                                   * 
+        *                                                                *
+        +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+
+    \n""")
+
+    global travel_pace, speed, resource_consume 
+    global chc_sick, chc_break_wheel, chc_break_axle, chc_hostile_native, chc_bad_weather, chc_boat_sink, chc_horse_fall, chc_bandits
+    # MAKE SURE YOU USE THE DISASTER VARIABLES RELATED TO YOUR EXPEDITION PLEASE. 
+
+
+
+
+
+
 
 
 
