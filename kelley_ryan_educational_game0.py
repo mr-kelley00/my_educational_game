@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:36AM> <03/25/2021>, <Version 1.5.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:47AM> <03/25/2021>, <Version 1.6.0>
 
 # Player Variables 
 starting_role = " "
@@ -65,14 +65,14 @@ location3 = "Fill in the Name"
 current_location = starting_point 
 
 # Disaster Variables 
-chc_sick = 0.0
-chc_break_wheel = 0.0
-chc_break_axle = 0.0
-chc_hostile_native = 0.0
-chc_bad_weather = 0.0
-chc_boat_sink = 0.0
-chc_horse_fall = 0.0
-chc_bandits = 0.0 
+chc_sick = 0
+chc_break_wheel = 0
+chc_break_axle = 0
+chc_hostile_native = 0
+chc_bad_weather = 0
+chc_boat_sink = 0
+chc_horse_fall = 0
+chc_bandits = 0
 
 # Travel Variables 
 num_days = 0 
@@ -288,6 +288,47 @@ def how_fast():
     global travel_pace, speed, resource_consume 
     global chc_sick, chc_break_wheel, chc_break_axle, chc_hostile_native, chc_bad_weather, chc_boat_sink, chc_horse_fall, chc_bandits
     # MAKE SURE YOU USE THE DISASTER VARIABLES RELATED TO YOUR EXPEDITION PLEASE. 
+
+    travel_pace = int(input("Please enter a number from the menu and press enter.\n"))
+
+    if travel_pace == 1:  
+        speed = 10 
+        resource_consume = 1 
+        chc_sick = 5 # This means there is a 1% chance of a player or party member getting sick. 
+        chc_break_wheel = 5
+        chc_break_axle = 5
+        chc_hostile_native = 5
+        chc_bad_weather = 5
+        chc_boat_sink = 5
+        chc_horse_fall = 5
+        chc_bandits = 5
+    elif travel_pace == 2:  
+        speed = 20 
+        resource_consume = 2 
+        chc_sick = 10 # This means there is a 1% chance of a player or party member getting sick. 
+        chc_break_wheel = 10
+        chc_break_axle = 10
+        chc_hostile_native = 10
+        chc_bad_weather = 10
+        chc_boat_sink = 10
+        chc_horse_fall = 10
+        chc_bandits = 10
+    else:   
+        speed = 30 
+        resource_consume = 3 
+        chc_sick = 15 # This means there is a 1% chance of a player or party member getting sick. 
+        chc_break_wheel = 15
+        chc_break_axle = 15
+        chc_hostile_native = 15
+        chc_bad_weather = 15
+        chc_boat_sink = 15
+        chc_horse_fall = 15
+        chc_bandits = 15
+
+    print(f"You are going to travel at {speed} miles per day.  Your party will consume food and water at {resource_consume} times the normal rate.\n")
+
+
+
 
 
 
