@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:02AM> <03/25/2021>, <Version 1.7.1>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:32AM> <03/25/2021>, <Version 1.8.0>
 
 # Player Variables 
 starting_role = " "
@@ -387,6 +387,8 @@ def disaster_check():
             num_boats += -1  
             num_wagon_axle += -1 
             num_wagon_wheel += -1 
+
+    show_inventory()
 
 
 
