@@ -740,7 +740,7 @@ def how_fast(): # Determine how fast the player wants to travel, assign travel s
 # DETERMINE DISASTERS -- UNFINISHED -- THIS CODE WILL BE FINISHED LATER. 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-def disaster(): 
+def disaster_check(): 
     import random
     global num_wheels
     disaster_type = random.randint(1, 7) # This should have the MAXIMUM value for your possible disasters. 
