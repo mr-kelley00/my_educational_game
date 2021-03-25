@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <10:47AM> <03/25/2021>, <Version 1.6.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:02AM> <03/25/2021>, <Version 1.7.0>
 
 # Player Variables 
 starting_role = " "
@@ -326,6 +326,21 @@ def how_fast():
         chc_bandits = 15
 
     print(f"You are going to travel at {speed} miles per day.  Your party will consume food and water at {resource_consume} times the normal rate.\n")
+
+
+# //////////////////////////////////////////////////
+# DISASTER CHECK -- Determine if a disaster actually occurs.  
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+def disaster_check(): 
+    import random 
+    global player_hp, party_member0_hp, party_member1_hp, party_member2_hp, party_member3_hp
+    global num_horses, num_boats, num_wagons, num_wagon_wheel, num_wagon_axle 
+
+    disaster_type = random.randint(1, 8) # REPLACE X WITH THE TOTAL NUMBER OF DISASTERS YOU CAN HAVE.  
+    disaster_chance = random.randint(1, 100) # This is the % chance of a disaster happening. 
+
+
 
 
 
