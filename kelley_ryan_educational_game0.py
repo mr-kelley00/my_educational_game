@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:02AM> <03/25/2021>, <Version 1.7.0>
+# <The Lewis and Clark Expedition>, <Ryan Kelley>, <11:02AM> <03/25/2021>, <Version 1.7.1>
 
 # Player Variables 
 starting_role = " "
@@ -339,6 +339,56 @@ def disaster_check():
 
     disaster_type = random.randint(1, 8) # REPLACE X WITH THE TOTAL NUMBER OF DISASTERS YOU CAN HAVE.  
     disaster_chance = random.randint(1, 100) # This is the % chance of a disaster happening. 
+
+    if disaster_type == 1: # SICKNESS 
+        if chc_sick <= disaster_chance:
+            print("Your party has come down with a debilitating sickness.  You must rest for a few days and recover.\n")
+            player_hp += -5
+            party_member0_hp += -5
+            party_member1_hp += -5
+            party_member2_hp += -5
+            party_member3_hp += -5
+    elif disaster_type == 2: # WHEEL BREAK
+        if chc_break_wheel <= disaster_chance: 
+            print("Your wagon has suffered a serious accident and a wheel has been broken.\n")
+            num_wagon_wheel += -1 
+    elif disaster_type == 3: # WAGON AXLE BREAK 
+        if chc_break_axle <= disaster_chance: 
+            print("During the rigorous travel, one of the wagons has broken an axle.\n")
+            num_wagon_axle += -1 
+    elif disaster_type == 4: # HOSTILE NATIVES 
+        if chc_hostile_native <= disaster_chance: 
+            print("Your party has been ambushed by hostile natives on the journey.\n  You succesfully repel the attack but suffer wounds to the party.\n")
+            player_hp += -10
+            party_member0_hp += -10
+            party_member1_hp += -10
+            party_member2_hp += -10
+            party_member3_hp += -10
+    elif disaster_type == 5: # BAD WEATHER 
+        if chc_bad_weather <= disaster_chance: 
+            print("Bad weather forces your party to seek shelter for the day.\n")
+            player_hp += -1
+            party_member0_hp += -1
+            party_member1_hp += -1
+            party_member2_hp += -1
+            party_member3_hp += -1
+    elif disaster_type == 6: # BOAT SINK 
+        if chc_boat_sink <= disaster_chance: 
+            print("While crossing a stream, one of the boats hits a rock and sinks.\n")
+            num_boats += -1 
+    elif disaster_type == 7: # HORSE FALL 
+        if chc_horse_fall <= disaster_chance: 
+            print("Sadly, one of the horses has fallen and must be put down.\n")
+            num_horses += -1 
+    else: 
+        if chc_bandits <= disaster_chance:  
+            print("When you awake, you discover that bandits have raided your camp in the night and stolen supplies.\n")
+            num_horses += -1
+            num_boats += -1  
+            num_wagon_axle += -1 
+            num_wagon_wheel += -1 
+
+
 
 
 
