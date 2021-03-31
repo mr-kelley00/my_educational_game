@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <9:59AM> <03/23/21>, <Version 1.6.1a>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <11:50PM> <03/30/21>, <Version 1.7.0>
 
 # /////////////////|
 # Inventory Amounts|
@@ -52,6 +52,8 @@ party_member0_hp = 100
 party_member1_hp = 100
 party_member2_hp = 100
 party_member3_hp = 100
+
+# enemy_hp = 200 ADD ME IN NEXT VIDEO. 
 
 party_member0_alive = True
 party_member1_alive = True
@@ -845,7 +847,42 @@ def travel():
 
 def combat():
     # Combat Loop
-    global player_hp, party_member0_hp, party_member1_hp, party_member2_hp, party_member3_hp
+    global player_hp, party_member0_hp, party_member1_hp, party_member2_hp, party_member3_hp #, enemy_hp
+    
+
+    # Check for weapons, ammunition, armor, or other items. 
+        # If the party DOES have that item, what should the code do?
+            # The code should give a bonus to defense, attack, or similar stat.
+        # If the party DOES NOT have that item, what should the code do?
+            # The code should give a penalty to defense, attack, or similar stat. 
+
+    # Combat will require a loop starting here.  Should it be a WHILE or a FOR loop?  Do you want combat to go until there is a winner or a specific number of turns each time?
+        
+        # The code should roll XdY dice to determine an ATTACK SCORE for the player. X = number of dice, Y = number of sides on each die. Example: 5d10 is 5 dice with 10-sided dice.  3d6 is 3 dice with 6-sided die. 
+        # YOU PICK THE NUMBER AND SIZE OF DICE TO ROLL.  Example: X could have the value of num_bullets and Y could have the value of num_guns. 
+        # Add bonuses or subtract penalties based on the item checking code above.  Example: +5 to the score if the party has guns or -10 to the score if the party has no wagons for cover. 
+            
+        # The code should roll XdY dice to determine a DEFENSE SCORE for the enemies. X = number of dice, Y = number of sides on each die. 
+        # YOU PICK THE NUMBER AND SIZE OF DICE TO ROLL.  
+            
+        # If the ATTACKING SCORE >= DEFENSE SCORE, what should the code do?
+            # The code should print a message indicating the PLAYER has won this turn of combat. 
+            # Create a variable named damage, assign damage the value of (ATTACKING SCORE - DEFENSE SCORE).
+            # Subtract damage from enemy_hp. 
+        # Else, the ATTACKING SCORE < DEFENSE SCORE, what should the code do?
+            # The code should print a message indicating the ENEMY has won this turn of combat. 
+            # Create a variable named damage, assign damage the value of (ATTACKING SCORE - DEFENSE SCORE).
+            # Subtract damage from player_hp (easy-peasy to code) OR randomly determine a party member to subtract damage from (requires skill to code).
+
+        # Run death_check() to see if anyone died. 
+        # Any other actions or options you want to present the player in combat.  Examples: run away, surrender, sneak attack, dodge, etc. 
+        # Move back to start of the loop and do another turn of combat. 
+
+
+        
+    
+
+
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # DEATH CHECK -- Did someone die? -- UNFINISHED
