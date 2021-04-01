@@ -15,7 +15,9 @@ num_wagons = 0
 num_wheels = 0
 num_axles = 0
 
-# Inventory Costs
+# /////////////////|
+# Inventory Costs  |
+# \\\\\\\\\\\\\\\\\|
 cost_water = 0.10 
 cost_food = 0.25
 cost_clothing = 1.25
@@ -29,7 +31,9 @@ cost_wagon_wheel = 1.50
 cost_wagon_axle = 1.50
 cost_multi = 1.0 
 
-# Player Variables
+# /////////////////|
+# Player Variables |
+# \\\\\\\\\\\\\\\\\|
 player_choice = ""
 starting_role = ""
 money = 0
@@ -37,16 +41,17 @@ score_bonus = 0
 player_name = ""
 party_size = 5 # Total number of people in the party to start. 
 
-# Party Member Variables 
+# /////////////////|
+# Party Variables  |
+# \\\\\\\\\\\\\\\\\|
 party_member0 = ""
 party_member1 = ""
 party_member2 = ""
 party_member3 = ""
 
-# +++++++++++++++
-# HEALTH
-# +++++++++++++++
-
+# /////////////////|
+# Health Variables |
+# \\\\\\\\\\\\\\\\\|
 player_hp = 100
 party_member0_hp = 100
 party_member1_hp = 100
@@ -61,7 +66,9 @@ party_member2_alive = True
 party_member3_alive = True
 
 
-# Location Variables 
+# ///////////////////|
+# Location Variables |
+# \\\\\\\\\\\\\\\\\\\|
 starting_point = "St. Louis, Missouri"
 ending_point = "Fort Calstop"
 location0 =  "Test 0"
@@ -70,14 +77,18 @@ location2 =  "Test 2"
 location3 =  "Test 3"
 current_location = "St. Louis, Missouri"
 
-# Travel Variables 
+# ///////////////////|
+# Travel Variables   |
+# \\\\\\\\\\\\\\\\\\\|
 num_days = 0
 dist_travel = 0 
 travel_pace = 0 
 speed = 0
 resource_consume = 0
 
-# Disaster Variables, % chance it occurs.  
+# ///////////////////|
+# Disaster Variables |
+# \\\\\\\\\\\\\\\\\\\|
 chc_sick = 0.0
 chc_break_wheel = 0.0
 chc_break_axle = 0.0
