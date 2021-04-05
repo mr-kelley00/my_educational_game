@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <10:39PM> <04/04/21>, <Version 1.7.1>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <10:48PM> <04/04/21>, <Version 1.7.2>
 
 # /////////////////|
 # Inventory Amounts|
@@ -94,6 +94,7 @@ ending_point_dist = 3500 # Miles from Start
 # \\\\\\\\\\\\\\\\\\\|
 num_days = 0
 dist_travel = 0 
+are_we_there_yet = ending_point_dist - dist_travel # ADD THIS AS WELL. 
 travel_pace = 0 
 speed = 0
 resource_consume = 0
@@ -830,6 +831,7 @@ def travel():
             amt_water = 0
           
         print(f"You have traveled {dist_travel} miles in {num_days} days.\n")
+        print(f"Your party is {are_we_there_yet} miles away from finishing the journey.")
         print(f"You have {amt_food} pounds of food and {amt_water} gallons of water remaining.\n")
 
         
