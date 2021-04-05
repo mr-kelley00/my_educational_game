@@ -1,4 +1,4 @@
-# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <11:50PM> <03/30/21>, <Version 1.7.0>
+# <The Lewis and Clark Expedition Simulator>, <Ryan Kelley>, <10:39PM> <04/04/21>, <Version 1.7.1>
 
 # /////////////////|
 # Inventory Amounts|
@@ -71,11 +71,23 @@ party_member3_alive = True
 # \\\\\\\\\\\\\\\\\\\|
 starting_point = "St. Louis, Missouri"
 ending_point = "Fort Calstop"
+current_location = "St. Louis, Missouri"
+
 location0 =  "Test 0"
 location1 =  "Test 1"
 location2 =  "Test 2"
 location3 =  "Test 3"
-current_location = "St. Louis, Missouri"
+
+########################################## 
+# ADD THIS TO NEXT VIDEO UPDATE. 
+location0_dist =  100 # Miles from Start
+location1_dist =  500 # Miles from Start
+location2_dist =  1000 # Miles from Start
+location3_dist =  2500 # Miles from Start
+ending_point_dist = 3500 # Miles from Start
+# ADD THIS TO NEXT VIDEO UPDATE. 
+###########################################
+
 
 # ///////////////////|
 # Travel Variables   |
@@ -801,7 +813,15 @@ def travel():
     while do_travel == True: 
         dist_travel += speed
         num_days += 1
+        
+        # Check to see where we are and set current_location.
+        # If current_location == end_location, declare a winner.  
+
+        # "Must consume mass quantaties." -- Beldar Conehead
+        # Use up food and water based on number of people in party and travel pace. 
+
         amt_food += -(resource_consume * party_size)
+
         if amt_food <= 0: 
             amt_food = 0
         
@@ -811,26 +831,33 @@ def travel():
           
         print(f"You have traveled {dist_travel} miles in {num_days} days.\n")
         print(f"You have {amt_food} pounds of food and {amt_water} gallons of water remaining.\n")
+
         
         if amt_food <= 0:  
-            player_hp += -5
-            party_member0_hp += -5 
-            party_member1_hp += -5 
-            party_member2_hp += -5 
-            party_member3_hp += -5 
+            player_hp += -15
+            party_member0_hp += -15
+            party_member1_hp += -15 
+            party_member2_hp += -15 
+            party_member3_hp += -15 
         else: 
-            player_hp += -2
-            party_member0_hp += -2
-            party_member1_hp += -2 
-            party_member2_hp += -2 
-            party_member3_hp += -2
+            player_hp += +5
+            party_member0_hp += +5
+            party_member1_hp += +5
+            party_member2_hp += +5
+            party_member3_hp += +5
 
         if amt_water <= 0: 
-            player_hp += -10
-            party_member0_hp += -10 
-            party_member1_hp += -10
-            party_member2_hp += -10
-            party_member3_hp += -10
+            player_hp += -33
+            party_member0_hp += -33
+            party_member1_hp += -33
+            party_member2_hp += -33
+            party_member3_hp += -33
+        else: 
+            player_hp += +5
+            party_member0_hp += +5
+            party_member1_hp += +5
+            party_member2_hp += +5
+            party_member3_hp += +5
         
         do_travel = input("Do you want to continue traveling? [Yes / No]\n")
         if do_travel == "Yes" or do_travel == "yes" or do_travel == "y":
