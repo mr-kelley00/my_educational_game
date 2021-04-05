@@ -908,7 +908,7 @@ def death_check():
         print(f"{party_member1} has died.  Rest in peace.\n")
         party_member1_alive == False
         party_size += -1
-    
+        
     if party_member2_alive == True and party_member2_hp <= 0:
         print(f"{party_member2} has died.  Rest in peace.\n")
         party_member2_alive == False
