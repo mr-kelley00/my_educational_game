@@ -886,7 +886,7 @@ def travel():
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 def combat():
-    # Import the dice roll functions you need from the dice_roll.py module. Hint: You must copy the dice_roll.py file into this directory first.  
+  
     
     # global variables for all of the player, party, and enemy hitpoint values. 
     
