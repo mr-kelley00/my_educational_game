@@ -58,7 +58,7 @@ party_member1_hp = 100
 party_member2_hp = 100
 party_member3_hp = 100
 
-# enemy_hp = 200 ADD ME IN NEXT VIDEO. 
+enemy_hp = 200 
 
 party_member0_alive = True
 party_member1_alive = True
@@ -880,13 +880,14 @@ def travel():
         {party_member3} has {party_member3_hp} HP remaining.
         
         \n""")
+        death_check()
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # COMBAT LOOP -- UNFINISHED
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-def combat():
-  
+# def combat():
+
     
     # global variables for all of the player, party, and enemy hitpoint values. 
     
@@ -968,24 +969,25 @@ def calc_score():
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 def play_game():
-    main_menu()
+    
+    while True:
 
-    if player_choice == 1:
-        player_info()
-        buy_item()
-        how_fast()
-        travel()
-    elif player_choice == 2:
-        display_info()
-    elif player_choice == 3:
-        # high_scores()
-        print("This is a test.\n")
-    else:
-        print("Come back again sometime.\n")
-        exit()
+        main_menu()
 
-# !@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!
-# !@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!!@#$%^&*())(*&^%$#@!
-# TEST FUNCTION CALLS BELOW THIS LINE 
+        if player_choice == 1:
+            player_info()
+            buy_item()
+            how_fast()
+            travel()
+            calc_score()
+        elif player_choice == 2:
+            display_info()            
+        elif player_choice == 3:
+            # high_scores()
+            
+            print("This is a test.\n")
+        else:
+            print("Come back again sometime.\n")
+            exit()
 
-death_check()
+play_game()
